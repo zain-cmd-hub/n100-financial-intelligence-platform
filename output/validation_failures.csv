@@ -1,0 +1,871 @@
+dq_rule,severity,description,company_id,year
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2013
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2014
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2015
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2016
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2017
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2018
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2019
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2020
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2021
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2022
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2023
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2024
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,TTM
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2013
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2014
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2015
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2016
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2017
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2018
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2019
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2020
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2021
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2022
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2023
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,Mar 2024
+DQ-02,CRITICAL,Duplicate company-year composite key,ADANIPORTS,TTM
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ULTRACEMCO,Mar 2013
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ULTRACEMCO,Mar 2014
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ULTRACEMCO,Mar 2015
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ULTRACEMCO,Mar 2016
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ULTRACEMCO,Mar 2017
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ULTRACEMCO,Mar 2018
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ULTRACEMCO,Mar 2019
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ULTRACEMCO,Mar 2020
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ULTRACEMCO,Mar 2021
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ULTRACEMCO,Mar 2022
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ULTRACEMCO,Mar 2023
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ULTRACEMCO,Mar 2024
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ULTRACEMCO,TTM
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNIONBANK,Mar 2013
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNIONBANK,Mar 2014
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNIONBANK,Mar 2015
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNIONBANK,Mar 2016
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNIONBANK,Mar 2017
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNIONBANK,Mar 2018
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNIONBANK,Mar 2019
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNIONBANK,Mar 2020
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNIONBANK,Mar 2021
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNIONBANK,Mar 2022
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNIONBANK,Mar 2023
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNIONBANK,Mar 2024
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNIONBANK,TTM
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNITDSPR,Mar 2013
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNITDSPR,Mar 2014
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNITDSPR,Mar 2015
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNITDSPR,Mar 2016
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNITDSPR,Mar 2017
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNITDSPR,Mar 2018
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNITDSPR,Mar 2019
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNITDSPR,Mar 2020
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNITDSPR,Mar 2021
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNITDSPR,Mar 2022
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNITDSPR,Mar 2023
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNITDSPR,Mar 2024
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,UNITDSPR,TTM
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VBL,Dec 2012
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VBL,Dec 2013
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VBL,Dec 2014
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VBL,Dec 2015
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VBL,Dec 2016
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VBL,Dec 2017
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VBL,Dec 2018
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VBL,Dec 2019
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VBL,Dec 2020
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VBL,Dec 2021
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VBL,Dec 2022
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VBL,Dec 2023
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VBL,TTM
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VEDL,Mar 2013
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VEDL,Mar 2014
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VEDL,Mar 2015
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VEDL,Mar 2016
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VEDL,Mar 2017
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VEDL,Mar 2018
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VEDL,Mar 2019
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VEDL,Mar 2020
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VEDL,Mar 2021
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VEDL,Mar 2022
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VEDL,Mar 2023
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VEDL,Mar 2024
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,VEDL,TTM
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,WIPRO,Mar 2013
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,WIPRO,Mar 2014
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,WIPRO,Mar 2015
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,WIPRO,Mar 2016
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,WIPRO,Mar 2017
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,WIPRO,Mar 2018
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,WIPRO,Mar 2019
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,WIPRO,Mar 2020
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,WIPRO,Mar 2021
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,WIPRO,Mar 2022
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,WIPRO,Mar 2023
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,WIPRO,Mar 2024
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,WIPRO,TTM
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZOMATO,Mar 2018
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZOMATO,Mar 2019
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZOMATO,Mar 2020
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZOMATO,Mar 2021
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZOMATO,Mar 2022
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZOMATO,Mar 2023
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZOMATO,Mar 2024
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZOMATO,TTM
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZYDUSLIFE,Mar 2013
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZYDUSLIFE,Mar 2014
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZYDUSLIFE,Mar 2015
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZYDUSLIFE,Mar 2016
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZYDUSLIFE,Mar 2017
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZYDUSLIFE,Mar 2018
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZYDUSLIFE,Mar 2019
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZYDUSLIFE,Mar 2020
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZYDUSLIFE,Mar 2021
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZYDUSLIFE,Mar 2022
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZYDUSLIFE,Mar 2023
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZYDUSLIFE,Mar 2024
+DQ-03,CRITICAL,Foreign key company_id not found in companies table,ZYDUSLIFE,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ADANIENSOL,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,AXISBANK,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,AXISBANK,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,AXISBANK,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,AXISBANK,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,AXISBANK,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,AXISBANK,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,AXISBANK,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,AXISBANK,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,AXISBANK,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,AXISBANK,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,AXISBANK,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,AXISBANK,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,AXISBANK,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BAJFINANCE,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BAJFINANCE,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BAJFINANCE,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BAJFINANCE,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BAJFINANCE,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BAJFINANCE,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BAJFINANCE,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BAJFINANCE,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BAJFINANCE,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BAJFINANCE,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BAJFINANCE,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BANKBARODA,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BANKBARODA,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BANKBARODA,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BANKBARODA,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BANKBARODA,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BANKBARODA,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BANKBARODA,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BANKBARODA,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BANKBARODA,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BANKBARODA,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BANKBARODA,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BANKBARODA,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,BANKBARODA,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CANBK,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CANBK,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CANBK,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CANBK,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CANBK,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CANBK,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CANBK,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CANBK,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CANBK,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CANBK,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CANBK,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CANBK,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CANBK,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CHOLAFIN,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CHOLAFIN,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CHOLAFIN,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CHOLAFIN,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CHOLAFIN,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CHOLAFIN,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CHOLAFIN,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CHOLAFIN,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CHOLAFIN,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CHOLAFIN,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CHOLAFIN,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CHOLAFIN,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CHOLAFIN,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CIPLA,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CIPLA,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CIPLA,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CIPLA,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CIPLA,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CIPLA,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CIPLA,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CIPLA,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CIPLA,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CIPLA,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CIPLA,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CIPLA,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,CIPLA,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,COALINDIA,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,COALINDIA,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,COALINDIA,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,COALINDIA,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,COALINDIA,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,COALINDIA,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,COALINDIA,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,COALINDIA,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,COALINDIA,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,COALINDIA,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,COALINDIA,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,COALINDIA,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,COALINDIA,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCBANK,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCBANK,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCBANK,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCBANK,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCBANK,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCBANK,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCBANK,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCBANK,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCBANK,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCBANK,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCBANK,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCBANK,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCBANK,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCLIFE,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCLIFE,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCLIFE,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCLIFE,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCLIFE,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCLIFE,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCLIFE,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCLIFE,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCLIFE,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCLIFE,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCLIFE,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCLIFE,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HDFCLIFE,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HEROMOTOCO,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HEROMOTOCO,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HEROMOTOCO,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HEROMOTOCO,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HEROMOTOCO,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HEROMOTOCO,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HEROMOTOCO,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HEROMOTOCO,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HEROMOTOCO,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HEROMOTOCO,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HEROMOTOCO,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HEROMOTOCO,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDALCO,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDALCO,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDALCO,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDALCO,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDALCO,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDALCO,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDALCO,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDALCO,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDALCO,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDALCO,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDALCO,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDALCO,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDALCO,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDUNILVR,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDUNILVR,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDUNILVR,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDUNILVR,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDUNILVR,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDUNILVR,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDUNILVR,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDUNILVR,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDUNILVR,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDUNILVR,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDUNILVR,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDUNILVR,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,HINDUNILVR,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIBANK,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIBANK,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIBANK,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIBANK,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIBANK,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIBANK,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIBANK,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIBANK,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIBANK,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIBANK,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIBANK,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIBANK,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIBANK,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIGI,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIGI,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIGI,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIGI,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIGI,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIGI,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIGI,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIGI,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIGI,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIGI,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIGI,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIGI,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIGI,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIPRULI,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIPRULI,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIPRULI,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIPRULI,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIPRULI,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIPRULI,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIPRULI,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIPRULI,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIPRULI,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIPRULI,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIPRULI,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIPRULI,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,ICICIPRULI,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDUSINDBK,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDUSINDBK,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDUSINDBK,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDUSINDBK,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDUSINDBK,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDUSINDBK,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDUSINDBK,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDUSINDBK,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDUSINDBK,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDUSINDBK,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDUSINDBK,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDUSINDBK,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDUSINDBK,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,JIOFIN,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,KOTAKBANK,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,KOTAKBANK,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,KOTAKBANK,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,KOTAKBANK,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,KOTAKBANK,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,KOTAKBANK,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,KOTAKBANK,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,KOTAKBANK,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,KOTAKBANK,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,KOTAKBANK,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,KOTAKBANK,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,KOTAKBANK,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,KOTAKBANK,TTM
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,SUNPHARMA,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDIGO,Mar 2013
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDIGO,Mar 2014
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDIGO,Mar 2015
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDIGO,Mar 2016
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDIGO,Mar 2017
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDIGO,Mar 2018
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDIGO,Mar 2019
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDIGO,Mar 2020
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDIGO,Mar 2021
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDIGO,Mar 2022
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDIGO,Mar 2023
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDIGO,Mar 2024
+DQ-05,WARNING,Operating profit margin does not match calculated OPM,INDIGO,TTM
+DQ-06,WARNING,Sales must be greater than zero,ADANIENSOL,Mar 2014
+DQ-07,WARNING,"Net cash flow does not match operating, investing and financing activities",TVSMOTOR,Mar 2022
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,ADANIENT,Mar 2014
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,ADANIGREEN,Mar 2017
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,ADANIGREEN,Mar 2018
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,ADANIGREEN,Mar 2019
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,ADANIPOWER,Mar 2014
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,ADANIPOWER,Mar 2016
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,ADANIPOWER,Mar 2017
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,ADANIPOWER,Mar 2023
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,AMBUJACEM,Dec 2018
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,AXISBANK,Mar 2018
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,BANKBARODA,Mar 2016
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,BANKBARODA,Mar 2018
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,BANKBARODA,Mar 2020
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,BHARTIARTL,Mar 2019
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,BHARTIARTL,Mar 2020
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,BHEL,Mar 2016
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,BHEL,Mar 2021
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,BHEL,Mar 2024
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,CANBK,Mar 2016
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,CANBK,Mar 2018
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,CANBK,Mar 2019
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,DLF,Mar 2014
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,DRREDDY,Mar 2020
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,GODREJCP,Mar 2019
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,GRASIM,Mar 2020
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,HDFCLIFE,Mar 2024
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,IOC,Mar 2020
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,JINDALSTEL,Mar 2015
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,JINDALSTEL,Mar 2016
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,JINDALSTEL,Mar 2017
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,JINDALSTEL,Mar 2018
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,JINDALSTEL,Mar 2019
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,JSWSTEEL,Mar 2016
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,JSWSTEEL,Mar 2020
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,LODHA,Mar 2021
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,LODHA,Mar 2023
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,MOTHERSON,Mar 2020
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,NHPC,Mar 2020
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,NHPC,Mar 2022
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,NTPC,Mar 2016
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,NTPC,Mar 2019
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,PNB,Mar 2016
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,PNB,Mar 2018
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,PNB,Mar 2019
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,POWERGRID,Mar 2019
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,SBIN,Mar 2018
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,SHREECEM,Jun 2015
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,TATAMOTORS,Mar 2019
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,TATAMOTORS,Mar 2024
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,TATASTEEL,Mar 2020
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,TRENT,Mar 2021
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,ULTRACEMCO,Mar 2020
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,UNIONBANK,Mar 2017
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,UNIONBANK,Mar 2018
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,UNIONBANK,Mar 2019
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,UNIONBANK,Mar 2020
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,UNIONBANK,Mar 2021
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,VBL,Dec 2012
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,VBL,Dec 2013
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,VEDL,Mar 2013
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,VEDL,Mar 2014
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,VEDL,Mar 2016
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,VEDL,Mar 2020
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,ZOMATO,Mar 2023
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,ZOMATO,Mar 2024
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,INDIGO,Mar 2019
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,INDIGO,Mar 2020
+DQ-08,WARNING,Tax percentage is outside the expected 0 to 100 range,INDIGO,Mar 2024
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,AMBUJACEM,Dec 2020
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,BHARTIARTL,Mar 2018
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,BHARTIARTL,Mar 2019
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,BHARTIARTL,Mar 2020
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,BHEL,Mar 2016
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,BHEL,Mar 2018
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,BPCL,Mar 2020
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,BPCL,Mar 2021
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,BRITANNIA,Mar 2021
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,COALINDIA,Mar 2014
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,COALINDIA,Mar 2016
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,COALINDIA,Mar 2017
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,COALINDIA,Mar 2018
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,DLF,Mar 2016
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,DLF,Mar 2020
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,HINDALCO,Mar 2016
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,HINDUNILVR,Mar 2013
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,HINDUNILVR,Mar 2021
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,IOC,Mar 2020
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,ITC,Mar 2021
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,JSWSTEEL,Mar 2016
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,M&M,Mar 2020
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,NAUKRI,Mar 2015
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,NAUKRI,Mar 2017
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,NAUKRI,Mar 2020
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,NAUKRI,Mar 2023
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,NESTLEIND,Dec 2019
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,PNB,Mar 2016
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,SBIN,Mar 2017
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,TATACONSUM,Mar 2016
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,TATAPOWER,Mar 2013
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,TATAPOWER,Mar 2014
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,TATAPOWER,Mar 2015
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,TATASTEEL,Mar 2013
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,TATASTEEL,Mar 2015
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,TATASTEEL,Mar 2016
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,TATASTEEL,Mar 2017
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,TATASTEEL,Mar 2024
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,TECHM,Mar 2024
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,TORNTPHARM,Mar 2022
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,TRENT,Mar 2013
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,TRENT,Mar 2014
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,TRENT,Mar 2021
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,UNITDSPR,Mar 2013
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,VEDL,Mar 2015
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,VEDL,Mar 2016
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,VEDL,Mar 2020
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,VEDL,Mar 2023
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,VEDL,Mar 2024
+DQ-09,WARNING,Dividend payout is outside the expected 0 to 100 range,INDIGO,Mar 2019
+DQ-10,WARNING,EPS and net profit signs are inconsistent,M&M,Mar 2020
+DQ-10,WARNING,EPS and net profit signs are inconsistent,NAUKRI,Mar 2015
+DQ-10,WARNING,EPS and net profit signs are inconsistent,TATAPOWER,Mar 2014
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIENSOL,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIENSOL,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIENSOL,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIENSOL,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIENSOL,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIENSOL,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIENSOL,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIENT,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIENT,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIENT,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIGREEN,2017
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIGREEN,2016
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIGREEN,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIGREEN,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIGREEN,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIGREEN,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIGREEN,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIGREEN,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIGREEN,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPORTS,2019
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPORTS,2018
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPORTS,2017
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPORTS,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPORTS,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPORTS,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPORTS,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPORTS,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPORTS,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPOWER,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPOWER,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPOWER,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPOWER,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPOWER,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,ADANIPOWER,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,AMBUJACEM,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,AMBUJACEM,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,AMBUJACEM,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,AMBUJACEM,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,AMBUJACEM,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,APOLLOHOSP,2019
+DQ-11,WARNING,Annual report URL is missing or invalid,APOLLOHOSP,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,APOLLOHOSP,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,APOLLOHOSP,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,ASIANPAINT,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,ASIANPAINT,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,ASIANPAINT,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,ASIANPAINT,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,ATGL,2018
+DQ-11,WARNING,Annual report URL is missing or invalid,ATGL,2017
+DQ-11,WARNING,Annual report URL is missing or invalid,ATGL,2016
+DQ-11,WARNING,Annual report URL is missing or invalid,ATGL,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,ATGL,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,ATGL,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,ATGL,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,ATGL,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,ATGL,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,ATGL,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,AXISBANK,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,AXISBANK,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,BAJAJ-AUTO,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,BAJAJ-AUTO,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,BAJAJ-AUTO,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,BAJAJFINSV,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,BAJAJFINSV,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,BAJAJHLDNG,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,BAJAJHLDNG,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,BAJFINANCE,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,BAJFINANCE,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,BANKBARODA,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,BANKBARODA,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,BEL,2022
+DQ-11,WARNING,Annual report URL is missing or invalid,BEL,2019
+DQ-11,WARNING,Annual report URL is missing or invalid,BEL,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,BEL,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,BEL,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,BEL,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,BEL,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,BHARTIARTL,2021
+DQ-11,WARNING,Annual report URL is missing or invalid,BHARTIARTL,2018
+DQ-11,WARNING,Annual report URL is missing or invalid,BHARTIARTL,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,BHARTIARTL,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,BHARTIARTL,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,BHEL,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,BHEL,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,BHEL,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,BHEL,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,BHEL,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,BHEL,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,BHEL,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,BOSCHLTD,2019
+DQ-11,WARNING,Annual report URL is missing or invalid,BOSCHLTD,2018
+DQ-11,WARNING,Annual report URL is missing or invalid,BOSCHLTD,2017
+DQ-11,WARNING,Annual report URL is missing or invalid,BOSCHLTD,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,BOSCHLTD,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,BOSCHLTD,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,BOSCHLTD,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,BOSCHLTD,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,BOSCHLTD,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,BPCL,2022
+DQ-11,WARNING,Annual report URL is missing or invalid,BPCL,2019
+DQ-11,WARNING,Annual report URL is missing or invalid,BPCL,2016
+DQ-11,WARNING,Annual report URL is missing or invalid,BPCL,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,BPCL,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,BPCL,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,BRITANNIA,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,BRITANNIA,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,CANBK,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,CANBK,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,CHOLAFIN,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,CHOLAFIN,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,CHOLAFIN,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,CIPLA,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,CIPLA,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,COALINDIA,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,DABUR,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,DABUR,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,DLF,2018
+DQ-11,WARNING,Annual report URL is missing or invalid,DLF,2017
+DQ-11,WARNING,Annual report URL is missing or invalid,DLF,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,DLF,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,DMART,2016
+DQ-11,WARNING,Annual report URL is missing or invalid,DMART,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,DMART,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,DMART,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,DMART,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,DMART,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,DMART,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,DMART,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,DRREDDY,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,DRREDDY,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,DRREDDY,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,EICHERMOT,2019
+DQ-11,WARNING,Annual report URL is missing or invalid,EICHERMOT,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,EICHERMOT,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,GAIL,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,GAIL,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,GODREJCP,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,GODREJCP,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,GRASIM,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,GRASIM,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,HAL,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,HAL,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,HAVELLS,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,HAVELLS,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,HCLTECH,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,HCLTECH,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,HCLTECH,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,HDFCBANK,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,HDFCBANK,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,HDFCBANK,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,HDFCBANK,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,HDFCLIFE,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,HDFCLIFE,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,HDFCLIFE,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,HDFCLIFE,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,HDFCLIFE,2008
+DQ-11,WARNING,Annual report URL is missing or invalid,HEROMOTOCO,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,HEROMOTOCO,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,HINDALCO,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,HINDALCO,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,HINDUNILVR,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,HINDUNILVR,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,ICICIBANK,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,ICICIGI,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,ICICIPRULI,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,ICICIPRULI,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,ICICIPRULI,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,INDIGO,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,INDIGO,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,INDIGO,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,INDIGO,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,INDIGO,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,INDIGO,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,INDIGO,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,INDUSINDBK,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,INDUSINDBK,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,INFY,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,INFY,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,IOC,2024
+DQ-11,WARNING,Annual report URL is missing or invalid,IOC,2023
+DQ-11,WARNING,Annual report URL is missing or invalid,IOC,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,IOC,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,IRCTC,2019
+DQ-11,WARNING,Annual report URL is missing or invalid,IRCTC,2018
+DQ-11,WARNING,Annual report URL is missing or invalid,IRCTC,2017
+DQ-11,WARNING,Annual report URL is missing or invalid,IRCTC,2016
+DQ-11,WARNING,Annual report URL is missing or invalid,IRCTC,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,IRCTC,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,IRCTC,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,IRCTC,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,IRCTC,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,IRCTC,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,IRCTC,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,IRFC,2020
+DQ-11,WARNING,Annual report URL is missing or invalid,IRFC,2019
+DQ-11,WARNING,Annual report URL is missing or invalid,IRFC,2018
+DQ-11,WARNING,Annual report URL is missing or invalid,IRFC,2017
+DQ-11,WARNING,Annual report URL is missing or invalid,IRFC,2016
+DQ-11,WARNING,Annual report URL is missing or invalid,IRFC,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,IRFC,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,IRFC,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,IRFC,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,IRFC,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,IRFC,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,IRFC,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,ITC,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,ITC,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,ITC,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,JINDALSTEL,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,JINDALSTEL,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2023
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2022
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2021
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2020
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2019
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2018
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2017
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2016
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,JIOFIN,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,JSWENERGY,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,JSWENERGY,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,JSWENERGY,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,JSWSTEEL,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,JSWSTEEL,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,KOTAKBANK,2023
+DQ-11,WARNING,Annual report URL is missing or invalid,KOTAKBANK,2022
+DQ-11,WARNING,Annual report URL is missing or invalid,KOTAKBANK,2021
+DQ-11,WARNING,Annual report URL is missing or invalid,KOTAKBANK,2017
+DQ-11,WARNING,Annual report URL is missing or invalid,KOTAKBANK,2016
+DQ-11,WARNING,Annual report URL is missing or invalid,KOTAKBANK,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,KOTAKBANK,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,KOTAKBANK,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,KOTAKBANK,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,KOTAKBANK,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,KOTAKBANK,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,LICI,2018
+DQ-11,WARNING,Annual report URL is missing or invalid,LICI,2017
+DQ-11,WARNING,Annual report URL is missing or invalid,LICI,2016
+DQ-11,WARNING,Annual report URL is missing or invalid,LICI,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,LICI,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,LICI,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,LICI,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,LICI,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,LICI,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,LICI,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,LODHA,2020
+DQ-11,WARNING,Annual report URL is missing or invalid,LODHA,2019
+DQ-11,WARNING,Annual report URL is missing or invalid,LODHA,2018
+DQ-11,WARNING,Annual report URL is missing or invalid,LODHA,2017
+DQ-11,WARNING,Annual report URL is missing or invalid,LODHA,2016
+DQ-11,WARNING,Annual report URL is missing or invalid,LODHA,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,LODHA,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,LODHA,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,LODHA,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,LODHA,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,LODHA,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,LODHA,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,LT,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,LT,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,LTIM,2016
+DQ-11,WARNING,Annual report URL is missing or invalid,LTIM,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,LTIM,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,LTIM,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,LTIM,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,LTIM,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,LTIM,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,LTIM,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,M&M,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,M&M,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,MARUTI,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,MARUTI,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,MOTHERSON,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,MOTHERSON,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,NAUKRI,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,NAUKRI,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,NESTLEIND,2023
+DQ-11,WARNING,Annual report URL is missing or invalid,NHPC,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,NHPC,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,NTPC,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,NTPC,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,ONGC,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,ONGC,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,ONGC,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,PFC,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,PFC,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,PIDILITIND,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,PIDILITIND,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,PIDILITIND,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,PNB,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,PNB,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,POWERGRID,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,POWERGRID,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,RECLTD,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,RECLTD,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,RECLTD,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,RELIANCE,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,RELIANCE,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,RELIANCE,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,SBILIFE,2017
+DQ-11,WARNING,Annual report URL is missing or invalid,SBILIFE,2016
+DQ-11,WARNING,Annual report URL is missing or invalid,SBILIFE,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,SBILIFE,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,SBILIFE,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,SBILIFE,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,SBILIFE,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,SBILIFE,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,SBILIFE,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,SBIN,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,SHREECEM,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,SHREECEM,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,SHREECEM,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,SHRIRAMFIN,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,SHRIRAMFIN,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,SHRIRAMFIN,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,SIEMENS,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,SIEMENS,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,SUNPHARMA,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,SUNPHARMA,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,SUNPHARMA,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,TATACONSUM,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,TATACONSUM,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,TATAMOTORS,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,TATAMOTORS,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,TATAPOWER,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,TATAPOWER,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,TATASTEEL,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,TATASTEEL,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,TCS,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,TCS,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,TECHM,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,TECHM,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,TECHM,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,TECHM,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,TITAN,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,TITAN,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,TITAN,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,TORNTPHARM,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,TORNTPHARM,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,TRENT,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,TRENT,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,TVSMOTOR,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,TVSMOTOR,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,ULTRACEMCO,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,ULTRACEMCO,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,ULTRACEMCO,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,UNIONBANK,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,UNIONBANK,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,UNITDSPR,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,UNITDSPR,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,UNITDSPR,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,VBL,2024
+DQ-11,WARNING,Annual report URL is missing or invalid,VBL,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,VBL,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,VBL,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,VBL,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,VBL,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,VBL,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,VBL,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,VEDL,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,VEDL,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,WIPRO,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,WIPRO,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,ZOMATO,2021
+DQ-11,WARNING,Annual report URL is missing or invalid,ZOMATO,2020
+DQ-11,WARNING,Annual report URL is missing or invalid,ZOMATO,2019
+DQ-11,WARNING,Annual report URL is missing or invalid,ZOMATO,2018
+DQ-11,WARNING,Annual report URL is missing or invalid,ZOMATO,2017
+DQ-11,WARNING,Annual report URL is missing or invalid,ZOMATO,2016
+DQ-11,WARNING,Annual report URL is missing or invalid,ZOMATO,2015
+DQ-11,WARNING,Annual report URL is missing or invalid,ZOMATO,2014
+DQ-11,WARNING,Annual report URL is missing or invalid,ZOMATO,2013
+DQ-11,WARNING,Annual report URL is missing or invalid,ZOMATO,2012
+DQ-11,WARNING,Annual report URL is missing or invalid,ZOMATO,2011
+DQ-11,WARNING,Annual report URL is missing or invalid,ZOMATO,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,ZOMATO,2009
+DQ-11,WARNING,Annual report URL is missing or invalid,ZYDUSLIFE,2010
+DQ-11,WARNING,Annual report URL is missing or invalid,ZYDUSLIFE,2009
+DQ-12,WARNING,BSE profile URL is missing or invalid,TVSMOTOR,
+DQ-13,WARNING,Company has less than 5 years of financial data,JIOFIN,
+DQ-14,WARNING,ROE percentage is outside the expected -100 to 100 range,NESTLEIND,
+DQ-15,WARNING,NSE profile URL is missing or invalid,TVSMOTOR,
+DQ-16,WARNING,Company website URL is missing or invalid,TVSMOTOR,
