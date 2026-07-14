@@ -2,27 +2,27 @@ import re
 import pandas as pd
 
 
+TICKER_ALIASES = {
+    "AGTL": "ADANIGREEN",
+}
+
+
 def normalize_ticker(ticker):
     """
     Normalize company ticker symbols.
-    Example:
-    ' tcs ' -> 'TCS'
     """
 
     if pd.isna(ticker):
         return None
 
-    return str(ticker).strip().upper()
+    ticker = str(ticker).strip().upper()
+
+    return TICKER_ALIASES.get(ticker, ticker)
 
 
 def normalize_year(year):
     """
     Normalize financial year values.
-
-    Examples:
-    Mar-24   -> 2024
-    Mar-2023 -> 2023
-    2022     -> 2022
     """
 
     if pd.isna(year):
@@ -30,16 +30,22 @@ def normalize_year(year):
 
     year = str(year).strip()
 
-    # Find year at the end of the string
-    match = re.search(r'(\d{2,4})$', year)
+    if year.upper() == "TTM":
+        return None
+
+    match = re.search(r"(\d{2,4})$", year)
 
     if match:
         yr = match.group(1)
 
         if len(yr) == 2:
-            return int("20" + yr)
+            yr = int(yr)
+
+            if yr <= 50:
+                return 2000 + yr
+
+            return 1900 + yr
 
         return int(yr)
 
     return None
-

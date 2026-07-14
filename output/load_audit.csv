@@ -1,0 +1,13 @@
+load_timestamp,source_file,table_name,source_rows,loaded_rows,rejected_rows,duplicate_rows,status,error_message
+2026-07-14T16:11:28,companies.xlsx,companies,92,92,0,0,SUCCESS,
+2026-07-14T16:11:28,profitandloss.xlsx,profitandloss,1276,1177,99,0,SUCCESS,
+2026-07-14T16:11:29,balancesheet.xlsx,balancesheet,1312,1227,85,0,SUCCESS,
+2026-07-14T16:11:29,cashflow.xlsx,cashflow,1187,1098,89,0,SUCCESS,
+2026-07-14T16:11:29,analysis.xlsx,analysis,20,16,4,0,SUCCESS,
+2026-07-14T16:11:29,documents.xlsx,documents,1585,1457,128,0,SUCCESS,
+2026-07-14T16:11:29,prosandcons.xlsx,prosandcons,16,14,2,0,SUCCESS,
+2026-07-14T16:11:29,sectors.xlsx,sectors,92,92,0,0,SUCCESS,
+2026-07-14T16:11:30,stock_prices.xlsx,stock_prices,5520,5520,0,0,SUCCESS,
+2026-07-14T16:11:30,market_cap.xlsx,market_cap,552,552,0,0,SUCCESS,
+2026-07-14T16:11:31,financial_ratios.xlsx,financial_ratios,1184,1160,24,0,SUCCESS,
+2026-07-14T16:11:31,peer_groups.xlsx,peer_groups,56,56,0,0,SUCCESS,
