@@ -1,0 +1,95 @@
+company_id,company_name,year_count,coverage_status
+JIOFIN,Jio Financial Services Ltd,3,REVIEW
+LICI,Life Insurance Corporation of India,7,PASS
+ATGL,Adani Total Gas Ltd,8,PASS
+ADANIGREEN,Adani Green Energy Ltd,9,PASS
+BAJFINANCE,Bajaj Finance Ltd,11,PASS
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,11,PASS
+ADANIENSOL,Adani Energy Solutions Ltd,12,PASS
+HEROMOTOCO,Hero MotoCorp Ltd,12,PASS
+SIEMENS,Siemens Ltd,12,PASS
+ABB,Abbott India Ltd,13,PASS
+ADANIENT,Adani Enterprises Ltd,13,PASS
+ADANIPORTS,Adani Ports & Special Economic Zone Ltd,13,PASS
+ADANIPOWER,Adani Power Ltd,13,PASS
+AMBUJACEM,Ambuja Cements Ltd,13,PASS
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",13,PASS
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",13,PASS
+AXISBANK,Axis Bank Ltd,13,PASS
+BAJAJ-AUTO,Bajaj Auto Ltd,13,PASS
+BAJAJFINSV,Bajaj Finserv Ltd,13,PASS
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,13,PASS
+BANKBARODA,Bank of Baroda,13,PASS
+BEL,Bharat Electronics Ltd,13,PASS
+BHARTIARTL,Bharti Airtel Ltd,13,PASS
+BHEL,Bharat Heavy Electricals Limited,13,PASS
+BOSCHLTD,Bosch Ltd,13,PASS
+BPCL,Bharat Petroleum Corporation Ltd,13,PASS
+BRITANNIA,Britannia Industries Ltd,13,PASS
+CANBK,Canara Bank,13,PASS
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,13,PASS
+CIPLA,Cipla Ltd,13,PASS
+COALINDIA,Coal India Ltd,13,PASS
+DABUR,Dabur India Ltd,13,PASS
+DIVISLAB,Divis Laboratories Ltd,13,PASS
+DLF,DLF Ltd,13,PASS
+DMART,Avenue Supermarts Ltd,13,PASS
+DRREDDY,Dr Reddys Laboratories Ltd,13,PASS
+EICHERMOT,Eicher Motors Ltd,13,PASS
+GAIL,GAIL (India) Ltd,13,PASS
+GODREJCP,Godrej Consumer Products Ltd,13,PASS
+GRASIM,Grasim Industries Ltd,13,PASS
+HAL,Hindustan Aeronautics Ltd,13,PASS
+HAVELLS,Havells India Ltd,13,PASS
+HCLTECH,HCL Technologies Ltd,13,PASS
+HDFCBANK,HDFC Bank Ltd,13,PASS
+HDFCLIFE,HDFC Life Insurance Company Ltd,13,PASS
+HINDALCO,Hindalco Industries Ltd,13,PASS
+HINDUNILVR,Hindustan Unilever Ltd,13,PASS
+ICICIBANK,ICICI Bank Ltd,13,PASS
+ICICIGI,ICICI Lombard General Insurance Company Ltd,13,PASS
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,13,PASS
+INDIGO,Interglobe Aviation Ltd,13,PASS
+INDUSINDBK,IndusInd Bank Ltd,13,PASS
+INFY,Infosys Ltd,13,PASS
+IOC,Indian Oil Corporation,13,PASS
+IRFC,Indian Railway Finance Corporation Ltd,13,PASS
+ITC,ITC Ltd,13,PASS
+JINDALSTEL,Jindal Steel & Power Ltd,13,PASS
+JSWENERGY,JSW Energy Ltd,13,PASS
+JSWSTEEL,JSW Steel Ltd,13,PASS
+KOTAKBANK,Kotak Mahindra Bank Ltd,13,PASS
+LODHA,Macrotech Developers Ltd,13,PASS
+LT,Larsen & Toubro Ltd,13,PASS
+LTIM,LTIMindtree Ltd,13,PASS
+M&M,Mahindra & Mahindra Ltd,13,PASS
+MARUTI,Maruti Suzuki India Ltd,13,PASS
+MOTHERSON,Samvardhana Motherson International Ltd,13,PASS
+NAUKRI,Info Edge (India) Ltd,13,PASS
+NESTLEIND,Nestle India Ltd,13,PASS
+NHPC,NHPC Ltd,13,PASS
+NTPC,NTPC Ltd,13,PASS
+ONGC,Oil & Natural Gas Corpn Ltd,13,PASS
+PFC,Power Finance Corporation Ltd,13,PASS
+PIDILITIND,Pidilite Industries Ltd,13,PASS
+PNB,Punjab National Bank,13,PASS
+POWERGRID,Power Grid Corporation of India Ltd,13,PASS
+RECLTD,REC Ltd,13,PASS
+RELIANCE,Reliance Industries Ltd,13,PASS
+SBILIFE,SBI Life Insurance Company Ltd,13,PASS
+SBIN,State Bank of India,13,PASS
+SHREECEM,Shree Cement Ltd,13,PASS
+SHRIRAMFIN,Shriram Finance Ltd,13,PASS
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,13,PASS
+TATACONSUM,Tata Consumer Products Ltd,13,PASS
+TATAMOTORS,Tata Motors Ltd,13,PASS
+TATAPOWER,Tata Power Company Ltd,13,PASS
+TATASTEEL,Tata Steel Ltd,13,PASS
+TCS,Tata Consultancy Services Ltd,13,PASS
+TECHM,Tech Mahindra Ltd,13,PASS
+TITAN,Titan Company Ltd,13,PASS
+TORNTPHARM,Torrent Pharmaceuticals Ltd,13,PASS
+TRENT,Trent Ltd,13,PASS
+TVSMOTOR,TVS Motor Company Ltd,13,PASS

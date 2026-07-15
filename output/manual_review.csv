@@ -1,0 +1,6 @@
+company_id,company_name,profitandloss_rows,balancesheet_rows,cashflow_rows,stock_price_rows,review_status
+ADANIGREEN,Adani Green Energy Ltd,9,9,15,60,PASS
+BAJFINANCE,Bajaj Finance Ltd,11,11,10,60,PASS
+EICHERMOT,Eicher Motors Ltd,13,13,12,60,PASS
+HAL,Hindustan Aeronautics Ltd,13,10,8,60,PASS
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,13,13,12,60,PASS
