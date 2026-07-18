@@ -23,6 +23,9 @@ class ScreenerEngine:
     def connect_db(self):
         return sqlite3.connect(DATABASE_FILE)
 
+    def close(self):
+        self.conn.close()
+
     # -------------------------------------------------
     # Load Config
     # -------------------------------------------------
@@ -133,6 +136,8 @@ class ScreenerEngine:
     # -------------------------------------------------
     def apply_filters(self, df):
 
+        df = df.copy()
+
         config = self.load_config()
         filters = config["filters"]
 
@@ -142,13 +147,35 @@ class ScreenerEngine:
 
         # Debt to Equity
         if filters.get("debt_to_equity_max") is not None:
+            df["debt_to_equity"] = (
+                df["debt_to_equity"]
+                .replace({"Debt Free": 0})
+            )
+
             df["debt_to_equity"] = pd.to_numeric(
                 df["debt_to_equity"],
                 errors="coerce"
             )
 
+            sector_column = None
+            for candidate in ["broad_sector", "sector_name", "sector", "industry"]:
+                if candidate in df.columns:
+                    sector_column = candidate
+                    break
+
+            if sector_column is not None:
+                financial = (
+                    df[sector_column]
+                    .astype(str)
+                    .str.strip()
+                    .str.lower() == "financials"
+                )
+            else:
+                financial = pd.Series(False, index=df.index)
+
             df = df[
-                df["debt_to_equity"] <= filters["debt_to_equity_max"]
+                financial |
+                (df["debt_to_equity"] <= filters["debt_to_equity_max"])
             ]
 
         # Free Cash Flow
@@ -181,6 +208,10 @@ class ScreenerEngine:
 
         # Interest Coverage
         if filters.get("interest_coverage_min") is not None:
+            df["interest_coverage"] = (
+                df["interest_coverage"]
+                .replace({"Debt Free": 999999})
+            )
 
             df["interest_coverage"] = pd.to_numeric(
                 df["interest_coverage"],
@@ -210,9 +241,11 @@ class ScreenerEngine:
         # Quality Score
         # -------------------------------------------------
         df["quality_score"] = (
-            df["return_on_equity_pct"].fillna(0) * 0.40
-            + df["operating_profit_margin_pct"].fillna(0) * 0.30
-            + df["asset_turnover"].fillna(0) * 0.30
+            df["return_on_equity_pct"].fillna(0) * 0.30
+            + df["operating_profit_margin_pct"].fillna(0) * 0.25
+            + df["asset_turnover"].fillna(0) * 0.15
+            + df["interest_coverage"].fillna(0) * 0.15
+            + df["free_cash_flow_cr"].clip(lower=0).fillna(0) * 0.15
         )
 
         # -------------------------------------------------
@@ -223,6 +256,8 @@ class ScreenerEngine:
             by="quality_score",
             ascending=False
         )
+
+        df = df.reset_index(drop=True)
 
         # -------------------------------------------------
         # Ranking
@@ -253,6 +288,24 @@ class ScreenerEngine:
 
         print("\nFiltered Shape :", df.shape)
 
+        print("\n" + "=" * 60)
+        print("VALIDATION")
+        print("=" * 60)
+
+        print("Rows After Filtering :", len(df))
+        print("Unique Companies     :", df["company_id"].nunique())
+
+        output_dir = BASE_DIR / "output"
+        output_dir.mkdir(exist_ok=True)
+
+        df.to_csv(
+            output_dir / "screened_stocks.csv",
+            index=False
+        )
+
+        print("\nCSV Saved Successfully!")
+        print(output_dir / "screened_stocks.csv")
+
         return df
 
 
@@ -266,3 +319,5 @@ if __name__ == "__main__":
     merged_df = engine.merge_data()
 
     filtered_df = engine.apply_filters(merged_df)
+
+    engine.close()
