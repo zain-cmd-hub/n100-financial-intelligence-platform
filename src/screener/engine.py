@@ -2,6 +2,11 @@ from pathlib import Path
 import sqlite3
 import pandas as pd
 import yaml
+try:
+    from src.screener.presets import PRESETS
+except ImportError:
+    from presets import PRESETS
+
 
 # -------------------------------------------------
 # Paths
@@ -122,10 +127,20 @@ class ScreenerEngine:
             suffixes=("", "_company")
         )
 
+        # Keep only latest financial year for each company
+        df = (
+            df.sort_values(["company_id", "year"])
+              .drop_duplicates(
+                  subset="company_id",
+                  keep="last"
+              )
+              .reset_index(drop=True)
+        )
+
         print("=" * 60)
         print("MERGED DATA")
         print("=" * 60)
-        print(df.head())
+        print(f"Merged Records : {len(df)}")
 
         print("\nShape :", df.shape)
 
@@ -134,12 +149,21 @@ class ScreenerEngine:
     # -------------------------------------------------
     # Apply Filters
     # -------------------------------------------------
-    def apply_filters(self, df):
+    def apply_filters(self, df, filters=None, preset_name="custom"):
 
         df = df.copy()
 
-        config = self.load_config()
-        filters = config["filters"]
+        if filters is None:
+            config = self.load_config()
+            filters = config["filters"]
+
+        def normalize(series):
+            series = series.fillna(0)
+
+            if series.max() == series.min():
+                return series
+
+            return (series - series.min()) / (series.max() - series.min())
 
         # ROE
         if filters.get("roe_min") is not None:
@@ -240,13 +264,21 @@ class ScreenerEngine:
         # -------------------------------------------------
         # Quality Score
         # -------------------------------------------------
+        roe = normalize(df["return_on_equity_pct"])
+        opm = normalize(df["operating_profit_margin_pct"])
+        at = normalize(df["asset_turnover"])
+        ic = normalize(df["interest_coverage"])
+        fcf = normalize(df["free_cash_flow_cr"].clip(lower=0))
+
         df["quality_score"] = (
-            df["return_on_equity_pct"].fillna(0) * 0.30
-            + df["operating_profit_margin_pct"].fillna(0) * 0.25
-            + df["asset_turnover"].fillna(0) * 0.15
-            + df["interest_coverage"].fillna(0) * 0.15
-            + df["free_cash_flow_cr"].clip(lower=0).fillna(0) * 0.15
-        )
+            roe * 0.30 +
+            opm * 0.25 +
+            at * 0.15 +
+            ic * 0.15 +
+            fcf * 0.15
+        ) * 100
+        
+        
 
         # -------------------------------------------------
         # Sort by Quality Score
@@ -269,7 +301,8 @@ class ScreenerEngine:
         # Display Top Stocks
         # -------------------------------------------------
         print("\n" + "=" * 60)
-        print("TOP SCREENED STOCKS")
+        print(f"Preset : {preset_name.title()}")
+        print(f"Companies Found : {len(df)}")
         print("=" * 60)
 
         print(
@@ -292,21 +325,53 @@ class ScreenerEngine:
         print("VALIDATION")
         print("=" * 60)
 
+        print("Latest Year          :", df["year"].max())
+        print("CSV Rows             :", len(df))
         print("Rows After Filtering :", len(df))
         print("Unique Companies     :", df["company_id"].nunique())
 
         output_dir = BASE_DIR / "output"
         output_dir.mkdir(exist_ok=True)
 
+        file_name = f"{preset_name}_screener.csv"
+
         df.to_csv(
-            output_dir / "screened_stocks.csv",
+            output_dir / file_name,
             index=False
         )
 
         print("\nCSV Saved Successfully!")
-        print(output_dir / "screened_stocks.csv")
+        print(output_dir / file_name)
 
         return df
+
+    # -------------------------------------------------
+    # Run Preset Screener
+    # -------------------------------------------------
+    def run_preset(self, preset_name):
+
+        preset_name = preset_name.lower()
+
+        if preset_name not in PRESETS:
+            print("\nInvalid Preset!")
+            print("Available Presets:")
+            for p in PRESETS:
+                print("-", p)
+            return None
+
+        print("\n" + "=" * 60)
+        print(f"RUNNING {preset_name.upper()} SCREENER")
+        print("=" * 60)
+
+        df = self.merge_data()
+
+        result = self.apply_filters(
+            df=df,
+            filters=PRESETS[preset_name],
+            preset_name=preset_name
+        )
+
+        return result
 
 
 # -------------------------------------------------
@@ -316,8 +381,19 @@ if __name__ == "__main__":
 
     engine = ScreenerEngine()
 
-    merged_df = engine.merge_data()
+    print("=" * 60)
+    print("AVAILABLE PRESETS")
+    print("=" * 60)
 
-    filtered_df = engine.apply_filters(merged_df)
+    for preset in PRESETS.keys():
+        print("-", preset)
+
+    preset = input("\nEnter Preset : ").strip().lower()
+
+    filtered_df = engine.run_preset(preset)
+
+    if filtered_df is None:
+        engine.close()
+        exit()
 
     engine.close()
