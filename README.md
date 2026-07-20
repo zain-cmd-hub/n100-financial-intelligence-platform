@@ -1,30 +1,55 @@
-# Nifty100 Stock Screener
+# Nifty100 Financial Intelligence Platform (Data Analytics Internship Project)
 
-The Nifty100 Stock Screener is a production-grade algorithmic pipeline that evaluates companies within the Nifty100 index based on complex financial factors. It performs data extraction, validation, integration, composite scoring, and ranked filtering across multiple presets (Growth, Value, Quality, Dividend).
+> **Internship Details**
+> - **Company:** Bluestock Fintech
+> - **Role:** Data Analyst Intern
+> - **Team Group:** 340FMBF
+> - **Project Scope:** End-to-End Data Pipeline, ETL, Financial Analysis & Algorithmic Stock Screening
 
-## Architecture
+---
 
-1. **Database Module (`db/`):** Contains raw SQLite financial data (`nifty100.db`).
-2. **ETL Module (`src/etl/`):** Scripts to load and validate CSVs into the SQLite database.
-3. **Screener Engine (`src/screener/engine.py`):** The core pipeline that connects to the database, extracts historical metrics, resolves duplication, merges tables using strict (`1:1` / `m:1`) cardinality, and filters stocks.
-4. **Scoring Engine (`src/screener/scoring.py`):** Calculates normalized composite scores using a dynamic weighting system and vectorized CAGR computations over multi-year periods.
+## Project Overview
 
-## Pipeline Flow
+This project was developed from the ground up during my internship at **Bluestock Fintech** to solve complex financial data evaluation challenges. It is a production-grade algorithmic pipeline that extracts raw financial data, validates and integrates it, and applies dynamic mathematical models to evaluate and screen companies within the Nifty100 index.
 
-1. **Data Load:** `ScreenerEngine` opens a managed connection to `nifty100.db`.
-2. **Sanitization:** Cleans duplicate entries across composite keys `(company_id, year)` to prevent cartesian explosion during joins.
-3. **Merge Strategy:** Data is left-joined sequentially (`financial_ratios` → `market_cap` → `profit_loss` → `cash_flow` → `balance_sheet` → `sectors`).
-4. **Scoring:** Missing data is handled via robust pandas operations. Outliers are normalized using Winsorization (P10/P90 capping). Advanced metrics like `CFO/PAT` and multi-year `Revenue/PAT/FCF CAGR` are computed efficiently via vectorized numpy structures.
-5. **Ranking & Filtering:** Predefined filters (e.g. `pe_max`, `roe_min`) are applied via YAML config. Output is ranked by `composite_score` and exported as a CSV.
+The screener is capable of classifying stocks across multiple pre-defined strategies: **Growth, Value, Quality, and Dividend**.
 
-## Composite Score Formula
+## Key Contributions & Technical Implementations
 
-The Composite Score (0–100) is calculated using normalized values on a configurable weighted scale:
+As a Data Analyst, my core responsibilities for this pipeline included:
+
+1. **ETL (Extract, Transform, Load):** 
+   - Engineered data ingestion scripts to securely load disparate financial CSVs (Balance sheets, P&L, Cash Flow) into a centralized SQLite schema.
+   - Designed data validation protocols (`validator.py`) to prevent corrupt or incomplete data from polluting the database.
+2. **Data Cleansing & Joining:** 
+   - Resolved highly complex many-to-many (`m:m`) cartesian product issues during Pandas dataframe merges by implementing strict composite-key `(company_id, year)` aggregations and `1:1` cardinality validations.
+3. **Financial Algorithm Design (Vectorization):**
+   - Transformed inefficient iterative loops into highly performant, vectorized NumPy operations to calculate multi-year Compound Annual Growth Rates (CAGR) for Revenue, PAT, and Free Cash Flow.
+   - Implemented P10/P90 Winsorization techniques to normalize severe financial outliers (mitigating statistical skewing).
+4. **Production Readiness:** 
+   - Configured robust Python `logging`, removed memory leaks using Python Context Managers, and structured the codebase to adhere to PEP-8 standards with comprehensive type hinting and Sphinx/Google docstrings.
+
+---
+
+## System Architecture
+
+1. **Database Module (`db/`):** Contains the normalized SQLite financial data (`nifty100.db`).
+2. **ETL Module (`src/etl/`):** Automated scripts and sanitization logic to bridge raw CSVs into the SQLite database.
+3. **Screener Engine (`src/screener/engine.py`):** The operational core. It executes the database extraction, structural formatting, duplicate resolution, and left-joins sequential tables into a unified master dataset.
+4. **Scoring Engine (`src/screener/scoring.py`):** The intelligence layer. It calculates complex metrics, normalizes them, and assigns dynamic weighted scores for final filtering and ranking.
+
+---
+
+## Composite Score Methodology
+
+The engine calculates a definitive Composite Score (0–100) using normalized values on a strict weighted scale tailored for institutional-grade screening:
 
 - **Profitability (35%):** ROE (15%), ROCE (10%), Net Profit Margin (10%)
-- **Cash Quality (30%):** FCF CAGR (15%), CFO/PAT (10%), Positive FCF streak (5%)
-- **Growth (20%):** Revenue CAGR (10%), PAT CAGR (10%)
-- **Leverage (15%):** Debt-to-Equity inverted (10%), Interest Coverage Ratio (5%)
+- **Cash Quality (30%):** Free Cash Flow CAGR (15%), CFO/PAT Ratio (10%), Positive FCF Streak (5%)
+- **Growth (20%):** Revenue CAGR (10%), Profit After Tax (PAT) CAGR (10%)
+- **Leverage (15%):** Debt-to-Equity (Inverted) (10%), Interest Coverage Ratio (5%)
+
+---
 
 ## Installation & Setup
 
@@ -43,14 +68,14 @@ The Composite Score (0–100) is calculated using normalized values on a configu
 
 ## Usage
 
-### 1. Interactive CLI
-Run the screener interactively to choose a preset (`growth`, `value`, `quality`, `dividend`). The resulting file will be saved in `output/`.
+### 1. Interactive CLI Screener
+Run the screener interactively to evaluate the Nifty100 universe against a specific strategy (`growth`, `value`, `quality`, `dividend`). The filtered, ranked dataset will be exported to the `output/` directory as a CSV.
 ```bash
 python -m src.screener.engine
 ```
 
-### 2. Run Tests
-Validate the system logic using the test suite.
+### 2. Run Automated Testing Suite
+Validate the system logic, merge cardinality, and vectorized math algorithms using the test suite.
 ```bash
 python tests/test_screener.py
 ```
