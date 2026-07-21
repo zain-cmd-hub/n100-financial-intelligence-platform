@@ -128,6 +128,10 @@ class CompositeScorer:
         """Calculate Free Cash Flow CAGR for each company."""
         return self._calculate_company_cagr("free_cash_flow_cr")
 
+    def calculate_eps_cagr(self) -> pd.Series:
+        """Calculate EPS (Earnings Per Share) CAGR for each company."""
+        return self._calculate_company_cagr("earnings_per_share")
+
     def calculate_cfo_pat_ratio(self) -> pd.Series:
         """
         Calculate CFO to PAT ratio.
@@ -164,6 +168,7 @@ class CompositeScorer:
             df["pat_cagr"] = self.calculate_pat_cagr()
             df["free_cash_flow_cagr"] = self.calculate_fcf_cagr()
             df["cfo_pat_ratio"] = self.calculate_cfo_pat_ratio()
+            df["eps_cagr"] = self.calculate_eps_cagr()
 
             # Profitability (35%)
             roe = self.normalize(df.get("return_on_equity_pct", pd.Series(0, index=df.index)))
