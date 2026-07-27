@@ -81,6 +81,13 @@ def get_peers(group_name):
     return df
 
 @st.cache_data(ttl=600)
+def get_peer_group_names():
+    conn = get_connection()
+    df = pd.read_sql("SELECT DISTINCT peer_group_name FROM peer_groups", conn)
+    conn.close()
+    return df['peer_group_name'].tolist()
+
+@st.cache_data(ttl=600)
 def get_valuation(ticker):
     # SAFE STUB for Day 22. Actual logic will be implemented in Day 26.
     return pd.DataFrame()
@@ -97,5 +104,20 @@ def get_composite_scores():
             # return only latest year
             scored_df = scored_df.sort_values(["company_id", "year"]).drop_duplicates(subset=["company_id"], keep="last")
             return scored_df[["company_id", "company_name_company", "sector_name", "composite_score"]].sort_values("composite_score", ascending=False)
+    except Exception as e:
+        return pd.DataFrame()
+
+@st.cache_data(ttl=600)
+def get_screener_data():
+    try:
+        with ScreenerEngine() as engine:
+            df = engine.merge_data()
+            if df.empty:
+                return pd.DataFrame()
+            scorer = CompositeScorer(df)
+            scored_df = scorer.calculate_score()
+            # return only latest year for the screener
+            scored_df = scored_df.sort_values(["company_id", "year"]).drop_duplicates(subset=["company_id"], keep="last")
+            return scored_df
     except Exception as e:
         return pd.DataFrame()
