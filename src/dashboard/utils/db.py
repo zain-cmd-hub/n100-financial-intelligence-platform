@@ -39,6 +39,54 @@ def get_pl(ticker):
     return df
 
 @st.cache_data(ttl=600)
+def get_ratios(ticker):
+    conn = get_connection()
+    df = pd.read_sql(f"SELECT * FROM financial_ratios WHERE company_id = '{ticker}'", conn)
+    conn.close()
+    return df
+
+@st.cache_data(ttl=600)
+def get_full_trends_data(ticker):
+    pl = get_pl(ticker)
+    ratios = get_ratios(ticker)
+    
+    if pl.empty and ratios.empty:
+        return pd.DataFrame()
+        
+    if not pl.empty:
+        pl['year'] = pl['year'].astype(str)
+    if not ratios.empty:
+        ratios['year'] = ratios['year'].astype(str)
+        
+    if not pl.empty and not ratios.empty:
+        merged = pl.merge(ratios, on=['company_id', 'year'], how='outer')
+    elif not pl.empty:
+        merged = pl
+    else:
+        merged = ratios
+        
+    # Standardize columns we care about
+    metrics = {
+        'sales': 'Revenue',
+        'net_profit': 'Net Profit',
+        'eps': 'EPS',
+        'free_cash_flow_cr': 'Free Cash Flow',
+        'operating_profit': 'Operating Profit',
+        'return_on_equity_pct': 'ROE (%)'
+    }
+    
+    for c in metrics.keys():
+        if c not in merged.columns:
+            merged[c] = None
+        else:
+            # Handle "Debt Free" or weird strings
+            merged[c] = pd.to_numeric(merged[c].replace("Debt Free", 0), errors='coerce')
+            
+    merged = merged.rename(columns=metrics)
+    merged = merged.sort_values('year')
+    return merged[['year'] + list(metrics.values())]
+
+@st.cache_data(ttl=600)
 def get_bs(ticker):
     conn = get_connection()
     df = pd.read_sql(f"SELECT * FROM balancesheet WHERE company_id = '{ticker}'", conn)
@@ -88,9 +136,15 @@ def get_peer_group_names():
     return df['peer_group_name'].tolist()
 
 @st.cache_data(ttl=600)
-def get_valuation(ticker):
-    # SAFE STUB for Day 22. Actual logic will be implemented in Day 26.
-    return pd.DataFrame()
+def get_valuation(ticker=None):
+    try:
+        val_path = Path(__file__).resolve().parents[3] / 'output' / 'valuation_summary.xlsx'
+        df = pd.read_excel(val_path)
+        if ticker:
+            return df[df['company_id'] == ticker]
+        return df
+    except Exception as e:
+        return pd.DataFrame()
 
 @st.cache_data(ttl=600)
 def get_composite_scores():
@@ -121,3 +175,11 @@ def get_screener_data():
             return scored_df
     except Exception as e:
         return pd.DataFrame()
+
+@st.cache_data(ttl=600)
+def get_documents(ticker):
+    conn = get_connection()
+    df = pd.read_sql(f"SELECT * FROM documents WHERE company_id = '{ticker}'", conn)
+    conn.close()
+    return df
+
