@@ -1,81 +1,73 @@
-# Nifty100 Financial Intelligence Platform (Data Analytics Internship Project)
+# Nifty 100 Financial Intelligence Platform
 
-> **Internship Details**
-> - **Company:** Bluestock Fintech
-> - **Role:** Data Analyst Intern
-> - **Team Group:** 340FMBF
-> - **Project Scope:** End-to-End Data Pipeline, ETL, Financial Analysis & Algorithmic Stock Screening
+A full-stack, 8-screen Streamlit Dashboard providing deep financial analytics and valuation metrics for the Nifty 100 ecosystem.
 
----
+## 🚀 How to Run the Dashboard
 
-## Project Overview
-
-This project was developed from the ground up during my internship at **Bluestock Fintech** to solve complex financial data evaluation challenges. It is a production-grade algorithmic pipeline that extracts raw financial data, validates and integrates it, and applies dynamic mathematical models to evaluate and screen companies within the Nifty100 index.
-
-The screener is capable of classifying stocks across multiple pre-defined strategies: **Growth, Value, Quality, and Dividend**.
-
-## Key Contributions & Technical Implementations
-
-As a Data Analyst, my core responsibilities for this pipeline included:
-
-1. **ETL (Extract, Transform, Load):** 
-   - Engineered data ingestion scripts to securely load disparate financial CSVs (Balance sheets, P&L, Cash Flow) into a centralized SQLite schema.
-   - Designed data validation protocols (`validator.py`) to prevent corrupt or incomplete data from polluting the database.
-2. **Data Cleansing & Joining:** 
-   - Resolved highly complex many-to-many (`m:m`) cartesian product issues during Pandas dataframe merges by implementing strict composite-key `(company_id, year)` aggregations and `1:1` cardinality validations.
-3. **Financial Algorithm Design (Vectorization):**
-   - Transformed inefficient iterative loops into highly performant, vectorized NumPy operations to calculate multi-year Compound Annual Growth Rates (CAGR) for Revenue, PAT, and Free Cash Flow.
-   - Implemented P10/P90 Winsorization techniques to normalize severe financial outliers (mitigating statistical skewing).
-4. **Production Readiness:** 
-   - Configured robust Python `logging`, removed memory leaks using Python Context Managers, and structured the codebase to adhere to PEP-8 standards with comprehensive type hinting and Sphinx/Google docstrings.
-
----
-
-## System Architecture
-
-1. **Database Module (`db/`):** Contains the normalized SQLite financial data (`nifty100.db`).
-2. **ETL Module (`src/etl/`):** Automated scripts and sanitization logic to bridge raw CSVs into the SQLite database.
-3. **Screener Engine (`src/screener/engine.py`):** The operational core. It executes the database extraction, structural formatting, duplicate resolution, and left-joins sequential tables into a unified master dataset.
-4. **Scoring Engine (`src/screener/scoring.py`):** The intelligence layer. It calculates complex metrics, normalizes them, and assigns dynamic weighted scores for final filtering and ranking.
-
----
-
-## Composite Score Methodology
-
-The engine calculates a definitive Composite Score (0–100) using normalized values on a strict weighted scale tailored for institutional-grade screening:
-
-- **Profitability (35%):** ROE (15%), ROCE (10%), Net Profit Margin (10%)
-- **Cash Quality (30%):** Free Cash Flow CAGR (15%), CFO/PAT Ratio (10%), Positive FCF Streak (5%)
-- **Growth (20%):** Revenue CAGR (10%), Profit After Tax (PAT) CAGR (10%)
-- **Leverage (15%):** Debt-to-Equity (Inverted) (10%), Interest Coverage Ratio (5%)
-
----
-
-## Installation & Setup
-
-1. **Clone the Repository:**
+1. **Activate the Virtual Environment:**
    ```bash
-   git clone https://github.com/bluestock/nifty100-platform.git
-   cd nifty100-platform
+   .venv\Scripts\activate
    ```
-
-2. **Setup Virtual Environment:**
+2. **Launch Streamlit:**
    ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # Or `.venv\Scripts\activate` on Windows
-   pip install -r requirements.txt
+   streamlit run src/dashboard/app.py
    ```
+3. The dashboard will automatically open in your browser at `http://localhost:8501`.
 
-## Usage
+---
 
-### 1. Interactive CLI Screener
-Run the screener interactively to evaluate the Nifty100 universe against a specific strategy (`growth`, `value`, `quality`, `dividend`). The filtered, ranked dataset will be exported to the `output/` directory as a CSV.
-```bash
-python -m src.screener.engine
-```
+## 🖥️ Screen Breakdown (Sprint 4)
 
-### 2. Run Automated Testing Suite
-Validate the system logic, merge cardinality, and vectorized math algorithms using the test suite.
-```bash
-python tests/test_screener.py
-```
+### 1. Home Dashboard (`01_home.py`)
+- High-level KPIs (Average ROE, Median P/E, Total Companies, etc.).
+- A Plotly Donut chart displaying the breakdown of Nifty 100 companies by Sector.
+- Top-5 Quality Companies leaderboard based on the proprietary Composite Score.
+
+### 2. Company Profile (`02_profile.py`)
+- Instant Text-search dropdown for any company or ticker.
+- Rapid (< 3s) load time with `@st.cache_data`.
+- 10-year Bar (Revenue/PAT) and dual-axis Line charts (ROE/ROCE).
+- Automated Pros & Cons badges based on algorithmic thresholds.
+
+### 3. Advanced Screener (`03_screener.py`)
+- 10 interactive metric sliders to filter the universe.
+- **6 Preset Modes:** Quality, Value, Growth, Dividend, Debt-Free, and Turnaround. Clicking these instantly configures all 10 sliders.
+- Real-time CSV Export capability.
+
+### 4. Peer Comparison (`04_peers.py`)
+- Compare companies within 11 distinct Peer Groups.
+- Multi-dimensional Radar Chart (using `plotly.graph_objects.Scatterpolar`) analyzing 8 core metrics.
+- Side-by-side KPI table with the Sector Benchmark highlighted.
+
+### 5. Trend Analysis (`05_trends.py`)
+- Overlay up to 3 custom metrics (Revenue, Net Profit, EPS, FCF) on a 10-year timeline.
+- Dynamic YoY % change annotations directly calculated and plotted on each data point.
+
+### 6. Sector Deep-Dive (`06_sectors.py`)
+- Macro Plotly Bubble Chart (X=Revenue, Y=ROE, Size=Market Cap, Color=Sub-Sector).
+- Sub-sector median KPI breakdown via a grouped bar chart.
+
+### 7. Capital Allocation Map (`07_capital.py`)
+- 92 companies algorithmically categorized into 8 Heuristic Capital Patterns (e.g., *Dividend Kings*, *Asset-Light Compounders*).
+- Interactive Plotly Treemap sized by Market Cap for deep drill-down analytics.
+
+### 8. Annual Reports Archive (`08_reports.py`)
+- Direct links to BSE PDF Annual Reports (2019 - 2024).
+- Built-in live URL verifier (using Python `requests`): Alerts the user with a red `[Report Unavailable]` badge if the BSE server returns a 404 error.
+
+---
+
+## 🔍 Valuation Engine (`src/analytics/valuation.py`)
+A standalone analytics engine processing market cap and financial data to flag companies as Overvalued or Undervalued.
+
+**Outputs generated:**
+- `output/valuation_summary.xlsx` (Full set of 92 companies with FCF Yield and Sector Medians)
+- `output/valuation_flags.csv` (Filtered list of companies marked **Caution** or **Discount**)
+
+---
+
+## 📘 Sprint 4 Retrospective
+
+- **UX Decisions:** Implemented Streamlit's `st.session_state` heavily in the Screener screen to ensure the 6 Preset buttons could programmatically override the 10 manual sliders without causing race conditions.
+- **Data Edge Cases:** Many tables contained the string `"Debt Free"` within numeric columns (like `debt_to_equity`). We successfully integrated `pd.to_numeric(df[col].replace("Debt Free", 0), errors='coerce')` globally to prevent mathematical crashes. Missing metrics (`NaN`) are safely cast to `"N/A"` in the UI.
+- **Performance Findings:** By globally wrapping our SQLite reads in `@st.cache_data(ttl=600)`, we reduced individual screen load times from ~4.5s down to <0.3s on consecutive loads.

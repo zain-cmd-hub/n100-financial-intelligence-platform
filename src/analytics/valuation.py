@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 # Add project root to path so we can import modules
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from src.dashboard.utils.db import get_screener_data
+from src.dashboard.utils.db import get_screener_data, get_companies
 
 def generate_valuation_output():
     """Generate valuation flags and output files based on market cap and FCF."""
@@ -22,8 +22,24 @@ def generate_valuation_output():
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # 1. Load Data
-    df = get_screener_data()
-    if df.empty:
+    all_companies = get_companies()
+    df_raw = get_screener_data()
+    
+    if all_companies.empty:
+        logger.error("Failed to load companies data.")
+        return
+        
+    # Merge to ensure we have exactly all companies
+    if not df_raw.empty:
+        df = all_companies.merge(df_raw, left_on='id', right_on='company_id', how='left', suffixes=('_comp', '_raw'))
+        df['company_id'] = df['id_comp'] if 'id_comp' in df.columns else df['id']
+        df['company_name_final'] = df['company_name_comp'] if 'company_name_comp' in df.columns else df['company_name']
+        df['broad_sector_final'] = df['broad_sector'].fillna('Unknown') if 'broad_sector' in df.columns else 'Unknown'
+    else:
+        df = all_companies.copy()
+        df['company_id'] = df['id']
+        df['company_name_final'] = df['company_name']
+        df['broad_sector_final'] = 'Unknown'
         logger.error("Failed to load screener data. Ensure database exists and is populated.")
         return
 
@@ -38,10 +54,10 @@ def generate_valuation_output():
     df['FCF_yield_pct'] = (df['free_cash_flow_cr'] / df['market_cap_crore']) * 100
 
     # 3. Compute Sector Median P/E
-    sector_medians = df.groupby('broad_sector')['pe_ratio'].median().reset_index()
+    sector_medians = df.groupby('broad_sector_final')['pe_ratio'].median().reset_index()
     sector_medians = sector_medians.rename(columns={'pe_ratio': 'sector_median_PE'})
     
-    df = df.merge(sector_medians, on='broad_sector', how='left')
+    df = df.merge(sector_medians, on='broad_sector_final', how='left')
 
     # 4. Apply Overvaluation Flags
     def assign_flag(row):
@@ -71,7 +87,7 @@ def generate_valuation_output():
 
     # Prepare final output DataFrame
     output_cols = [
-        'company_id', 'company_name_company', 'broad_sector', 'pe_ratio', 'pb_ratio', 
+        'company_id', 'company_name_final', 'broad_sector_final', 'pe_ratio', 'pb_ratio', 
         'ev_ebitda', 'FCF_yield_pct', '5yr_median_PE', 'PE_vs_sector_median_pct', 'flag'
     ]
     
@@ -84,8 +100,8 @@ def generate_valuation_output():
     
     # Rename specifically requested columns
     summary_df.rename(columns={
-        'company_name_company': 'company_name',
-        'broad_sector': 'sector',
+        'company_name_final': 'company_name',
+        'broad_sector_final': 'sector',
         'pe_ratio': 'P/E',
         'pb_ratio': 'P/B',
         'ev_ebitda': 'EV/EBITDA'
