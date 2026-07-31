@@ -1,0 +1,520 @@
+company_id,type,rule_id,text,confidence_pct
+ABB,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+ABB,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+ABB,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,84.8
+ABB,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+ABB,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,84.9
+ABB,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+ABB,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+ABB,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+ADANIENSOL,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,90.0
+ADANIENSOL,con,C1,Debt-to-equity ratio of 2.9x is elevated for a non-financial company and warrants monitoring,87.9
+ADANIENSOL,con,C3,Operating margins declining for 3 consecutive years suggest pricing or cost pressure,100.0
+ADANIENSOL,con,C9,Earnings per share declining for 3 consecutive years reflects deteriorating profitability,100.0
+ADANIENSOL,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+ADANIENSOL,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+ADANIENT,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+ADANIENT,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+ADANIENT,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+ADANIGREEN,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,100.0
+ADANIGREEN,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+ADANIGREEN,con,C1,Debt-to-equity ratio of 6.6x is elevated for a non-financial company and warrants monitoring,100.0
+ADANIGREEN,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+ADANIPORTS,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,80.2
+ADANIPORTS,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+ADANIPORTS,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,61.0
+ADANIPORTS,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+ADANIPORTS,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+ADANIPOWER,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+ADANIPOWER,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+ADANIPOWER,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,80.5
+ADANIPOWER,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+ADANIPOWER,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+ADANIPOWER,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+AMBUJACEM,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+AMBUJACEM,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+AMBUJACEM,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+APOLLOHOSP,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+APOLLOHOSP,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,63.5
+APOLLOHOSP,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+APOLLOHOSP,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+ASIANPAINT,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+ASIANPAINT,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+ASIANPAINT,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+ASIANPAINT,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+ASIANPAINT,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,61.0
+ASIANPAINT,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+ASIANPAINT,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+ASIANPAINT,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+ASIANPAINT,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+ATGL,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,87.0
+ATGL,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,100.0
+ATGL,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+ATGL,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+ATGL,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+ATGL,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+AXISBANK,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+AXISBANK,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+AXISBANK,con,C3,Operating margins declining for 3 consecutive years suggest pricing or cost pressure,100.0
+AXISBANK,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+AXISBANK,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+BAJAJ-AUTO,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+BAJAJ-AUTO,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+BAJAJ-AUTO,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+BAJAJ-AUTO,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+BAJAJ-AUTO,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+BAJAJ-AUTO,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+BAJAJFINSV,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+BAJAJFINSV,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,100.0
+BAJAJFINSV,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+BAJAJFINSV,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,63.9
+BAJAJFINSV,con,C2,Free cash flow negative for 3 consecutive years raises concern about cash generation quality,100.0
+BAJAJFINSV,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+BAJAJFINSV,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+BAJAJHLDNG,pro,P3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,100.0
+BAJAJHLDNG,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,63.4
+BAJAJHLDNG,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+BAJAJHLDNG,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+BAJAJHLDNG,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+BAJAJHLDNG,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+BAJAJHLDNG,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+BAJAJHLDNG,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+BAJFINANCE,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,100.0
+BAJFINANCE,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+BAJFINANCE,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,100.0
+BAJFINANCE,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+BAJFINANCE,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+BAJFINANCE,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+BAJFINANCE,con,C2,Free cash flow negative for 3 consecutive years raises concern about cash generation quality,100.0
+BAJFINANCE,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+BANKBARODA,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+BANKBARODA,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+BANKBARODA,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+BANKBARODA,con,C3,Operating margins declining for 3 consecutive years suggest pricing or cost pressure,100.0
+BANKBARODA,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+BANKBARODA,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+BEL,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+BEL,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+BEL,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,63.0
+BEL,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+BEL,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+BEL,con,C2,Free cash flow negative for 3 consecutive years raises concern about cash generation quality,100.0
+BHARTIARTL,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+BHARTIARTL,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+BHARTIARTL,con,C1,Debt-to-equity ratio of 2.6x is elevated for a non-financial company and warrants monitoring,78.3
+BHEL,con,C2,Free cash flow negative for 3 consecutive years raises concern about cash generation quality,100.0
+BHEL,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+BHEL,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,67.2
+BHEL,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+BHEL,con,C12,Revenue growing at below 5% over 5 years lags inflation and suggests limited business momentum,100.0
+BHEL,pro,P_FALLBACK,Stable market position within the Nifty 100 universe,100.0
+BOSCHLTD,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+BOSCHLTD,pro,P3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,100.0
+BOSCHLTD,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+BOSCHLTD,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+BOSCHLTD,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+BOSCHLTD,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+BOSCHLTD,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+BOSCHLTD,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+BPCL,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,100.0
+BPCL,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+BPCL,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+BPCL,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+BPCL,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+BRITANNIA,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+BRITANNIA,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,84.4
+BRITANNIA,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+BRITANNIA,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,83.7
+BRITANNIA,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+BRITANNIA,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+CANBK,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+CANBK,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+CANBK,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+CANBK,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+CANBK,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+CHOLAFIN,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,80.2
+CHOLAFIN,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+CHOLAFIN,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,97.9
+CHOLAFIN,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+CHOLAFIN,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,94.2
+CHOLAFIN,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+CHOLAFIN,con,C2,Free cash flow negative for 3 consecutive years raises concern about cash generation quality,100.0
+CHOLAFIN,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+CHOLAFIN,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+CIPLA,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+CIPLA,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+CIPLA,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+CIPLA,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+CIPLA,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+COALINDIA,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+COALINDIA,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+COALINDIA,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+COALINDIA,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+COALINDIA,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+COALINDIA,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+COALINDIA,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+DABUR,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+DABUR,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+DABUR,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+DABUR,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+DABUR,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+DIVISLAB,pro,P3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,100.0
+DIVISLAB,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,84.0
+DIVISLAB,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+DIVISLAB,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+DLF,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,99.0
+DLF,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+DLF,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+DLF,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+DLF,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+DLF,con,C12,Revenue growing at below 5% over 5 years lags inflation and suggests limited business momentum,100.0
+DMART,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,100.0
+DMART,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,100.0
+DMART,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+DMART,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+DMART,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+DMART,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+DRREDDY,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+DRREDDY,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,84.0
+DRREDDY,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+DRREDDY,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+DRREDDY,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+DRREDDY,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+EICHERMOT,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+EICHERMOT,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,78.0
+EICHERMOT,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,85.5
+EICHERMOT,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+EICHERMOT,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+EICHERMOT,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+EICHERMOT,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+EICHERMOT,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+EICHERMOT,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+EICHERMOT,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+GAIL,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+GAIL,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+GAIL,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+GODREJCP,con,C4,Company reported a net loss in the most recent financial year,100.0
+GODREJCP,pro,P_FALLBACK,Stable market position within the Nifty 100 universe,100.0
+GRASIM,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,61.0
+GRASIM,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+GRASIM,con,C9,Earnings per share declining for 3 consecutive years reflects deteriorating profitability,100.0
+GRASIM,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+GRASIM,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+HAL,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+HAL,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,96.0
+HAL,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+HAL,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+HAL,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,76.7
+HAL,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+HAL,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+HAVELLS,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+HAVELLS,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+HAVELLS,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+HCLTECH,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+HCLTECH,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+HCLTECH,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,62.8
+HCLTECH,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+HCLTECH,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,61.1
+HCLTECH,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+HCLTECH,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+HDFCBANK,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,82.7
+HDFCBANK,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,90.8
+HDFCBANK,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+HDFCBANK,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,70.8
+HDFCBANK,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+HDFCBANK,con,C3,Operating margins declining for 3 consecutive years suggest pricing or cost pressure,100.0
+HDFCBANK,con,C6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,61.0
+HDFCBANK,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+HDFCBANK,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+HDFCLIFE,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,78.7
+HDFCLIFE,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+HDFCLIFE,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+HDFCLIFE,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+HDFCLIFE,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+HDFCLIFE,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+HEROMOTOCO,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+HEROMOTOCO,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+HEROMOTOCO,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+HEROMOTOCO,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+HEROMOTOCO,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+HEROMOTOCO,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+HEROMOTOCO,con,C12,Revenue growing at below 5% over 5 years lags inflation and suggests limited business momentum,61.0
+HINDALCO,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+HINDALCO,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+HINDALCO,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+HINDALCO,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+HINDUNILVR,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+HINDUNILVR,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+HINDUNILVR,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+HINDUNILVR,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+HINDUNILVR,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+HINDUNILVR,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+ICICIBANK,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+ICICIBANK,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+ICICIBANK,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+ICICIBANK,con,C6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,61.0
+ICICIBANK,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+ICICIBANK,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+ICICIGI,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+ICICIGI,pro,P3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,100.0
+ICICIGI,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,63.9
+ICICIGI,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+ICICIGI,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+ICICIGI,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+ICICIGI,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,62.0
+ICICIGI,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+ICICIGI,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+ICICIGI,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+ICICIPRULI,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+ICICIPRULI,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+ICICIPRULI,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+ICICIPRULI,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+INDIGO,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,80.3
+INDIGO,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+INDIGO,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,94.8
+INDIGO,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+INDIGO,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+INDIGO,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+INDIGO,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+INDIGO,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+INDUSINDBK,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,74.5
+INDUSINDBK,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+INDUSINDBK,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,85.6
+INDUSINDBK,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,68.9
+INDUSINDBK,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+INDUSINDBK,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+INDUSINDBK,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+INDUSINDBK,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+INFY,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+INFY,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+INFY,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+INFY,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+INFY,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+IOC,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,100.0
+IOC,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+IOC,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,93.1
+IOC,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+IOC,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+IOC,con,C12,Revenue growing at below 5% over 5 years lags inflation and suggests limited business momentum,61.0
+IRCTC,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+IRCTC,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,67.0
+IRCTC,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+IRCTC,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,100.0
+IRCTC,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+IRCTC,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+IRCTC,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+IRCTC,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+IRFC,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,61.3
+IRFC,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+IRFC,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,100.0
+IRFC,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+IRFC,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+IRFC,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+IRFC,con,C6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,61.0
+IRFC,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+IRFC,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+ITC,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+ITC,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+ITC,pro,P3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,100.0
+ITC,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+ITC,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+ITC,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+ITC,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+ITC,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+JINDALSTEL,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+JINDALSTEL,pro,P_FALLBACK,Stable market position within the Nifty 100 universe,100.0
+JIOFIN,pro,P3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,100.0
+JIOFIN,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,100.0
+JIOFIN,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+JIOFIN,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,100.0
+JIOFIN,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+JIOFIN,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+JIOFIN,con,C3,Operating margins declining for 3 consecutive years suggest pricing or cost pressure,100.0
+JIOFIN,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,78.4
+JSWENERGY,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+JSWENERGY,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+JSWENERGY,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+JSWENERGY,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+JSWENERGY,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+JSWENERGY,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+JSWENERGY,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+JSWENERGY,con,C12,Revenue growing at below 5% over 5 years lags inflation and suggests limited business momentum,61.0
+JSWSTEEL,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,91.6
+JSWSTEEL,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,88.4
+JSWSTEEL,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+JSWSTEEL,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+KOTAKBANK,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,64.6
+KOTAKBANK,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,84.0
+KOTAKBANK,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,71.7
+KOTAKBANK,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+KOTAKBANK,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+KOTAKBANK,con,C3,Operating margins declining for 3 consecutive years suggest pricing or cost pressure,100.0
+KOTAKBANK,con,C6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,61.0
+KOTAKBANK,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+KOTAKBANK,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+LICI,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+LICI,pro,P3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,100.0
+LICI,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,100.0
+LICI,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+LICI,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+LICI,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100.0
+LICI,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+LICI,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+LODHA,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,61.0
+LODHA,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,78.0
+LODHA,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+LODHA,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+LT,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+LT,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+LT,con,C3,Operating margins declining for 3 consecutive years suggest pricing or cost pressure,100.0
+LT,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+LTIM,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+LTIM,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+LTIM,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,89.5
+LTIM,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,84.1
+LTIM,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+LTIM,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+LTIM,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+M&M,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+M&M,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+MARUTI,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+MARUTI,pro,P3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,100.0
+MARUTI,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+MARUTI,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,64.9
+MARUTI,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+MARUTI,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+MARUTI,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+MOTHERSON,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+MOTHERSON,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+MOTHERSON,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+MOTHERSON,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+MOTHERSON,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+NAUKRI,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,66.1
+NAUKRI,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,84.0
+NAUKRI,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,82.3
+NAUKRI,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+NAUKRI,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,67.1
+NAUKRI,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+NAUKRI,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,63.5
+NESTLEIND,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+NESTLEIND,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+NESTLEIND,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+NESTLEIND,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+NESTLEIND,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+NESTLEIND,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+NHPC,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+NHPC,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+NHPC,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+NHPC,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+NHPC,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+NHPC,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+NHPC,con,C12,Revenue growing at below 5% over 5 years lags inflation and suggests limited business momentum,61.0
+NTPC,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,87.0
+NTPC,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+ONGC,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+ONGC,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+ONGC,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+PFC,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+PFC,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,65.4
+PFC,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+PFC,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+PFC,con,C6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,92.0
+PFC,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+PFC,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+PIDILITIND,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+PIDILITIND,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+PIDILITIND,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+PIDILITIND,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+PNB,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+PNB,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,83.7
+POWERGRID,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+POWERGRID,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+POWERGRID,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+POWERGRID,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+POWERGRID,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+RECLTD,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,100.0
+RECLTD,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+RECLTD,con,C2,Free cash flow negative for 3 consecutive years raises concern about cash generation quality,100.0
+RECLTD,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+RELIANCE,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+RELIANCE,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+RELIANCE,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+RELIANCE,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+SBILIFE,pro,P3,Debt-free balance sheet provides financial flexibility and eliminates interest burden,100.0
+SBILIFE,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,87.8
+SBILIFE,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+SBILIFE,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+SHREECEM,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+SHREECEM,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+SHREECEM,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+SHRIRAMFIN,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,64.6
+SHRIRAMFIN,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,87.0
+SHRIRAMFIN,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+SHRIRAMFIN,con,C2,Free cash flow negative for 3 consecutive years raises concern about cash generation quality,100.0
+SHRIRAMFIN,con,C6,Interest coverage ratio below 1.5x indicates the company is at risk of not meeting its debt obligations,82.0
+SHRIRAMFIN,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+SIEMENS,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+SIEMENS,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+SIEMENS,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,64.6
+SIEMENS,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+SIEMENS,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+SIEMENS,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+SUNPHARMA,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,84.0
+SUNPHARMA,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+SUNPHARMA,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+SUNPHARMA,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+SUNPHARMA,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+TATACONSUM,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+TATACONSUM,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+TATACONSUM,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+TATACONSUM,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+TATACONSUM,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+TATAMOTORS,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+TATAMOTORS,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+TATAMOTORS,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+TATAMOTORS,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+TATAMOTORS,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+TATAPOWER,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,100.0
+TATAPOWER,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+TATAPOWER,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
+TATASTEEL,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+TATASTEEL,con,C4,Company reported a net loss in the most recent financial year,100.0
+TATASTEEL,con,C5,Revenue contraction over 2 consecutive years indicates demand weakness or market share loss,100.0
+TATASTEEL,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+TATASTEEL,con,C10,Return on capital employed below 10% suggests the business is not generating sufficient returns on invested capital,61.0
+TATASTEEL,con,C12,Revenue growing at below 5% over 5 years lags inflation and suggests limited business momentum,61.0
+TCS,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+TCS,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+TCS,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,81.0
+TCS,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+TCS,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+TCS,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+TECHM,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+TECHM,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,80.8
+TECHM,pro,P7,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90.0
+TECHM,con,C7,"Dividend payout ratio above 100% means the company is paying dividends from reserves, which is unsustainable",100.0
+TITAN,pro,P1,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100.0
+TITAN,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,63.4
+TITAN,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+TITAN,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,62.0
+TITAN,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+TITAN,con,C8,Rising debt-to-equity ratio over 3 years suggests increasing financial leverage risk,100.0
+TORNTPHARM,pro,P2,Strong free cash flow generation over 5 years signals healthy business fundamentals,100.0
+TORNTPHARM,pro,P5,Operating profit margin above 25% indicates strong pricing power and cost discipline,93.0
+TORNTPHARM,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+TORNTPHARM,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+TORNTPHARM,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+TORNTPHARM,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+TRENT,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,69.3
+TRENT,pro,P8,Consistent dividend yield above 2% backed by positive free cash flow,100.0
+TRENT,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+TRENT,con,C_FALLBACK,Macro-economic sensitivity and broad sector cyclicality,100.0
+TVSMOTOR,pro,P4,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,64.8
+TVSMOTOR,pro,P6,Net profit compounding at above 20% over 5 years creates significant shareholder value,88.4
+TVSMOTOR,pro,P9,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,88.4
+TVSMOTOR,pro,P10,Return on equity improving for 3 consecutive years shows strengthening business quality,100.0
+TVSMOTOR,pro,P11,Revenue growing slower than profits shows improving operating leverage and scale benefits,85.0
+TVSMOTOR,pro,P12,Growing asset base funded by internal accruals reflects self-sustaining growth,90.0
+TVSMOTOR,con,C1,Debt-to-equity ratio of 3.8x is elevated for a non-financial company and warrants monitoring,100.0
+TVSMOTOR,con,C2,Free cash flow negative for 3 consecutive years raises concern about cash generation quality,100.0
+TVSMOTOR,con,C11,Net debt exceeding 3 times EBITDA is a high leverage ratio and limits financial flexibility,85.0
