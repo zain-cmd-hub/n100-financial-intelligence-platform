@@ -1,0 +1,1087 @@
+company_id,year,pattern
+ABB,Dec 2012,Cash Cow / Self-Sustaining
+ABB,Mar 2014,Cash Cow / Self-Sustaining
+ABB,Mar 2014,Cash Cow / Self-Sustaining
+ABB,Mar 2015,Cash Cow / Self-Sustaining
+ABB,Mar 2015,Distress Signal
+ABB,Mar 2016,Cash Cow / Self-Sustaining
+ABB,Mar 2016,Cash Cow / Self-Sustaining
+ABB,Mar 2017,Cash Cow / Self-Sustaining
+ABB,Mar 2017,Cash Cow / Self-Sustaining
+ABB,Mar 2018,Cash Cow / Self-Sustaining
+ABB,Mar 2018,Reinvestor
+ABB,Mar 2019,Cash Cow / Self-Sustaining
+ABB,Mar 2019,Reinvestor
+ABB,Mar 2020,Cash Cow / Self-Sustaining
+ABB,Mar 2020,Reinvestor
+ABB,Mar 2021,Cash Cow / Self-Sustaining
+ABB,Mar 2021,Cash Cow / Self-Sustaining
+ABB,Mar 2022,Cash Cow / Self-Sustaining
+ABB,Mar 2022,Cash Cow / Self-Sustaining
+ABB,Mar 2023,Cash Cow / Self-Sustaining
+ABB,Mar 2023,Reinvestor
+ABB,Mar 2024,Cash Cow / Self-Sustaining
+ABB,Mar 2024,Cash Cow / Self-Sustaining
+ADANIENSOL,Mar 2014,Cash Cow / Self-Sustaining
+ADANIENSOL,Mar 2015,Distress Signal
+ADANIENSOL,Mar 2016,Cash Cow / Self-Sustaining
+ADANIENSOL,Mar 2017,Cash Cow / Self-Sustaining
+ADANIENSOL,Mar 2018,Reinvestor
+ADANIENSOL,Mar 2019,Reinvestor
+ADANIENSOL,Mar 2020,Reinvestor
+ADANIENSOL,Mar 2021,Cash Cow / Self-Sustaining
+ADANIENSOL,Mar 2022,Cash Cow / Self-Sustaining
+ADANIENSOL,Mar 2023,Reinvestor
+ADANIENSOL,Mar 2024,Cash Cow / Self-Sustaining
+ADANIENT,Mar 2013,Reinvestor
+ADANIENT,Mar 2014,Cash Cow / Self-Sustaining
+ADANIENT,Mar 2015,Reinvestor
+ADANIENT,Mar 2016,Cash Cow / Self-Sustaining
+ADANIENT,Mar 2017,Reinvestor
+ADANIENT,Mar 2018,Reinvestor
+ADANIENT,Mar 2019,Deleveraging
+ADANIENT,Mar 2020,Cash Cow / Self-Sustaining
+ADANIENT,Mar 2021,Reinvestor
+ADANIENT,Mar 2022,Reinvestor
+ADANIENT,Mar 2023,Cash Cow / Self-Sustaining
+ADANIENT,Mar 2024,Reinvestor
+ADANIGREEN,Mar 2017,Reinvestor
+ADANIGREEN,Mar 2018,Reinvestor
+ADANIGREEN,Mar 2018,Reinvestor
+ADANIGREEN,Mar 2019,Reinvestor
+ADANIGREEN,Mar 2019,Deleveraging
+ADANIGREEN,Mar 2020,Reinvestor
+ADANIGREEN,Mar 2020,Cash Cow / Self-Sustaining
+ADANIGREEN,Mar 2021,Reinvestor
+ADANIGREEN,Mar 2021,Reinvestor
+ADANIGREEN,Mar 2022,Reinvestor
+ADANIGREEN,Mar 2022,Reinvestor
+ADANIGREEN,Mar 2023,Cash Cow / Self-Sustaining
+ADANIGREEN,Mar 2023,Reinvestor
+ADANIGREEN,Mar 2024,Reinvestor
+ADANIGREEN,Mar 2024,Cash Cow / Self-Sustaining
+ADANIPORTS,Mar 2013,Reinvestor
+ADANIPORTS,Mar 2014,Reinvestor
+ADANIPORTS,Mar 2015,Cash Cow / Self-Sustaining
+ADANIPORTS,Mar 2016,Reinvestor
+ADANIPORTS,Mar 2017,Cash Cow / Self-Sustaining
+ADANIPORTS,Mar 2018,Cash Cow / Self-Sustaining
+ADANIPORTS,Mar 2019,Reinvestor
+ADANIPORTS,Mar 2020,Cash Cow / Self-Sustaining
+ADANIPORTS,Mar 2021,Reinvestor
+ADANIPORTS,Mar 2022,Cash Cow / Self-Sustaining
+ADANIPORTS,Mar 2023,Cash Cow / Self-Sustaining
+ADANIPORTS,Mar 2024,Cash Cow / Self-Sustaining
+ADANIPOWER,Mar 2013,Reinvestor
+ADANIPOWER,Mar 2014,Reinvestor
+ADANIPOWER,Mar 2015,Cash Cow / Self-Sustaining
+ADANIPOWER,Mar 2016,Cash Cow / Self-Sustaining
+ADANIPOWER,Mar 2017,Cash Cow / Self-Sustaining
+ADANIPOWER,Mar 2018,Cash Cow / Self-Sustaining
+ADANIPOWER,Mar 2019,Cash Cow / Self-Sustaining
+ADANIPOWER,Mar 2020,Cash Cow / Self-Sustaining
+ADANIPOWER,Mar 2021,Cash Cow / Self-Sustaining
+ADANIPOWER,Mar 2022,Deleveraging
+ADANIPOWER,Mar 2023,Deleveraging
+ADANIPOWER,Mar 2024,Deleveraging
+AMBUJACEM,Dec 2012,Cash Cow / Self-Sustaining
+AMBUJACEM,Dec 2013,Cash Cow / Self-Sustaining
+AMBUJACEM,Dec 2014,Cash Cow / Self-Sustaining
+AMBUJACEM,Dec 2015,Cash Cow / Self-Sustaining
+AMBUJACEM,Dec 2016,Cash Cow / Self-Sustaining
+AMBUJACEM,Dec 2017,Cash Cow / Self-Sustaining
+AMBUJACEM,Dec 2018,Cash Cow / Self-Sustaining
+AMBUJACEM,Dec 2019,Cash Cow / Self-Sustaining
+AMBUJACEM,Dec 2020,Cash Cow / Self-Sustaining
+AMBUJACEM,Dec 2021,Cash Cow / Self-Sustaining
+AMBUJACEM,Mar 2023,Reinvestor
+AMBUJACEM,Mar 2024,Reinvestor
+APOLLOHOSP,Mar 2013,Reinvestor
+APOLLOHOSP,Mar 2014,Cash Cow / Self-Sustaining
+APOLLOHOSP,Mar 2015,Reinvestor
+APOLLOHOSP,Mar 2016,Reinvestor
+APOLLOHOSP,Mar 2017,Reinvestor
+APOLLOHOSP,Mar 2018,Cash Cow / Self-Sustaining
+APOLLOHOSP,Mar 2019,Cash Cow / Self-Sustaining
+APOLLOHOSP,Mar 2020,Cash Cow / Self-Sustaining
+APOLLOHOSP,Mar 2021,Cash Cow / Self-Sustaining
+APOLLOHOSP,Mar 2022,Cash Cow / Self-Sustaining
+APOLLOHOSP,Mar 2023,Cash Cow / Self-Sustaining
+APOLLOHOSP,Mar 2024,Cash Cow / Self-Sustaining
+ASIANPAINT,Mar 2013,Cash Cow / Self-Sustaining
+ASIANPAINT,Mar 2014,Cash Cow / Self-Sustaining
+ASIANPAINT,Mar 2015,Cash Cow / Self-Sustaining
+ASIANPAINT,Mar 2016,Cash Cow / Self-Sustaining
+ASIANPAINT,Mar 2017,Cash Cow / Self-Sustaining
+ASIANPAINT,Mar 2018,Cash Cow / Self-Sustaining
+ASIANPAINT,Mar 2019,Cash Cow / Self-Sustaining
+ASIANPAINT,Mar 2020,Cash Cow / Self-Sustaining
+ASIANPAINT,Mar 2021,Cash Cow / Self-Sustaining
+ASIANPAINT,Mar 2022,Cash Cow / Self-Sustaining
+ASIANPAINT,Mar 2023,Cash Cow / Self-Sustaining
+ASIANPAINT,Mar 2024,Cash Cow / Self-Sustaining
+AXISBANK,Mar 2013,Reinvestor
+AXISBANK,Mar 2014,Reinvestor
+AXISBANK,Mar 2015,Distress Signal
+AXISBANK,Mar 2016,Asset Seller
+AXISBANK,Mar 2017,Cash Cow / Self-Sustaining
+AXISBANK,Mar 2018,Distress Signal
+AXISBANK,Mar 2019,Reinvestor
+AXISBANK,Mar 2020,Reinvestor
+AXISBANK,Mar 2021,Reinvestor
+AXISBANK,Mar 2022,Reinvestor
+AXISBANK,Mar 2023,Reinvestor
+AXISBANK,Mar 2024,Distress Signal
+BAJAJ-AUTO,Mar 2013,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2013,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2014,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2014,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2015,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2015,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2016,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2016,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2017,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2017,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2018,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2018,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2019,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2019,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2020,Deleveraging
+BAJAJ-AUTO,Mar 2020,Deleveraging
+BAJAJ-AUTO,Mar 2021,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2021,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2022,Deleveraging
+BAJAJ-AUTO,Mar 2022,Deleveraging
+BAJAJ-AUTO,Mar 2023,Deleveraging
+BAJAJ-AUTO,Mar 2023,Deleveraging
+BAJAJ-AUTO,Mar 2024,Cash Cow / Self-Sustaining
+BAJAJ-AUTO,Mar 2024,Cash Cow / Self-Sustaining
+BAJAJFINSV,Mar 2013,Asset Seller
+BAJAJFINSV,Mar 2014,Asset Seller
+BAJAJFINSV,Mar 2015,Asset Seller
+BAJAJFINSV,Mar 2016,Distress Signal
+BAJAJFINSV,Mar 2017,Asset Seller
+BAJAJFINSV,Mar 2018,Distress Signal
+BAJAJFINSV,Mar 2019,Distress Signal
+BAJAJFINSV,Mar 2020,Distress Signal
+BAJAJFINSV,Mar 2021,Reinvestor
+BAJAJFINSV,Mar 2022,Asset Seller
+BAJAJFINSV,Mar 2023,Distress Signal
+BAJAJFINSV,Mar 2024,Distress Signal
+BAJAJHLDNG,Mar 2013,Cash Cow / Self-Sustaining
+BAJAJHLDNG,Mar 2014,Cash Cow / Self-Sustaining
+BAJAJHLDNG,Mar 2015,Cash Cow / Self-Sustaining
+BAJAJHLDNG,Mar 2016,Deleveraging
+BAJAJHLDNG,Mar 2017,High Risk / Bleeding
+BAJAJHLDNG,Mar 2018,Cash Cow / Self-Sustaining
+BAJAJHLDNG,Mar 2019,Cash Cow / Self-Sustaining
+BAJAJHLDNG,Mar 2020,Cash Cow / Self-Sustaining
+BAJAJHLDNG,Mar 2021,Cash Cow / Self-Sustaining
+BAJAJHLDNG,Mar 2022,Cash Cow / Self-Sustaining
+BAJAJHLDNG,Mar 2023,Cash Cow / Self-Sustaining
+BAJAJHLDNG,Mar 2024,Cash Cow / Self-Sustaining
+BAJFINANCE,Mar 2015,Distress Signal
+BAJFINANCE,Mar 2016,Distress Signal
+BAJFINANCE,Mar 2017,Distress Signal
+BAJFINANCE,Mar 2018,Asset Seller
+BAJFINANCE,Mar 2019,Distress Signal
+BAJFINANCE,Mar 2020,Distress Signal
+BAJFINANCE,Mar 2021,Distress Signal
+BAJFINANCE,Mar 2022,Asset Seller
+BAJFINANCE,Mar 2023,Distress Signal
+BAJFINANCE,Mar 2024,Distress Signal
+BANKBARODA,Mar 2013,Cash Cow / Self-Sustaining
+BANKBARODA,Mar 2014,Reinvestor
+BANKBARODA,Mar 2015,Cash Cow / Self-Sustaining
+BANKBARODA,Mar 2016,High Risk / Bleeding
+BANKBARODA,Mar 2017,Cash Cow / Self-Sustaining
+BANKBARODA,Mar 2018,Distress Signal
+BANKBARODA,Mar 2019,Distress Signal
+BANKBARODA,Mar 2020,Reinvestor
+BANKBARODA,Mar 2021,High Risk / Bleeding
+BANKBARODA,Mar 2022,Cash Cow / Self-Sustaining
+BANKBARODA,Mar 2023,High Risk / Bleeding
+BANKBARODA,Mar 2024,Distress Signal
+BEL,Mar 2013,Liquidating
+BEL,Mar 2014,Liquidating
+BEL,Mar 2015,Cash Cow / Self-Sustaining
+BEL,Mar 2016,Cash Cow / Self-Sustaining
+BEL,Mar 2017,Liquidating
+BEL,Mar 2018,High Risk / Bleeding
+BEL,Mar 2019,Cash Cow / Self-Sustaining
+BEL,Mar 2020,Cash Cow / Self-Sustaining
+BEL,Mar 2021,Cash Cow / Self-Sustaining
+BEL,Mar 2022,Cash Cow / Self-Sustaining
+BEL,Mar 2023,Deleveraging
+BEL,Mar 2024,Cash Cow / Self-Sustaining
+BHARTIARTL,Mar 2013,Cash Cow / Self-Sustaining
+BHARTIARTL,Mar 2014,Reinvestor
+BHARTIARTL,Mar 2015,Cash Cow / Self-Sustaining
+BHARTIARTL,Mar 2016,Cash Cow / Self-Sustaining
+BHARTIARTL,Mar 2017,Cash Cow / Self-Sustaining
+BHARTIARTL,Mar 2018,Reinvestor
+BHARTIARTL,Mar 2019,Reinvestor
+BHARTIARTL,Mar 2020,Reinvestor
+BHARTIARTL,Mar 2021,Cash Cow / Self-Sustaining
+BHARTIARTL,Mar 2022,Cash Cow / Self-Sustaining
+BHARTIARTL,Mar 2023,Cash Cow / Self-Sustaining
+BHARTIARTL,Mar 2024,Cash Cow / Self-Sustaining
+BHEL,Mar 2013,Reinvestor
+BHEL,Mar 2014,Reinvestor
+BHEL,Mar 2015,Deleveraging
+BHEL,Mar 2016,Deleveraging
+BHEL,Mar 2017,Cash Cow / Self-Sustaining
+BHEL,Mar 2018,Deleveraging
+BHEL,Mar 2019,Liquidating
+BHEL,Mar 2020,Asset Seller
+BHEL,Mar 2021,Cash Cow / Self-Sustaining
+BHEL,Mar 2022,Cash Cow / Self-Sustaining
+BHEL,Mar 2023,Asset Seller
+BHEL,Mar 2024,Asset Seller
+BOSCHLTD,Dec 2012,Cash Cow / Self-Sustaining
+BOSCHLTD,Dec 2013,Cash Cow / Self-Sustaining
+BOSCHLTD,Mar 2015,Cash Cow / Self-Sustaining
+BOSCHLTD,Mar 2016,Cash Cow / Self-Sustaining
+BOSCHLTD,Mar 2017,Deleveraging
+BOSCHLTD,Mar 2018,Cash Cow / Self-Sustaining
+BOSCHLTD,Mar 2019,Deleveraging
+BOSCHLTD,Mar 2020,Cash Cow / Self-Sustaining
+BOSCHLTD,Mar 2021,Cash Cow / Self-Sustaining
+BOSCHLTD,Mar 2022,Cash Cow / Self-Sustaining
+BOSCHLTD,Mar 2023,Deleveraging
+BOSCHLTD,Mar 2024,Deleveraging
+BPCL,Mar 2013,Cash Cow / Self-Sustaining
+BPCL,Mar 2014,Cash Cow / Self-Sustaining
+BPCL,Mar 2015,Cash Cow / Self-Sustaining
+BPCL,Mar 2016,Cash Cow / Self-Sustaining
+BPCL,Mar 2017,Reinvestor
+BPCL,Mar 2018,Cash Cow / Self-Sustaining
+BPCL,Mar 2019,Reinvestor
+BPCL,Mar 2020,Reinvestor
+BPCL,Mar 2021,Cash Cow / Self-Sustaining
+BPCL,Mar 2022,Cash Cow / Self-Sustaining
+BPCL,Mar 2023,Cash Cow / Self-Sustaining
+BPCL,Mar 2024,Cash Cow / Self-Sustaining
+BRITANNIA,Mar 2013,Deleveraging
+BRITANNIA,Mar 2014,Cash Cow / Self-Sustaining
+BRITANNIA,Mar 2015,Cash Cow / Self-Sustaining
+BRITANNIA,Mar 2016,Cash Cow / Self-Sustaining
+BRITANNIA,Mar 2017,Cash Cow / Self-Sustaining
+BRITANNIA,Mar 2018,Cash Cow / Self-Sustaining
+BRITANNIA,Mar 2019,Cash Cow / Self-Sustaining
+BRITANNIA,Mar 2020,Reinvestor
+BRITANNIA,Mar 2021,Deleveraging
+BRITANNIA,Mar 2022,Deleveraging
+BRITANNIA,Mar 2023,Cash Cow / Self-Sustaining
+BRITANNIA,Mar 2024,Deleveraging
+CANBK,Mar 2013,Cash Cow / Self-Sustaining
+CANBK,Mar 2014,Cash Cow / Self-Sustaining
+CANBK,Mar 2015,Cash Cow / Self-Sustaining
+CANBK,Mar 2016,Cash Cow / Self-Sustaining
+CANBK,Mar 2017,Reinvestor
+CANBK,Mar 2018,Distress Signal
+CANBK,Mar 2019,Cash Cow / Self-Sustaining
+CANBK,Mar 2020,Distress Signal
+CANBK,Mar 2021,Reinvestor
+CANBK,Mar 2022,Reinvestor
+CANBK,Mar 2023,Distress Signal
+CANBK,Mar 2024,Cash Cow / Self-Sustaining
+CHOLAFIN,Mar 2013,Asset Seller
+CHOLAFIN,Mar 2014,Distress Signal
+CHOLAFIN,Mar 2015,Distress Signal
+CHOLAFIN,Mar 2016,Distress Signal
+CHOLAFIN,Mar 2017,Distress Signal
+CHOLAFIN,Mar 2018,Distress Signal
+CHOLAFIN,Mar 2019,Distress Signal
+CHOLAFIN,Mar 2020,Distress Signal
+CHOLAFIN,Mar 2021,Distress Signal
+CHOLAFIN,Mar 2022,Asset Seller
+CHOLAFIN,Mar 2023,Distress Signal
+CHOLAFIN,Mar 2024,Distress Signal
+CIPLA,Mar 2013,Reinvestor
+CIPLA,Mar 2014,Cash Cow / Self-Sustaining
+CIPLA,Mar 2015,Reinvestor
+CIPLA,Mar 2016,Reinvestor
+CIPLA,Mar 2017,Cash Cow / Self-Sustaining
+CIPLA,Mar 2018,Cash Cow / Self-Sustaining
+CIPLA,Mar 2019,Cash Cow / Self-Sustaining
+CIPLA,Mar 2020,Deleveraging
+CIPLA,Mar 2021,Cash Cow / Self-Sustaining
+CIPLA,Mar 2022,Cash Cow / Self-Sustaining
+CIPLA,Mar 2023,Cash Cow / Self-Sustaining
+CIPLA,Mar 2024,Cash Cow / Self-Sustaining
+COALINDIA,Mar 2013,Cash Cow / Self-Sustaining
+COALINDIA,Mar 2014,Deleveraging
+COALINDIA,Mar 2015,Deleveraging
+COALINDIA,Mar 2016,Deleveraging
+COALINDIA,Mar 2017,Deleveraging
+COALINDIA,Mar 2018,Cash Cow / Self-Sustaining
+COALINDIA,Mar 2019,Cash Cow / Self-Sustaining
+COALINDIA,Mar 2020,Deleveraging
+COALINDIA,Mar 2021,Deleveraging
+COALINDIA,Mar 2022,Cash Cow / Self-Sustaining
+COALINDIA,Mar 2023,Cash Cow / Self-Sustaining
+COALINDIA,Mar 2024,Cash Cow / Self-Sustaining
+DABUR,Mar 2013,Cash Cow / Self-Sustaining
+DABUR,Mar 2014,Cash Cow / Self-Sustaining
+DABUR,Mar 2015,Cash Cow / Self-Sustaining
+DABUR,Mar 2016,Cash Cow / Self-Sustaining
+DABUR,Mar 2017,Cash Cow / Self-Sustaining
+DABUR,Mar 2018,Cash Cow / Self-Sustaining
+DABUR,Mar 2019,Deleveraging
+DABUR,Mar 2020,Cash Cow / Self-Sustaining
+DABUR,Mar 2021,Cash Cow / Self-Sustaining
+DABUR,Mar 2022,Cash Cow / Self-Sustaining
+DABUR,Mar 2023,Cash Cow / Self-Sustaining
+DABUR,Mar 2024,Cash Cow / Self-Sustaining
+DIVISLAB,Mar 2013,Cash Cow / Self-Sustaining
+DIVISLAB,Mar 2014,Cash Cow / Self-Sustaining
+DIVISLAB,Mar 2015,Cash Cow / Self-Sustaining
+DIVISLAB,Mar 2016,Cash Cow / Self-Sustaining
+DIVISLAB,Mar 2017,Reinvestor
+DIVISLAB,Mar 2018,Cash Cow / Self-Sustaining
+DIVISLAB,Mar 2019,Cash Cow / Self-Sustaining
+DIVISLAB,Mar 2020,Cash Cow / Self-Sustaining
+DIVISLAB,Mar 2021,Deleveraging
+DIVISLAB,Mar 2022,Cash Cow / Self-Sustaining
+DIVISLAB,Mar 2023,Cash Cow / Self-Sustaining
+DIVISLAB,Mar 2024,Cash Cow / Self-Sustaining
+DLF,Mar 2013,Deleveraging
+DLF,Mar 2014,Deleveraging
+DLF,Mar 2015,Deleveraging
+DLF,Mar 2016,Cash Cow / Self-Sustaining
+DLF,Mar 2017,Asset Seller
+DLF,Mar 2018,Cash Cow / Self-Sustaining
+DLF,Mar 2019,Cash Accumulator
+DLF,Mar 2020,Deleveraging
+DLF,Mar 2021,Deleveraging
+DLF,Mar 2022,Deleveraging
+DLF,Mar 2023,Cash Cow / Self-Sustaining
+DLF,Mar 2024,Reinvestor
+DMART,Mar 2013,Reinvestor
+DMART,Mar 2014,Reinvestor
+DMART,Mar 2015,Reinvestor
+DMART,Mar 2016,Reinvestor
+DMART,Mar 2017,Reinvestor
+DMART,Mar 2018,Deleveraging
+DMART,Mar 2019,Reinvestor
+DMART,Mar 2020,Reinvestor
+DMART,Mar 2021,Cash Cow / Self-Sustaining
+DMART,Mar 2022,Cash Cow / Self-Sustaining
+DMART,Mar 2023,Cash Cow / Self-Sustaining
+DMART,Mar 2024,Cash Cow / Self-Sustaining
+DRREDDY,Mar 2013,Cash Cow / Self-Sustaining
+DRREDDY,Mar 2014,Cash Cow / Self-Sustaining
+DRREDDY,Mar 2015,Cash Cow / Self-Sustaining
+DRREDDY,Mar 2016,Cash Cow / Self-Sustaining
+DRREDDY,Mar 2017,Cash Cow / Self-Sustaining
+DRREDDY,Mar 2018,Cash Cow / Self-Sustaining
+DRREDDY,Mar 2019,Cash Cow / Self-Sustaining
+DRREDDY,Mar 2020,Cash Cow / Self-Sustaining
+DRREDDY,Mar 2021,Cash Cow / Self-Sustaining
+DRREDDY,Mar 2022,Cash Cow / Self-Sustaining
+DRREDDY,Mar 2023,Cash Cow / Self-Sustaining
+DRREDDY,Mar 2024,Cash Cow / Self-Sustaining
+EICHERMOT,Dec 2012,Cash Cow / Self-Sustaining
+EICHERMOT,Dec 2013,Cash Cow / Self-Sustaining
+EICHERMOT,Dec 2014,Cash Cow / Self-Sustaining
+EICHERMOT,Mar 2016,Cash Cow / Self-Sustaining
+EICHERMOT,Mar 2017,Reinvestor
+EICHERMOT,Mar 2018,Cash Cow / Self-Sustaining
+EICHERMOT,Mar 2019,Cash Cow / Self-Sustaining
+EICHERMOT,Mar 2020,Cash Cow / Self-Sustaining
+EICHERMOT,Mar 2021,Cash Cow / Self-Sustaining
+EICHERMOT,Mar 2022,Cash Cow / Self-Sustaining
+EICHERMOT,Mar 2023,Cash Cow / Self-Sustaining
+EICHERMOT,Mar 2024,Cash Cow / Self-Sustaining
+GAIL,Mar 2013,Reinvestor
+GAIL,Mar 2014,Cash Cow / Self-Sustaining
+GAIL,Mar 2015,Cash Cow / Self-Sustaining
+GAIL,Mar 2016,Cash Cow / Self-Sustaining
+GAIL,Mar 2017,Cash Cow / Self-Sustaining
+GAIL,Mar 2018,Cash Cow / Self-Sustaining
+GAIL,Mar 2019,Cash Cow / Self-Sustaining
+GAIL,Mar 2020,Reinvestor
+GAIL,Mar 2021,Cash Cow / Self-Sustaining
+GAIL,Mar 2022,Cash Cow / Self-Sustaining
+GAIL,Mar 2023,Reinvestor
+GAIL,Mar 2024,Cash Cow / Self-Sustaining
+GODREJCP,Mar 2013,Reinvestor
+GODREJCP,Mar 2014,Cash Cow / Self-Sustaining
+GODREJCP,Mar 2015,Cash Cow / Self-Sustaining
+GODREJCP,Mar 2016,Cash Cow / Self-Sustaining
+GODREJCP,Mar 2017,Reinvestor
+GODREJCP,Mar 2018,Cash Cow / Self-Sustaining
+GODREJCP,Mar 2019,Deleveraging
+GODREJCP,Mar 2020,Cash Cow / Self-Sustaining
+GODREJCP,Mar 2021,Cash Cow / Self-Sustaining
+GODREJCP,Mar 2022,Cash Cow / Self-Sustaining
+GODREJCP,Mar 2023,Cash Cow / Self-Sustaining
+GODREJCP,Mar 2024,Reinvestor
+GRASIM,Mar 2013,Reinvestor
+GRASIM,Mar 2014,Cash Cow / Self-Sustaining
+GRASIM,Mar 2015,Cash Cow / Self-Sustaining
+GRASIM,Mar 2016,Cash Cow / Self-Sustaining
+GRASIM,Mar 2017,Cash Cow / Self-Sustaining
+GRASIM,Mar 2018,Asset Seller
+GRASIM,Mar 2019,Distress Signal
+GRASIM,Mar 2020,Cash Cow / Self-Sustaining
+GRASIM,Mar 2021,Cash Cow / Self-Sustaining
+GRASIM,Mar 2022,Cash Cow / Self-Sustaining
+GRASIM,Mar 2023,Distress Signal
+GRASIM,Mar 2024,Distress Signal
+HAL,Mar 2017,Liquidating
+HAL,Mar 2018,Liquidating
+HAL,Mar 2019,Asset Seller
+HAL,Mar 2020,Reinvestor
+HAL,Mar 2021,Cash Cow / Self-Sustaining
+HAL,Mar 2022,Cash Cow / Self-Sustaining
+HAL,Mar 2023,Cash Cow / Self-Sustaining
+HAL,Mar 2024,Cash Cow / Self-Sustaining
+HAVELLS,Mar 2013,Cash Cow / Self-Sustaining
+HAVELLS,Mar 2014,Cash Cow / Self-Sustaining
+HAVELLS,Mar 2015,Cash Cow / Self-Sustaining
+HAVELLS,Mar 2016,Cash Cow / Self-Sustaining
+HAVELLS,Mar 2017,Cash Cow / Self-Sustaining
+HAVELLS,Mar 2018,Cash Cow / Self-Sustaining
+HAVELLS,Mar 2019,Deleveraging
+HAVELLS,Mar 2020,Cash Cow / Self-Sustaining
+HAVELLS,Mar 2021,Reinvestor
+HAVELLS,Mar 2022,Cash Cow / Self-Sustaining
+HAVELLS,Mar 2023,Deleveraging
+HAVELLS,Mar 2024,Cash Cow / Self-Sustaining
+HCLTECH,Jun 2013,Cash Cow / Self-Sustaining
+HCLTECH,Jun 2014,Cash Cow / Self-Sustaining
+HCLTECH,Jun 2015,Cash Cow / Self-Sustaining
+HCLTECH,Mar 2016,Cash Cow / Self-Sustaining
+HCLTECH,Mar 2017,Cash Cow / Self-Sustaining
+HCLTECH,Mar 2018,Cash Cow / Self-Sustaining
+HCLTECH,Mar 2019,Cash Cow / Self-Sustaining
+HCLTECH,Mar 2020,Cash Cow / Self-Sustaining
+HCLTECH,Mar 2021,Cash Cow / Self-Sustaining
+HCLTECH,Mar 2022,Deleveraging
+HCLTECH,Mar 2023,Cash Cow / Self-Sustaining
+HCLTECH,Mar 2024,Cash Cow / Self-Sustaining
+HDFCBANK,Mar 2013,Distress Signal
+HDFCBANK,Mar 2014,Reinvestor
+HDFCBANK,Mar 2015,Distress Signal
+HDFCBANK,Mar 2016,Distress Signal
+HDFCBANK,Mar 2017,Cash Cow / Self-Sustaining
+HDFCBANK,Mar 2018,Reinvestor
+HDFCBANK,Mar 2019,Distress Signal
+HDFCBANK,Mar 2020,Distress Signal
+HDFCBANK,Mar 2021,Cash Cow / Self-Sustaining
+HDFCBANK,Mar 2022,Distress Signal
+HDFCBANK,Mar 2023,Reinvestor
+HDFCBANK,Mar 2024,Deleveraging
+HDFCLIFE,Mar 2013,Cash Cow / Self-Sustaining
+HDFCLIFE,Mar 2014,Cash Cow / Self-Sustaining
+HDFCLIFE,Mar 2015,Cash Cow / Self-Sustaining
+HDFCLIFE,Mar 2016,Cash Cow / Self-Sustaining
+HDFCLIFE,Mar 2017,Cash Cow / Self-Sustaining
+HDFCLIFE,Mar 2018,Cash Cow / Self-Sustaining
+HDFCLIFE,Mar 2019,Cash Cow / Self-Sustaining
+HDFCLIFE,Mar 2020,Reinvestor
+HDFCLIFE,Mar 2021,Reinvestor
+HDFCLIFE,Mar 2022,Cash Cow / Self-Sustaining
+HDFCLIFE,Mar 2023,Reinvestor
+HDFCLIFE,Mar 2024,Cash Cow / Self-Sustaining
+HEROMOTOCO,Mar 2014,Cash Cow / Self-Sustaining
+HEROMOTOCO,Mar 2015,Deleveraging
+HEROMOTOCO,Mar 2016,Cash Cow / Self-Sustaining
+HEROMOTOCO,Mar 2017,Cash Cow / Self-Sustaining
+HEROMOTOCO,Mar 2018,Cash Cow / Self-Sustaining
+HEROMOTOCO,Mar 2019,Deleveraging
+HEROMOTOCO,Mar 2020,Cash Cow / Self-Sustaining
+HEROMOTOCO,Mar 2021,Cash Cow / Self-Sustaining
+HEROMOTOCO,Mar 2022,Cash Cow / Self-Sustaining
+HEROMOTOCO,Mar 2023,Cash Cow / Self-Sustaining
+HEROMOTOCO,Mar 2024,Cash Cow / Self-Sustaining
+HINDALCO,Mar 2013,Reinvestor
+HINDALCO,Mar 2014,Reinvestor
+HINDALCO,Mar 2015,Cash Cow / Self-Sustaining
+HINDALCO,Mar 2016,Cash Cow / Self-Sustaining
+HINDALCO,Mar 2017,Cash Cow / Self-Sustaining
+HINDALCO,Mar 2018,Deleveraging
+HINDALCO,Mar 2019,Cash Cow / Self-Sustaining
+HINDALCO,Mar 2020,Reinvestor
+HINDALCO,Mar 2021,Cash Cow / Self-Sustaining
+HINDALCO,Mar 2022,Cash Cow / Self-Sustaining
+HINDALCO,Mar 2023,Cash Cow / Self-Sustaining
+HINDALCO,Mar 2024,Cash Cow / Self-Sustaining
+HINDUNILVR,Mar 2013,Deleveraging
+HINDUNILVR,Mar 2014,Cash Cow / Self-Sustaining
+HINDUNILVR,Mar 2015,Deleveraging
+HINDUNILVR,Mar 2016,Cash Cow / Self-Sustaining
+HINDUNILVR,Mar 2017,Cash Cow / Self-Sustaining
+HINDUNILVR,Mar 2018,Cash Cow / Self-Sustaining
+HINDUNILVR,Mar 2019,Cash Cow / Self-Sustaining
+HINDUNILVR,Mar 2020,Deleveraging
+HINDUNILVR,Mar 2021,Cash Cow / Self-Sustaining
+HINDUNILVR,Mar 2022,Cash Cow / Self-Sustaining
+HINDUNILVR,Mar 2023,Cash Cow / Self-Sustaining
+HINDUNILVR,Mar 2024,Cash Cow / Self-Sustaining
+ICICIBANK,Mar 2013,Reinvestor
+ICICIBANK,Mar 2014,Reinvestor
+ICICIBANK,Mar 2015,Distress Signal
+ICICIBANK,Mar 2016,Reinvestor
+ICICIBANK,Mar 2017,Cash Cow / Self-Sustaining
+ICICIBANK,Mar 2018,Reinvestor
+ICICIBANK,Mar 2019,Cash Cow / Self-Sustaining
+ICICIBANK,Mar 2020,Reinvestor
+ICICIBANK,Mar 2021,Cash Cow / Self-Sustaining
+ICICIBANK,Mar 2022,Reinvestor
+ICICIBANK,Mar 2023,Distress Signal
+ICICIBANK,Mar 2024,Reinvestor
+ICICIGI,Mar 2013,Reinvestor
+ICICIGI,Mar 2014,Reinvestor
+ICICIGI,Mar 2015,Liquidating
+ICICIGI,Mar 2016,Cash Cow / Self-Sustaining
+ICICIGI,Mar 2017,Reinvestor
+ICICIGI,Mar 2018,Cash Cow / Self-Sustaining
+ICICIGI,Mar 2019,Cash Cow / Self-Sustaining
+ICICIGI,Mar 2020,Cash Cow / Self-Sustaining
+ICICIGI,Mar 2021,Cash Cow / Self-Sustaining
+ICICIGI,Mar 2022,Deleveraging
+ICICIGI,Mar 2023,Cash Cow / Self-Sustaining
+ICICIGI,Mar 2024,Cash Cow / Self-Sustaining
+ICICIPRULI,Mar 2013,Liquidating
+ICICIPRULI,Mar 2014,Liquidating
+ICICIPRULI,Mar 2015,Cash Cow / Self-Sustaining
+ICICIPRULI,Mar 2016,Deleveraging
+ICICIPRULI,Mar 2017,Cash Cow / Self-Sustaining
+ICICIPRULI,Mar 2018,Cash Cow / Self-Sustaining
+ICICIPRULI,Mar 2019,Cash Cow / Self-Sustaining
+ICICIPRULI,Mar 2020,Cash Cow / Self-Sustaining
+ICICIPRULI,Mar 2021,Reinvestor
+ICICIPRULI,Mar 2022,Cash Cow / Self-Sustaining
+ICICIPRULI,Mar 2023,Cash Cow / Self-Sustaining
+ICICIPRULI,Mar 2024,Liquidating
+INDIGO,Mar 2013,Reinvestor
+INDIGO,Mar 2014,Reinvestor
+INDIGO,Mar 2015,Cash Cow / Self-Sustaining
+INDIGO,Mar 2016,Cash Cow / Self-Sustaining
+INDIGO,Mar 2017,Cash Cow / Self-Sustaining
+INDIGO,Mar 2018,Reinvestor
+INDIGO,Mar 2019,Cash Cow / Self-Sustaining
+INDIGO,Mar 2020,Cash Cow / Self-Sustaining
+INDIGO,Mar 2021,Liquidating
+INDIGO,Mar 2022,Deleveraging
+INDIGO,Mar 2023,Cash Cow / Self-Sustaining
+INDIGO,Mar 2024,Cash Cow / Self-Sustaining
+INDUSINDBK,Mar 2013,Distress Signal
+INDUSINDBK,Mar 2014,Distress Signal
+INDUSINDBK,Mar 2015,Distress Signal
+INDUSINDBK,Mar 2016,Distress Signal
+INDUSINDBK,Mar 2017,Cash Cow / Self-Sustaining
+INDUSINDBK,Mar 2018,Distress Signal
+INDUSINDBK,Mar 2019,Distress Signal
+INDUSINDBK,Mar 2020,Asset Seller
+INDUSINDBK,Mar 2021,Cash Cow / Self-Sustaining
+INDUSINDBK,Mar 2022,Cash Cow / Self-Sustaining
+INDUSINDBK,Mar 2023,Distress Signal
+INDUSINDBK,Mar 2024,High Risk / Bleeding
+INFY,Mar 2013,Cash Cow / Self-Sustaining
+INFY,Mar 2014,Cash Cow / Self-Sustaining
+INFY,Mar 2015,Deleveraging
+INFY,Mar 2016,Cash Cow / Self-Sustaining
+INFY,Mar 2017,Cash Cow / Self-Sustaining
+INFY,Mar 2018,Deleveraging
+INFY,Mar 2019,Cash Cow / Self-Sustaining
+INFY,Mar 2020,Cash Cow / Self-Sustaining
+INFY,Mar 2021,Cash Cow / Self-Sustaining
+INFY,Mar 2022,Cash Cow / Self-Sustaining
+INFY,Mar 2023,Cash Cow / Self-Sustaining
+INFY,Mar 2024,Cash Cow / Self-Sustaining
+IOC,Mar 2013,Reinvestor
+IOC,Mar 2014,Cash Cow / Self-Sustaining
+IOC,Mar 2015,Cash Cow / Self-Sustaining
+IOC,Mar 2016,Cash Cow / Self-Sustaining
+IOC,Mar 2017,Cash Cow / Self-Sustaining
+IOC,Mar 2018,Cash Cow / Self-Sustaining
+IOC,Mar 2019,Reinvestor
+IOC,Mar 2020,Reinvestor
+IOC,Mar 2021,Cash Cow / Self-Sustaining
+IOC,Mar 2022,Cash Cow / Self-Sustaining
+IOC,Mar 2023,Cash Cow / Self-Sustaining
+IOC,Mar 2024,Cash Cow / Self-Sustaining
+IRCTC,Mar 2015,Cash Cow / Self-Sustaining
+IRCTC,Mar 2016,Deleveraging
+IRCTC,Mar 2017,Deleveraging
+IRCTC,Mar 2018,Deleveraging
+IRCTC,Mar 2019,Cash Cow / Self-Sustaining
+IRCTC,Mar 2020,Deleveraging
+IRCTC,Mar 2021,Cash Cow / Self-Sustaining
+IRCTC,Mar 2022,Cash Cow / Self-Sustaining
+IRCTC,Mar 2023,Cash Cow / Self-Sustaining
+IRCTC,Mar 2024,Cash Cow / Self-Sustaining
+IRFC,Mar 2016,Asset Seller
+IRFC,Mar 2017,Asset Seller
+IRFC,Mar 2018,Asset Seller
+IRFC,Mar 2019,Asset Seller
+IRFC,Mar 2020,Asset Seller
+IRFC,Mar 2021,Distress Signal
+IRFC,Mar 2022,Distress Signal
+IRFC,Mar 2023,Distress Signal
+IRFC,Mar 2024,Cash Cow / Self-Sustaining
+ITC,Mar 2013,Cash Cow / Self-Sustaining
+ITC,Mar 2014,Cash Cow / Self-Sustaining
+ITC,Mar 2015,Cash Cow / Self-Sustaining
+ITC,Mar 2016,Cash Cow / Self-Sustaining
+ITC,Mar 2017,Cash Cow / Self-Sustaining
+ITC,Mar 2018,Cash Cow / Self-Sustaining
+ITC,Mar 2019,Cash Cow / Self-Sustaining
+ITC,Mar 2020,Cash Cow / Self-Sustaining
+ITC,Mar 2021,Deleveraging
+ITC,Mar 2022,Cash Cow / Self-Sustaining
+ITC,Mar 2023,Cash Cow / Self-Sustaining
+ITC,Mar 2024,Deleveraging
+JINDALSTEL,Mar 2013,Reinvestor
+JINDALSTEL,Mar 2014,Reinvestor
+JINDALSTEL,Mar 2015,Reinvestor
+JINDALSTEL,Mar 2016,Cash Cow / Self-Sustaining
+JINDALSTEL,Mar 2017,Cash Cow / Self-Sustaining
+JINDALSTEL,Mar 2018,Cash Cow / Self-Sustaining
+JINDALSTEL,Mar 2019,Cash Cow / Self-Sustaining
+JINDALSTEL,Mar 2020,Cash Cow / Self-Sustaining
+JINDALSTEL,Mar 2021,Cash Cow / Self-Sustaining
+JINDALSTEL,Mar 2022,Cash Cow / Self-Sustaining
+JINDALSTEL,Mar 2023,Cash Cow / Self-Sustaining
+JINDALSTEL,Mar 2024,Reinvestor
+JIOFIN,Mar 2023,Cash Cow / Self-Sustaining
+JIOFIN,Mar 2024,Liquidating
+JSWENERGY,Mar 2013,Cash Cow / Self-Sustaining
+JSWENERGY,Mar 2014,Cash Cow / Self-Sustaining
+JSWENERGY,Mar 2015,Cash Cow / Self-Sustaining
+JSWENERGY,Mar 2016,Cash Cow / Self-Sustaining
+JSWENERGY,Mar 2017,Cash Cow / Self-Sustaining
+JSWENERGY,Mar 2018,Cash Cow / Self-Sustaining
+JSWENERGY,Mar 2019,Cash Cow / Self-Sustaining
+JSWENERGY,Mar 2020,Deleveraging
+JSWENERGY,Mar 2021,Cash Cow / Self-Sustaining
+JSWENERGY,Mar 2022,Cash Cow / Self-Sustaining
+JSWENERGY,Mar 2023,Reinvestor
+JSWENERGY,Mar 2024,Reinvestor
+JSWSTEEL,Mar 2013,Cash Cow / Self-Sustaining
+JSWSTEEL,Mar 2014,Reinvestor
+JSWSTEEL,Mar 2015,Cash Cow / Self-Sustaining
+JSWSTEEL,Mar 2016,Cash Cow / Self-Sustaining
+JSWSTEEL,Mar 2017,Cash Cow / Self-Sustaining
+JSWSTEEL,Mar 2018,Cash Cow / Self-Sustaining
+JSWSTEEL,Mar 2019,Reinvestor
+JSWSTEEL,Mar 2020,Reinvestor
+JSWSTEEL,Mar 2021,Cash Cow / Self-Sustaining
+JSWSTEEL,Mar 2022,Cash Cow / Self-Sustaining
+JSWSTEEL,Mar 2023,Cash Cow / Self-Sustaining
+JSWSTEEL,Mar 2024,Cash Cow / Self-Sustaining
+KOTAKBANK,Mar 2013,Reinvestor
+KOTAKBANK,Mar 2014,Cash Cow / Self-Sustaining
+KOTAKBANK,Mar 2015,Reinvestor
+KOTAKBANK,Mar 2016,Reinvestor
+KOTAKBANK,Mar 2017,Reinvestor
+KOTAKBANK,Mar 2018,Distress Signal
+KOTAKBANK,Mar 2019,Reinvestor
+KOTAKBANK,Mar 2020,Cash Cow / Self-Sustaining
+KOTAKBANK,Mar 2021,Cash Cow / Self-Sustaining
+KOTAKBANK,Mar 2022,Reinvestor
+KOTAKBANK,Mar 2023,Distress Signal
+KOTAKBANK,Mar 2024,Reinvestor
+LICI,Mar 2019,Deleveraging
+LICI,Mar 2020,Cash Cow / Self-Sustaining
+LICI,Mar 2021,Deleveraging
+LICI,Mar 2022,Liquidating
+LICI,Mar 2023,Cash Cow / Self-Sustaining
+LICI,Mar 2024,Cash Cow / Self-Sustaining
+LODHA,Mar 2016,Reinvestor
+LODHA,Mar 2017,Cash Cow / Self-Sustaining
+LODHA,Mar 2018,Reinvestor
+LODHA,Mar 2019,Distress Signal
+LODHA,Mar 2020,Deleveraging
+LODHA,Mar 2021,Deleveraging
+LODHA,Mar 2022,Deleveraging
+LODHA,Mar 2023,Deleveraging
+LODHA,Mar 2024,Reinvestor
+LT,Mar 2013,Distress Signal
+LT,Mar 2014,Distress Signal
+LT,Mar 2015,Distress Signal
+LT,Mar 2016,Distress Signal
+LT,Mar 2017,Reinvestor
+LT,Mar 2018,Asset Seller
+LT,Mar 2019,Distress Signal
+LT,Mar 2020,Reinvestor
+LT,Mar 2021,Cash Cow / Self-Sustaining
+LT,Mar 2022,Cash Cow / Self-Sustaining
+LT,Mar 2023,Cash Cow / Self-Sustaining
+LT,Mar 2024,Deleveraging
+LTIM,Mar 2013,Cash Cow / Self-Sustaining
+LTIM,Mar 2014,Deleveraging
+LTIM,Mar 2015,Cash Cow / Self-Sustaining
+LTIM,Mar 2016,Cash Cow / Self-Sustaining
+LTIM,Mar 2017,Cash Cow / Self-Sustaining
+LTIM,Mar 2018,Cash Cow / Self-Sustaining
+LTIM,Mar 2019,Cash Cow / Self-Sustaining
+LTIM,Mar 2020,Cash Cow / Self-Sustaining
+LTIM,Mar 2021,Cash Cow / Self-Sustaining
+LTIM,Mar 2022,Cash Cow / Self-Sustaining
+LTIM,Mar 2023,Cash Cow / Self-Sustaining
+LTIM,Mar 2024,Cash Cow / Self-Sustaining
+M&M,Mar 2013,Distress Signal
+M&M,Mar 2014,Distress Signal
+M&M,Mar 2015,Reinvestor
+M&M,Mar 2016,Reinvestor
+M&M,Mar 2017,Reinvestor
+M&M,Mar 2018,Reinvestor
+M&M,Mar 2019,Distress Signal
+M&M,Mar 2020,Distress Signal
+M&M,Mar 2021,Reinvestor
+M&M,Mar 2022,Cash Cow / Self-Sustaining
+M&M,Mar 2023,Distress Signal
+M&M,Mar 2024,Distress Signal
+MARUTI,Mar 2013,Cash Cow / Self-Sustaining
+MARUTI,Mar 2014,Cash Cow / Self-Sustaining
+MARUTI,Mar 2015,Cash Cow / Self-Sustaining
+MARUTI,Mar 2016,Cash Cow / Self-Sustaining
+MARUTI,Mar 2017,Cash Cow / Self-Sustaining
+MARUTI,Mar 2018,Cash Cow / Self-Sustaining
+MARUTI,Mar 2019,Cash Cow / Self-Sustaining
+MARUTI,Mar 2020,Cash Cow / Self-Sustaining
+MARUTI,Mar 2021,Cash Cow / Self-Sustaining
+MARUTI,Mar 2022,Cash Cow / Self-Sustaining
+MARUTI,Mar 2023,Cash Cow / Self-Sustaining
+MARUTI,Mar 2024,Cash Cow / Self-Sustaining
+MOTHERSON,Mar 2013,Cash Cow / Self-Sustaining
+MOTHERSON,Mar 2014,Cash Cow / Self-Sustaining
+MOTHERSON,Mar 2015,Reinvestor
+MOTHERSON,Mar 2016,Cash Cow / Self-Sustaining
+MOTHERSON,Mar 2017,Reinvestor
+MOTHERSON,Mar 2018,Cash Cow / Self-Sustaining
+MOTHERSON,Mar 2019,Cash Cow / Self-Sustaining
+MOTHERSON,Mar 2020,Cash Cow / Self-Sustaining
+MOTHERSON,Mar 2021,Cash Cow / Self-Sustaining
+MOTHERSON,Mar 2022,Cash Cow / Self-Sustaining
+MOTHERSON,Mar 2023,Cash Cow / Self-Sustaining
+MOTHERSON,Mar 2024,Reinvestor
+NAUKRI,Mar 2013,Cash Cow / Self-Sustaining
+NAUKRI,Mar 2014,Reinvestor
+NAUKRI,Mar 2015,Reinvestor
+NAUKRI,Mar 2016,Cash Cow / Self-Sustaining
+NAUKRI,Mar 2017,Cash Cow / Self-Sustaining
+NAUKRI,Mar 2018,Cash Cow / Self-Sustaining
+NAUKRI,Mar 2019,Cash Cow / Self-Sustaining
+NAUKRI,Mar 2020,Deleveraging
+NAUKRI,Mar 2021,Reinvestor
+NAUKRI,Mar 2022,Reinvestor
+NAUKRI,Mar 2023,Reinvestor
+NAUKRI,Mar 2024,Reinvestor
+NESTLEIND,Dec 2013,Cash Cow / Self-Sustaining
+NESTLEIND,Dec 2014,Cash Cow / Self-Sustaining
+NESTLEIND,Dec 2015,Cash Cow / Self-Sustaining
+NESTLEIND,Dec 2016,Cash Cow / Self-Sustaining
+NESTLEIND,Dec 2017,Cash Cow / Self-Sustaining
+NESTLEIND,Dec 2018,Cash Cow / Self-Sustaining
+NESTLEIND,Dec 2019,Deleveraging
+NESTLEIND,Dec 2020,Cash Cow / Self-Sustaining
+NESTLEIND,Dec 2021,Cash Cow / Self-Sustaining
+NESTLEIND,Dec 2022,Cash Cow / Self-Sustaining
+NESTLEIND,Dec 2023,Cash Cow / Self-Sustaining
+NESTLEIND,Mar 2024,Cash Cow / Self-Sustaining
+NHPC,Mar 2013,Cash Cow / Self-Sustaining
+NHPC,Mar 2014,Cash Cow / Self-Sustaining
+NHPC,Mar 2015,Cash Cow / Self-Sustaining
+NHPC,Mar 2016,Cash Cow / Self-Sustaining
+NHPC,Mar 2017,Cash Cow / Self-Sustaining
+NHPC,Mar 2018,Cash Cow / Self-Sustaining
+NHPC,Mar 2019,Cash Cow / Self-Sustaining
+NHPC,Mar 2020,Reinvestor
+NHPC,Mar 2021,Cash Cow / Self-Sustaining
+NHPC,Mar 2022,Cash Cow / Self-Sustaining
+NHPC,Mar 2023,Cash Cow / Self-Sustaining
+NHPC,Mar 2024,Cash Cow / Self-Sustaining
+NTPC,Mar 2013,Reinvestor
+NTPC,Mar 2014,Cash Cow / Self-Sustaining
+NTPC,Mar 2015,Cash Cow / Self-Sustaining
+NTPC,Mar 2016,Cash Cow / Self-Sustaining
+NTPC,Mar 2017,Reinvestor
+NTPC,Mar 2018,Reinvestor
+NTPC,Mar 2019,Reinvestor
+NTPC,Mar 2020,Reinvestor
+NTPC,Mar 2021,Cash Cow / Self-Sustaining
+NTPC,Mar 2022,Cash Cow / Self-Sustaining
+NTPC,Mar 2023,Cash Cow / Self-Sustaining
+NTPC,Mar 2024,Cash Cow / Self-Sustaining
+ONGC,Mar 2013,Cash Cow / Self-Sustaining
+ONGC,Mar 2014,Reinvestor
+ONGC,Mar 2015,Cash Cow / Self-Sustaining
+ONGC,Mar 2016,Cash Cow / Self-Sustaining
+ONGC,Mar 2017,Cash Cow / Self-Sustaining
+ONGC,Mar 2018,Reinvestor
+ONGC,Mar 2019,Cash Cow / Self-Sustaining
+ONGC,Mar 2020,Cash Cow / Self-Sustaining
+ONGC,Mar 2021,Cash Cow / Self-Sustaining
+ONGC,Mar 2022,Cash Cow / Self-Sustaining
+ONGC,Mar 2023,Cash Cow / Self-Sustaining
+ONGC,Mar 2024,Cash Cow / Self-Sustaining
+PFC,Mar 2013,Asset Seller
+PFC,Mar 2014,Asset Seller
+PFC,Mar 2015,Distress Signal
+PFC,Mar 2016,Distress Signal
+PFC,Mar 2017,Reinvestor
+PFC,Mar 2018,Asset Seller
+PFC,Mar 2019,Distress Signal
+PFC,Mar 2020,Distress Signal
+PFC,Mar 2021,Asset Seller
+PFC,Mar 2022,Cash Cow / Self-Sustaining
+PFC,Mar 2023,Distress Signal
+PFC,Mar 2024,Distress Signal
+PIDILITIND,Mar 2013,Cash Cow / Self-Sustaining
+PIDILITIND,Mar 2014,Cash Cow / Self-Sustaining
+PIDILITIND,Mar 2015,Cash Cow / Self-Sustaining
+PIDILITIND,Mar 2016,Cash Cow / Self-Sustaining
+PIDILITIND,Mar 2017,Reinvestor
+PIDILITIND,Mar 2018,Deleveraging
+PIDILITIND,Mar 2019,Cash Cow / Self-Sustaining
+PIDILITIND,Mar 2020,Deleveraging
+PIDILITIND,Mar 2021,Cash Cow / Self-Sustaining
+PIDILITIND,Mar 2022,Cash Cow / Self-Sustaining
+PIDILITIND,Mar 2023,Cash Cow / Self-Sustaining
+PIDILITIND,Mar 2024,Cash Cow / Self-Sustaining
+PNB,Mar 2013,High Risk / Bleeding
+PNB,Mar 2014,Reinvestor
+PNB,Mar 2015,Reinvestor
+PNB,Mar 2016,Reinvestor
+PNB,Mar 2017,Deleveraging
+PNB,Mar 2018,Asset Seller
+PNB,Mar 2019,Distress Signal
+PNB,Mar 2020,Distress Signal
+PNB,Mar 2021,Reinvestor
+PNB,Mar 2022,Reinvestor
+PNB,Mar 2023,Reinvestor
+PNB,Mar 2024,Distress Signal
+POWERGRID,Mar 2013,Reinvestor
+POWERGRID,Mar 2014,Reinvestor
+POWERGRID,Mar 2015,Reinvestor
+POWERGRID,Mar 2016,Reinvestor
+POWERGRID,Mar 2017,Reinvestor
+POWERGRID,Mar 2018,Reinvestor
+POWERGRID,Mar 2019,Cash Cow / Self-Sustaining
+POWERGRID,Mar 2020,Cash Cow / Self-Sustaining
+POWERGRID,Mar 2021,Cash Cow / Self-Sustaining
+POWERGRID,Mar 2022,Deleveraging
+POWERGRID,Mar 2023,Cash Cow / Self-Sustaining
+POWERGRID,Mar 2024,Cash Cow / Self-Sustaining
+RECLTD,Mar 2013,Asset Seller
+RECLTD,Mar 2014,Asset Seller
+RECLTD,Mar 2015,Asset Seller
+RECLTD,Mar 2016,Distress Signal
+RECLTD,Mar 2017,Cash Cow / Self-Sustaining
+RECLTD,Mar 2018,Asset Seller
+RECLTD,Mar 2019,Asset Seller
+RECLTD,Mar 2020,Asset Seller
+RECLTD,Mar 2021,Asset Seller
+RECLTD,Mar 2022,Distress Signal
+RECLTD,Mar 2023,Distress Signal
+RECLTD,Mar 2024,Distress Signal
+RELIANCE,Mar 2013,Reinvestor
+RELIANCE,Mar 2014,Reinvestor
+RELIANCE,Mar 2015,Reinvestor
+RELIANCE,Mar 2016,Cash Cow / Self-Sustaining
+RELIANCE,Mar 2017,Reinvestor
+RELIANCE,Mar 2018,Cash Cow / Self-Sustaining
+RELIANCE,Mar 2019,Reinvestor
+RELIANCE,Mar 2020,Cash Cow / Self-Sustaining
+RELIANCE,Mar 2021,Reinvestor
+RELIANCE,Mar 2022,Reinvestor
+RELIANCE,Mar 2023,Reinvestor
+RELIANCE,Mar 2024,Cash Cow / Self-Sustaining
+SBILIFE,Mar 2013,Cash Cow / Self-Sustaining
+SBILIFE,Mar 2014,Cash Cow / Self-Sustaining
+SBILIFE,Mar 2015,Cash Cow / Self-Sustaining
+SBILIFE,Mar 2016,Cash Cow / Self-Sustaining
+SBILIFE,Mar 2017,Cash Cow / Self-Sustaining
+SBILIFE,Mar 2018,Cash Cow / Self-Sustaining
+SBILIFE,Mar 2019,Cash Cow / Self-Sustaining
+SBILIFE,Mar 2020,Cash Cow / Self-Sustaining
+SBILIFE,Mar 2021,Reinvestor
+SBILIFE,Mar 2022,Cash Cow / Self-Sustaining
+SBILIFE,Mar 2023,Cash Cow / Self-Sustaining
+SBILIFE,Mar 2024,Cash Cow / Self-Sustaining
+SHREECEM,Jun 2013,Cash Cow / Self-Sustaining
+SHREECEM,Jun 2014,Cash Cow / Self-Sustaining
+SHREECEM,Jun 2015,Cash Cow / Self-Sustaining
+SHREECEM,Mar 2016,Cash Cow / Self-Sustaining
+SHREECEM,Mar 2017,Cash Cow / Self-Sustaining
+SHREECEM,Mar 2018,Reinvestor
+SHREECEM,Mar 2019,Cash Cow / Self-Sustaining
+SHREECEM,Mar 2020,Reinvestor
+SHREECEM,Mar 2021,Cash Cow / Self-Sustaining
+SHREECEM,Mar 2022,Cash Cow / Self-Sustaining
+SHREECEM,Mar 2023,Cash Cow / Self-Sustaining
+SHREECEM,Mar 2024,Cash Cow / Self-Sustaining
+SHRIRAMFIN,Mar 2013,Distress Signal
+SHRIRAMFIN,Mar 2014,Distress Signal
+SHRIRAMFIN,Mar 2015,Distress Signal
+SHRIRAMFIN,Mar 2016,Distress Signal
+SHRIRAMFIN,Mar 2017,Distress Signal
+SHRIRAMFIN,Mar 2018,Asset Seller
+SHRIRAMFIN,Mar 2019,Distress Signal
+SHRIRAMFIN,Mar 2020,Distress Signal
+SHRIRAMFIN,Mar 2021,Distress Signal
+SHRIRAMFIN,Mar 2022,Distress Signal
+SHRIRAMFIN,Mar 2023,Asset Seller
+SHRIRAMFIN,Mar 2024,Distress Signal
+SIEMENS,Sep 2011,Deleveraging
+SIEMENS,Sep 2014,Deleveraging
+SIEMENS,Sep 2015,Deleveraging
+SIEMENS,Sep 2016,Deleveraging
+SIEMENS,Sep 2017,Deleveraging
+SIEMENS,Sep 2018,Cash Cow / Self-Sustaining
+SIEMENS,Sep 2019,Cash Cow / Self-Sustaining
+SIEMENS,Sep 2020,Deleveraging
+SIEMENS,Sep 2021,Cash Cow / Self-Sustaining
+SIEMENS,Sep 2022,Cash Cow / Self-Sustaining
+SIEMENS,Sep 2023,Cash Cow / Self-Sustaining
+SIEMENS,Sep 2024,Cash Cow / Self-Sustaining
+SUNPHARMA,Mar 2013,Cash Cow / Self-Sustaining
+SUNPHARMA,Mar 2014,Reinvestor
+SUNPHARMA,Mar 2015,Cash Cow / Self-Sustaining
+SUNPHARMA,Mar 2016,Cash Cow / Self-Sustaining
+SUNPHARMA,Mar 2017,Cash Cow / Self-Sustaining
+SUNPHARMA,Mar 2018,Cash Cow / Self-Sustaining
+SUNPHARMA,Mar 2019,Cash Cow / Self-Sustaining
+SUNPHARMA,Mar 2020,Cash Cow / Self-Sustaining
+SUNPHARMA,Mar 2021,Deleveraging
+SUNPHARMA,Mar 2022,Cash Cow / Self-Sustaining
+SUNPHARMA,Mar 2023,Reinvestor
+SUNPHARMA,Mar 2024,Cash Cow / Self-Sustaining
+TATACONSUM,Mar 2013,Cash Accumulator
+TATACONSUM,Mar 2014,Cash Cow / Self-Sustaining
+TATACONSUM,Mar 2015,Cash Cow / Self-Sustaining
+TATACONSUM,Mar 2016,Deleveraging
+TATACONSUM,Mar 2017,Deleveraging
+TATACONSUM,Mar 2018,Cash Cow / Self-Sustaining
+TATACONSUM,Mar 2019,Deleveraging
+TATACONSUM,Mar 2020,Cash Cow / Self-Sustaining
+TATACONSUM,Mar 2021,Cash Cow / Self-Sustaining
+TATACONSUM,Mar 2022,Cash Cow / Self-Sustaining
+TATACONSUM,Mar 2023,Cash Cow / Self-Sustaining
+TATACONSUM,Mar 2024,Reinvestor
+TATAMOTORS,Mar 2013,Cash Cow / Self-Sustaining
+TATAMOTORS,Mar 2014,Cash Cow / Self-Sustaining
+TATAMOTORS,Mar 2015,Reinvestor
+TATAMOTORS,Mar 2016,Cash Cow / Self-Sustaining
+TATAMOTORS,Mar 2017,Reinvestor
+TATAMOTORS,Mar 2018,Reinvestor
+TATAMOTORS,Mar 2019,Reinvestor
+TATAMOTORS,Mar 2020,Reinvestor
+TATAMOTORS,Mar 2021,Reinvestor
+TATAMOTORS,Mar 2022,Cash Cow / Self-Sustaining
+TATAMOTORS,Mar 2023,Cash Cow / Self-Sustaining
+TATAMOTORS,Mar 2024,Cash Cow / Self-Sustaining
+TATAPOWER,Mar 2013,Cash Cow / Self-Sustaining
+TATAPOWER,Mar 2014,Cash Cow / Self-Sustaining
+TATAPOWER,Mar 2015,Cash Cow / Self-Sustaining
+TATAPOWER,Mar 2016,Cash Cow / Self-Sustaining
+TATAPOWER,Mar 2017,Reinvestor
+TATAPOWER,Mar 2018,Cash Cow / Self-Sustaining
+TATAPOWER,Mar 2019,Cash Cow / Self-Sustaining
+TATAPOWER,Mar 2020,Cash Cow / Self-Sustaining
+TATAPOWER,Mar 2021,Deleveraging
+TATAPOWER,Mar 2022,Cash Cow / Self-Sustaining
+TATAPOWER,Mar 2023,Reinvestor
+TATAPOWER,Mar 2024,Cash Cow / Self-Sustaining
+TATASTEEL,Mar 2013,Cash Cow / Self-Sustaining
+TATASTEEL,Mar 2014,Reinvestor
+TATASTEEL,Mar 2015,Cash Cow / Self-Sustaining
+TATASTEEL,Mar 2016,Cash Cow / Self-Sustaining
+TATASTEEL,Mar 2017,Cash Cow / Self-Sustaining
+TATASTEEL,Mar 2018,Reinvestor
+TATASTEEL,Mar 2019,Cash Cow / Self-Sustaining
+TATASTEEL,Mar 2020,Cash Cow / Self-Sustaining
+TATASTEEL,Mar 2021,Cash Cow / Self-Sustaining
+TATASTEEL,Mar 2022,Cash Cow / Self-Sustaining
+TATASTEEL,Mar 2023,Cash Cow / Self-Sustaining
+TATASTEEL,Mar 2024,Cash Cow / Self-Sustaining
+TCS,Mar 2013,Cash Cow / Self-Sustaining
+TCS,Mar 2014,Cash Cow / Self-Sustaining
+TCS,Mar 2015,Cash Cow / Self-Sustaining
+TCS,Mar 2016,Cash Cow / Self-Sustaining
+TCS,Mar 2017,Cash Cow / Self-Sustaining
+TCS,Mar 2018,Deleveraging
+TCS,Mar 2019,Deleveraging
+TCS,Mar 2020,Deleveraging
+TCS,Mar 2021,Cash Cow / Self-Sustaining
+TCS,Mar 2022,Cash Cow / Self-Sustaining
+TCS,Mar 2023,Deleveraging
+TCS,Mar 2024,Deleveraging
+TCS,Mar-13,Cash Cow / Self-Sustaining
+TCS,Mar-14,Cash Cow / Self-Sustaining
+TCS,Mar-15,Cash Cow / Self-Sustaining
+TCS,Mar-16,Cash Cow / Self-Sustaining
+TCS,Mar-17,Cash Cow / Self-Sustaining
+TCS,Mar-18,Deleveraging
+TCS,Mar-19,Deleveraging
+TCS,Mar-20,Deleveraging
+TCS,Mar-21,Cash Cow / Self-Sustaining
+TCS,Mar-22,Cash Cow / Self-Sustaining
+TCS,Mar-23,Deleveraging
+TCS,Mar-24,Deleveraging
+TECHM,Mar 2013,Reinvestor
+TECHM,Mar 2014,Deleveraging
+TECHM,Mar 2015,Cash Cow / Self-Sustaining
+TECHM,Mar 2016,Cash Cow / Self-Sustaining
+TECHM,Mar 2017,Cash Cow / Self-Sustaining
+TECHM,Mar 2018,Cash Cow / Self-Sustaining
+TECHM,Mar 2019,Cash Cow / Self-Sustaining
+TECHM,Mar 2020,Deleveraging
+TECHM,Mar 2021,Cash Cow / Self-Sustaining
+TECHM,Mar 2022,Deleveraging
+TECHM,Mar 2023,Cash Cow / Self-Sustaining
+TECHM,Mar 2024,Cash Cow / Self-Sustaining
+TITAN,Mar 2013,Cash Cow / Self-Sustaining
+TITAN,Mar 2014,Distress Signal
+TITAN,Mar 2015,Cash Cow / Self-Sustaining
+TITAN,Mar 2016,Cash Cow / Self-Sustaining
+TITAN,Mar 2017,Cash Cow / Self-Sustaining
+TITAN,Mar 2018,Liquidating
+TITAN,Mar 2019,Cash Cow / Self-Sustaining
+TITAN,Mar 2020,Liquidating
+TITAN,Mar 2021,Cash Cow / Self-Sustaining
+TITAN,Mar 2022,Liquidating
+TITAN,Mar 2023,Reinvestor
+TITAN,Mar 2024,Cash Cow / Self-Sustaining
+TORNTPHARM,Mar 2013,Reinvestor
+TORNTPHARM,Mar 2014,Reinvestor
+TORNTPHARM,Mar 2015,Reinvestor
+TORNTPHARM,Mar 2016,Cash Cow / Self-Sustaining
+TORNTPHARM,Mar 2017,Cash Cow / Self-Sustaining
+TORNTPHARM,Mar 2018,Reinvestor
+TORNTPHARM,Mar 2019,Cash Cow / Self-Sustaining
+TORNTPHARM,Mar 2020,Deleveraging
+TORNTPHARM,Mar 2021,Cash Cow / Self-Sustaining
+TORNTPHARM,Mar 2022,Cash Cow / Self-Sustaining
+TORNTPHARM,Mar 2023,Reinvestor
+TORNTPHARM,Mar 2024,Cash Cow / Self-Sustaining
+TRENT,Mar 2013,Reinvestor
+TRENT,Mar 2014,High Risk / Bleeding
+TRENT,Mar 2015,Distress Signal
+TRENT,Mar 2016,Cash Cow / Self-Sustaining
+TRENT,Mar 2017,Cash Cow / Self-Sustaining
+TRENT,Mar 2018,Cash Cow / Self-Sustaining
+TRENT,Mar 2019,Reinvestor
+TRENT,Mar 2020,Reinvestor
+TRENT,Mar 2021,Deleveraging
+TRENT,Mar 2022,Deleveraging
+TRENT,Mar 2023,Cash Cow / Self-Sustaining
+TRENT,Mar 2024,Cash Cow / Self-Sustaining
+TVSMOTOR,Mar 2013,Cash Cow / Self-Sustaining
+TVSMOTOR,Mar 2014,Cash Cow / Self-Sustaining
+TVSMOTOR,Mar 2015,Reinvestor
+TVSMOTOR,Mar 2016,Cash Cow / Self-Sustaining
+TVSMOTOR,Mar 2017,Cash Cow / Self-Sustaining
+TVSMOTOR,Mar 2018,Reinvestor
+TVSMOTOR,Mar 2019,Distress Signal
+TVSMOTOR,Mar 2020,Reinvestor
+TVSMOTOR,Mar 2021,Reinvestor
+TVSMOTOR,Mar 2022,Distress Signal
+TVSMOTOR,Mar 2023,Distress Signal
+TVSMOTOR,Mar 2024,Distress Signal
