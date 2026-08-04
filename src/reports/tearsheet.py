@@ -361,9 +361,31 @@ def build_tearsheet(ticker):
     except Exception as e:
         logger.error(f"Failed to build PDF for {ticker}: {e}")
 
-if __name__ == "__main__":
-    test_tickers = ['TCS', 'HDFCBANK', 'RELIANCE', 'SUNPHARMA', 'TATASTEEL']
-    logger.info("Starting Batch Test for Day 33 Tearsheets...")
-    for t in test_tickers:
+def generate_all():
+    df = get_screener_data()
+    all_tickers = df['company_id'].unique()
+    skipped = []
+    
+    logger.info(f"Starting batch generation for {len(all_tickers)} companies...")
+    for t in all_tickers:
+        pl = get_pl(t)
+        if pl is None or pl.empty or len(pl['year'].unique()) < 3:
+            logger.warning(f"Skipping {t} - Insufficient data (< 3 years)")
+            skipped.append(t)
+            continue
         build_tearsheet(t)
-    logger.info("Test complete.")
+        
+    # Log skipped
+    skip_path = Path(__file__).resolve().parents[2] / 'output' / 'skipped_tearsheets.csv'
+    pd.DataFrame({'company_id': skipped}).to_csv(skip_path, index=False)
+    logger.info(f"Batch generation complete. Generated: {len(all_tickers) - len(skipped)}, Skipped: {len(skipped)}")
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == '--batch':
+        generate_all()
+    else:
+        test_tickers = ['TCS', 'HDFCBANK', 'RELIANCE', 'SUNPHARMA', 'TATASTEEL']
+        logger.info("Starting Batch Test for Day 33 Tearsheets...")
+        for t in test_tickers:
+            build_tearsheet(t)
+        logger.info("Test complete.")
