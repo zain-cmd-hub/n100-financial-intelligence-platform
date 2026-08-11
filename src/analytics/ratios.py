@@ -322,3 +322,34 @@ def asset_turnover(
 
     return round(value, 2)
 
+
+def cagr_turnaround_flag(start_val, end_val):
+    if start_val < 0 and end_val > 0:
+        return True
+    return False
+
+def cagr_decline_to_loss_flag(start_val, end_val):
+    if start_val > 0 and end_val < 0:
+        return True
+    return False
+
+def calculate_cagr(start_val, end_val, years):
+    if start_val <= 0 or end_val <= 0 or years <= 0:
+        return None
+    cagr = ((end_val / start_val) ** (1 / years) - 1) * 100
+    return round(cagr, 2)
+
+def cfo_quality_score(cfo_vals, pat_vals):
+    if not cfo_vals or not pat_vals or len(cfo_vals) != len(pat_vals):
+        return 0.0
+    ratios_arr = []
+    for cfo, pat in zip(cfo_vals, pat_vals):
+        if pat > 0:
+            ratios_arr.append(cfo / pat)
+        elif pat <= 0 and cfo > 0:
+            ratios_arr.append(2.0)
+        else:
+            ratios_arr.append(0.0)
+    import numpy as np
+    return float(np.mean(ratios_arr)) if ratios_arr else 0.0
+

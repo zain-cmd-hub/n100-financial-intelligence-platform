@@ -4,7 +4,7 @@ import sqlite3
 
 import pandas as pd
 
-from normaliser import normalize_ticker
+from src.etl.normaliser import normalize_ticker
 
 
 # ============================================================
