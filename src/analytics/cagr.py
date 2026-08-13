@@ -1,5 +1,3 @@
-from typing import Optional
-import math
 
 # ==========================================================
 # CAGR FLAGS
@@ -16,6 +14,7 @@ INSUFFICIENT = "INSUFFICIENT"
 # ==========================================================
 # SAFE CAGR
 # ==========================================================
+
 
 def safe_cagr(start_value, end_value, years):
     """
@@ -38,9 +37,7 @@ def safe_cagr(start_value, end_value, years):
     if end_value <= 0:
         return None
 
-    value = (
-        (end_value / start_value) ** (1 / years) - 1
-    ) * 100
+    value = ((end_value / start_value) ** (1 / years) - 1) * 100
 
     return round(value, 2)
 
@@ -48,6 +45,7 @@ def safe_cagr(start_value, end_value, years):
 # ==========================================================
 # CAGR ENGINE
 # ==========================================================
+
 
 def calculate_cagr(start_value, end_value, years):
     """
@@ -80,11 +78,7 @@ def calculate_cagr(start_value, end_value, years):
         return None, BOTH_NEGATIVE
 
     # Normal CAGR
-    value = safe_cagr(
-        start_value,
-        end_value,
-        years
-    )
+    value = safe_cagr(start_value, end_value, years)
 
     return value, NORMAL
 
@@ -93,43 +87,39 @@ def calculate_cagr(start_value, end_value, years):
 # GENERIC WRAPPERS
 # ==========================================================
 
+
 def revenue_cagr(start_sales, end_sales, years):
-    return calculate_cagr(
-        start_sales,
-        end_sales,
-        years
-    )
+    """Handles operations for revenue_cagr."""
+    return calculate_cagr(start_sales, end_sales, years)
 
 
 def profit_cagr(start_profit, end_profit, years):
-    return calculate_cagr(
-        start_profit,
-        end_profit,
-        years
-    )
+    """Handles operations for profit_cagr."""
+    return calculate_cagr(start_profit, end_profit, years)
 
 
 def eps_cagr(start_eps, end_eps, years):
-    return calculate_cagr(
-        start_eps,
-        end_eps,
-        years
-    )
+    """Handles operations for eps_cagr."""
+    return calculate_cagr(start_eps, end_eps, years)
 
 
 # ==========================================================
 # REVENUE CAGR
 # ==========================================================
 
+
 def revenue_cagr_3yr(start, end):
+    """Handles operations for revenue_cagr_3yr."""
     return revenue_cagr(start, end, 3)
 
 
 def revenue_cagr_5yr(start, end):
+    """Handles operations for revenue_cagr_5yr."""
     return revenue_cagr(start, end, 5)
 
 
 def revenue_cagr_10yr(start, end):
+    """Handles operations for revenue_cagr_10yr."""
     return revenue_cagr(start, end, 10)
 
 
@@ -137,15 +127,19 @@ def revenue_cagr_10yr(start, end):
 # PAT CAGR
 # ==========================================================
 
+
 def pat_cagr_3yr(start, end):
+    """Handles operations for pat_cagr_3yr."""
     return profit_cagr(start, end, 3)
 
 
 def pat_cagr_5yr(start, end):
+    """Handles operations for pat_cagr_5yr."""
     return profit_cagr(start, end, 5)
 
 
 def pat_cagr_10yr(start, end):
+    """Handles operations for pat_cagr_10yr."""
     return profit_cagr(start, end, 10)
 
 
@@ -153,13 +147,17 @@ def pat_cagr_10yr(start, end):
 # EPS CAGR
 # ==========================================================
 
+
 def eps_cagr_3yr(start, end):
+    """Handles operations for eps_cagr_3yr."""
     return eps_cagr(start, end, 3)
 
 
 def eps_cagr_5yr(start, end):
+    """Handles operations for eps_cagr_5yr."""
     return eps_cagr(start, end, 5)
 
 
 def eps_cagr_10yr(start, end):
+    """Handles operations for eps_cagr_10yr."""
     return eps_cagr(start, end, 10)

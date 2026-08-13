@@ -1,5 +1,4 @@
-from typing import Optional
-import math
+
 
 def safe_divide(numerator, denominator):
     """
@@ -17,10 +16,8 @@ def safe_divide(numerator, denominator):
 
     return numerator / denominator
 
-def net_profit_margin(
-    net_profit,
-    sales
-):
+
+def net_profit_margin(net_profit, sales):
     """
     Net Profit Margin (%)
 
@@ -28,44 +25,28 @@ def net_profit_margin(
     Net Profit / Sales × 100
     """
 
-    value = safe_divide(
-        net_profit,
-        sales
-    )
+    value = safe_divide(net_profit, sales)
 
     if value is None:
         return None
 
-    return round(
-        value * 100,
-        2
-    )
+    return round(value * 100, 2)
 
-def operating_profit_margin(
-    operating_profit,
-    sales
-):
+
+def operating_profit_margin(operating_profit, sales):
     """
     Operating Profit Margin (%)
     """
 
-    value = safe_divide(
-        operating_profit,
-        sales
-    )
+    value = safe_divide(operating_profit, sales)
 
     if value is None:
         return None
 
-    return round(
-        value * 100,
-        2
-    )
-def opm_cross_check(
-    calculated_opm,
-    source_opm,
-    tolerance=1
-):
+    return round(value * 100, 2)
+
+
+def opm_cross_check(calculated_opm, source_opm, tolerance=1):
     """
     Compare calculated OPM
     with source OPM.
@@ -77,18 +58,12 @@ def opm_cross_check(
     if source_opm is None:
         return False
 
-    difference = abs(
-        calculated_opm -
-        source_opm
-    )
+    difference = abs(calculated_opm - source_opm)
 
     return difference <= tolerance
 
-def return_on_equity(
-    net_profit,
-    equity,
-    reserves
-):
+
+def return_on_equity(net_profit, equity, reserves):
     """
     ROE (%)
 
@@ -102,25 +77,16 @@ def return_on_equity(
     if capital <= 0:
         return None
 
-    value = safe_divide(
-        net_profit,
-        capital
-    )
+    value = safe_divide(net_profit, capital)
 
     if value is None:
         return None
 
-    return round(
-        value * 100,
-        2
-    )
+    return round(value * 100, 2)
+
 
 def return_on_capital_employed(
-    operating_profit,
-    interest,
-    equity,
-    reserves,
-    borrowings
+    operating_profit, interest, equity, reserves, borrowings
 ):
     """
     ROCE
@@ -131,53 +97,33 @@ def return_on_capital_employed(
 
     ebit = operating_profit + interest
 
-    capital = (
-        equity +
-        reserves +
-        borrowings
-    )
+    capital = equity + reserves + borrowings
 
     if capital <= 0:
         return None
 
-    value = safe_divide(
-        ebit,
-        capital
-    )
+    value = safe_divide(ebit, capital)
 
     if value is None:
         return None
 
-    return round(
-        value * 100,
-        2
-    )
-def return_on_assets(
-    net_profit,
-    total_assets
-):
+    return round(value * 100, 2)
+
+
+def return_on_assets(net_profit, total_assets):
     """
     ROA (%)
     """
 
-    value = safe_divide(
-        net_profit,
-        total_assets
-    )
+    value = safe_divide(net_profit, total_assets)
 
     if value is None:
         return None
 
-    return round(
-        value * 100,
-        2
-    )
+    return round(value * 100, 2)
 
-def debt_to_equity(
-    borrowings,
-    equity,
-    reserves
-):
+
+def debt_to_equity(borrowings, equity, reserves):
     """
     Debt to Equity Ratio
 
@@ -198,20 +144,15 @@ def debt_to_equity(
     if capital <= 0:
         return None
 
-    value = safe_divide(
-        borrowings,
-        capital
-    )
+    value = safe_divide(borrowings, capital)
 
     if value is None:
         return None
 
     return round(value, 2)
 
-def high_leverage_flag(
-    debt_equity,
-    sector
-):
+
+def high_leverage_flag(debt_equity, sector):
     """
     High leverage warning.
 
@@ -229,39 +170,29 @@ def high_leverage_flag(
 
     return debt_equity > 5
 
-def interest_coverage_ratio(
-    operating_profit,
-    other_income,
-    interest
-):
-    """
-    Interest Coverage Ratio
 
-    (Operating Profit + Other Income)
-/ Interest
+def interest_coverage_ratio(operating_profit, other_income, interest):
+    """
+        Interest Coverage Ratio
+
+        (Operating Profit + Other Income)
+    / Interest
     """
 
     if interest == 0:
         return None
 
-    ebit = (
-        operating_profit +
-        other_income
-    )
+    ebit = operating_profit + other_income
 
-    value = safe_divide(
-        ebit,
-        interest
-    )
+    value = safe_divide(ebit, interest)
 
     if value is None:
         return None
 
     return round(value, 2)
 
-def interest_coverage_label(
-    interest
-):
+
+def interest_coverage_label(interest):
     """
     Display label for debt free companies.
     """
@@ -271,9 +202,8 @@ def interest_coverage_label(
 
     return ""
 
-def interest_coverage_warning(
-    icr
-):
+
+def interest_coverage_warning(icr):
     """
     Company unable to comfortably
     cover interest.
@@ -284,10 +214,8 @@ def interest_coverage_warning(
 
     return icr < 1.5
 
-def net_debt(
-    borrowings,
-    investments
-):
+
+def net_debt(borrowings, investments):
     """
     Net Debt
 
@@ -295,16 +223,10 @@ def net_debt(
     Investments
     """
 
-    return round(
-        borrowings -
-        investments,
-        2
-    )
+    return round(borrowings - investments, 2)
 
-def asset_turnover(
-    sales,
-    total_assets
-):
+
+def asset_turnover(sales, total_assets):
     """
     Asset Turnover
 
@@ -312,10 +234,7 @@ def asset_turnover(
     Total Assets
     """
 
-    value = safe_divide(
-        sales,
-        total_assets
-    )
+    value = safe_divide(sales, total_assets)
 
     if value is None:
         return None
@@ -324,22 +243,25 @@ def asset_turnover(
 
 
 def cagr_turnaround_flag(start_val, end_val):
-    if start_val < 0 and end_val > 0:
-        return True
-    return False
+    """Handles operations for cagr_turnaround_flag."""
+    return bool(start_val < 0 and end_val > 0)
+
 
 def cagr_decline_to_loss_flag(start_val, end_val):
-    if start_val > 0 and end_val < 0:
-        return True
-    return False
+    """Handles operations for cagr_decline_to_loss_flag."""
+    return bool(start_val > 0 and end_val < 0)
+
 
 def calculate_cagr(start_val, end_val, years):
+    """Handles operations for calculate_cagr."""
     if start_val <= 0 or end_val <= 0 or years <= 0:
         return None
     cagr = ((end_val / start_val) ** (1 / years) - 1) * 100
     return round(cagr, 2)
 
+
 def cfo_quality_score(cfo_vals, pat_vals):
+    """Handles operations for cfo_quality_score."""
     if not cfo_vals or not pat_vals or len(cfo_vals) != len(pat_vals):
         return 0.0
     ratios_arr = []
@@ -351,5 +273,5 @@ def cfo_quality_score(cfo_vals, pat_vals):
         else:
             ratios_arr.append(0.0)
     import numpy as np
-    return float(np.mean(ratios_arr)) if ratios_arr else 0.0
 
+    return float(np.mean(ratios_arr)) if ratios_arr else 0.0

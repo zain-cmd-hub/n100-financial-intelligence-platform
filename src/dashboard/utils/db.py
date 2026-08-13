@@ -1,9 +1,10 @@
 import sqlite3
-import pandas as pd
-import streamlit as st
+import sys
 from pathlib import Path
 
-import sys
+import pandas as pd
+import streamlit as st
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 from src.screener.engine import ScreenerEngine
 from src.screener.scoring import CompositeScorer
@@ -11,18 +12,24 @@ from src.screener.scoring import CompositeScorer
 # Connect to database securely
 DB_PATH = Path(__file__).resolve().parents[3] / "db" / "nifty100.db"
 
+
 def get_connection():
+    """Handles operations for get_connection."""
     return sqlite3.connect(DB_PATH, check_same_thread=False)
+
 
 @st.cache_data(ttl=600)
 def get_companies():
+    """Handles operations for get_companies."""
     conn = get_connection()
     df = pd.read_sql("SELECT * FROM companies", conn)
     conn.close()
     return df
 
+
 @st.cache_data(ttl=600)
 def get_ratios(ticker, year=None):
+    """Handles operations for get_ratios."""
     conn = get_connection()
     query = f"SELECT * FROM financial_ratios WHERE company_id = '{ticker}'"
     if year:
@@ -31,123 +38,155 @@ def get_ratios(ticker, year=None):
     conn.close()
     return df
 
+
 @st.cache_data(ttl=600)
 def get_pl(ticker):
+    """Handles operations for get_pl."""
     conn = get_connection()
     df = pd.read_sql(f"SELECT * FROM profitandloss WHERE company_id = '{ticker}'", conn)
     conn.close()
     return df
 
+
 @st.cache_data(ttl=600)
 def get_ratios(ticker):
+    """Handles operations for get_ratios."""
     conn = get_connection()
-    df = pd.read_sql(f"SELECT * FROM financial_ratios WHERE company_id = '{ticker}'", conn)
+    df = pd.read_sql(
+        f"SELECT * FROM financial_ratios WHERE company_id = '{ticker}'", conn
+    )
     conn.close()
     return df
 
+
 @st.cache_data(ttl=600)
 def get_full_trends_data(ticker):
+    """Handles operations for get_full_trends_data."""
     pl = get_pl(ticker)
     ratios = get_ratios(ticker)
-    
+
     if pl.empty and ratios.empty:
         return pd.DataFrame()
-        
+
     if not pl.empty:
-        pl['year'] = pl['year'].astype(str)
+        pl["year"] = pl["year"].astype(str)
     if not ratios.empty:
-        ratios['year'] = ratios['year'].astype(str)
-        
+        ratios["year"] = ratios["year"].astype(str)
+
     if not pl.empty and not ratios.empty:
-        merged = pl.merge(ratios, on=['company_id', 'year'], how='outer')
+        merged = pl.merge(ratios, on=["company_id", "year"], how="outer")
     elif not pl.empty:
         merged = pl
     else:
         merged = ratios
-        
+
     # Standardize columns we care about
     metrics = {
-        'sales': 'Revenue',
-        'net_profit': 'Net Profit',
-        'eps': 'EPS',
-        'free_cash_flow_cr': 'Free Cash Flow',
-        'operating_profit': 'Operating Profit',
-        'return_on_equity_pct': 'ROE (%)'
+        "sales": "Revenue",
+        "net_profit": "Net Profit",
+        "eps": "EPS",
+        "free_cash_flow_cr": "Free Cash Flow",
+        "operating_profit": "Operating Profit",
+        "return_on_equity_pct": "ROE (%)",
     }
-    
-    for c in metrics.keys():
+
+    for c in metrics:
         if c not in merged.columns:
             merged[c] = None
         else:
             # Handle "Debt Free" or weird strings
-            merged[c] = pd.to_numeric(merged[c].replace("Debt Free", 0), errors='coerce')
-            
+            merged[c] = pd.to_numeric(
+                merged[c].replace("Debt Free", 0), errors="coerce"
+            )
+
     merged = merged.rename(columns=metrics)
-    merged = merged.sort_values('year')
-    return merged[['year'] + list(metrics.values())]
+    merged = merged.sort_values("year")
+    return merged[["year"] + list(metrics.values())]
+
 
 @st.cache_data(ttl=600)
 def get_bs(ticker):
+    """Handles operations for get_bs."""
     conn = get_connection()
     df = pd.read_sql(f"SELECT * FROM balancesheet WHERE company_id = '{ticker}'", conn)
     conn.close()
     return df
 
+
 @st.cache_data(ttl=600)
 def get_cf(ticker):
+    """Handles operations for get_cf."""
     conn = get_connection()
     df = pd.read_sql(f"SELECT * FROM cashflow WHERE company_id = '{ticker}'", conn)
     conn.close()
     return df
 
+
 @st.cache_data(ttl=600)
 def get_sectors():
+    """Handles operations for get_sectors."""
     conn = get_connection()
     df = pd.read_sql("SELECT * FROM sectors", conn)
     conn.close()
     return df
 
+
 @st.cache_data(ttl=600)
 def get_all_ratios():
+    """Handles operations for get_all_ratios."""
     conn = get_connection()
     df = pd.read_sql("SELECT * FROM financial_ratios", conn)
     conn.close()
     return df
 
+
 @st.cache_data(ttl=600)
 def get_prosandcons(ticker):
+    """Handles operations for get_prosandcons."""
     conn = get_connection()
     df = pd.read_sql(f"SELECT * FROM prosandcons WHERE company_id = '{ticker}'", conn)
     conn.close()
     return df
 
+
 @st.cache_data(ttl=600)
 def get_peers(group_name):
+    """Handles operations for get_peers."""
     conn = get_connection()
-    df = pd.read_sql(f"SELECT * FROM peer_groups WHERE peer_group_name = '{group_name}'", conn)
+    df = pd.read_sql(
+        f"SELECT * FROM peer_groups WHERE peer_group_name = '{group_name}'", conn
+    )
     conn.close()
     return df
 
+
 @st.cache_data(ttl=600)
 def get_peer_group_names():
+    """Handles operations for get_peer_group_names."""
     conn = get_connection()
     df = pd.read_sql("SELECT DISTINCT peer_group_name FROM peer_groups", conn)
     conn.close()
-    return df['peer_group_name'].tolist()
+    return df["peer_group_name"].tolist()
+
 
 @st.cache_data(ttl=600)
 def get_valuation(ticker=None):
+    """Handles operations for get_valuation."""
     try:
-        val_path = Path(__file__).resolve().parents[3] / 'output' / 'valuation_summary.xlsx'
+        val_path = (
+            Path(__file__).resolve().parents[3] / "output" / "valuation_summary.xlsx"
+        )
         df = pd.read_excel(val_path)
         if ticker:
-            return df[df['company_id'] == ticker]
+            return df[df["company_id"] == ticker]
         return df
-    except Exception as e:
+    except Exception:
         return pd.DataFrame()
+
 
 @st.cache_data(ttl=600)
 def get_composite_scores():
+    """Handles operations for get_composite_scores."""
     try:
         with ScreenerEngine() as engine:
             df = engine.merge_data()
@@ -156,13 +195,19 @@ def get_composite_scores():
             scorer = CompositeScorer(df)
             scored_df = scorer.calculate_score()
             # return only latest year
-            scored_df = scored_df.sort_values(["company_id", "year"]).drop_duplicates(subset=["company_id"], keep="last")
-            return scored_df[["company_id", "company_name_company", "sector_name", "composite_score"]].sort_values("composite_score", ascending=False)
-    except Exception as e:
+            scored_df = scored_df.sort_values(["company_id", "year"]).drop_duplicates(
+                subset=["company_id"], keep="last"
+            )
+            return scored_df[
+                ["company_id", "company_name_company", "sector_name", "composite_score"]
+            ].sort_values("composite_score", ascending=False)
+    except Exception:
         return pd.DataFrame()
+
 
 @st.cache_data(ttl=600)
 def get_screener_data():
+    """Handles operations for get_screener_data."""
     try:
         with ScreenerEngine() as engine:
             df = engine.merge_data()
@@ -171,15 +216,18 @@ def get_screener_data():
             scorer = CompositeScorer(df)
             scored_df = scorer.calculate_score()
             # return only latest year for the screener
-            scored_df = scored_df.sort_values(["company_id", "year"]).drop_duplicates(subset=["company_id"], keep="last")
+            scored_df = scored_df.sort_values(["company_id", "year"]).drop_duplicates(
+                subset=["company_id"], keep="last"
+            )
             return scored_df
-    except Exception as e:
+    except Exception:
         return pd.DataFrame()
+
 
 @st.cache_data(ttl=600)
 def get_documents(ticker):
+    """Handles operations for get_documents."""
     conn = get_connection()
     df = pd.read_sql(f"SELECT * FROM documents WHERE company_id = '{ticker}'", conn)
     conn.close()
     return df
-

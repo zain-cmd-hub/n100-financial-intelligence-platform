@@ -1,7 +1,7 @@
 import logging
 import sqlite3
 from pathlib import Path
-from typing import Dict, Optional, Tuple, Any
+from typing import Any
 
 import pandas as pd
 import yaml
@@ -33,13 +33,15 @@ class ScreenerEngine:
 
     def __init__(self):
         """Initializes the ScreenerEngine and connects to the database."""
-        self.conn: Optional[sqlite3.Connection] = None
+        self.conn: sqlite3.Connection | None = None
         self.connect_db()
 
     def __enter__(self):
+        """Handles operations for __enter__."""
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
+        """Handles operations for __exit__."""
         self.close()
 
     # -------------------------------------------------
@@ -67,10 +69,10 @@ class ScreenerEngine:
     # -------------------------------------------------
     # Load Config
     # -------------------------------------------------
-    def load_config(self) -> Dict[str, Any]:
+    def load_config(self) -> dict[str, Any]:
         """
         Load filtering configuration from YAML file.
-        
+
         Returns:
             Dict: Configuration parameters.
         """
@@ -87,12 +89,22 @@ class ScreenerEngine:
     # -------------------------------------------------
     # Load Tables
     # -------------------------------------------------
-    def load_data(self) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    def load_data(
+        self,
+    ) -> tuple[
+        pd.DataFrame,
+        pd.DataFrame,
+        pd.DataFrame,
+        pd.DataFrame,
+        pd.DataFrame,
+        pd.DataFrame,
+        pd.DataFrame,
+    ]:
         """
         Load all necessary tables from the database.
-        
+
         Returns:
-            Tuple containing financial_ratios, profit_loss, cash_flow, 
+            Tuple containing financial_ratios, profit_loss, cash_flow,
             balance_sheet, market_cap, sectors, companies dataframes.
         """
         if not self.conn:
@@ -108,9 +120,9 @@ class ScreenerEngine:
             market_cap = pd.read_sql("SELECT * FROM market_cap", self.conn)
             sectors = pd.read_sql("SELECT * FROM sectors", self.conn)
             companies = pd.read_sql("SELECT * FROM companies", self.conn)
-            
+
             logger.info("Successfully loaded all tables from database.")
-            
+
             return (
                 financial_ratios,
                 profit_loss,
@@ -118,7 +130,7 @@ class ScreenerEngine:
                 balance_sheet,
                 market_cap,
                 sectors,
-                companies
+                companies,
             )
         except pd.io.sql.DatabaseError as e:
             logger.error(f"Database query error during loading: {e}")
@@ -137,7 +149,15 @@ class ScreenerEngine:
         market_cap: pd.DataFrame,
         sectors: pd.DataFrame,
         companies: pd.DataFrame,
-    ) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    ) -> tuple[
+        pd.DataFrame,
+        pd.DataFrame,
+        pd.DataFrame,
+        pd.DataFrame,
+        pd.DataFrame,
+        pd.DataFrame,
+        pd.DataFrame,
+    ]:
         """
         Clean and standardize data types across loaded tables.
         """
@@ -151,26 +171,26 @@ class ScreenerEngine:
         for table in tables:
             if table.empty:
                 continue
-                
+
             if "company_id" in table.columns:
                 table["company_id"] = table["company_id"].astype(str)
 
             if "year" in table.columns:
                 table["year"] = (
-                    table["year"]
-                    .astype(str)
-                    .str.extract(r"(\d{4})", expand=False)
+                    table["year"].astype(str).str.extract(r"(\d{4})", expand=False)
                 )
                 table.dropna(subset=["year"], inplace=True)
                 table["year"] = table["year"].astype(int)
 
         if not market_cap.empty:
             market_cap["company_id"] = market_cap["company_id"].astype(str)
-            market_cap["year"] = pd.to_numeric(market_cap["year"], errors='coerce').fillna(0).astype(int)
+            market_cap["year"] = (
+                pd.to_numeric(market_cap["year"], errors="coerce").fillna(0).astype(int)
+            )
 
         if not sectors.empty:
             sectors["company_id"] = sectors["company_id"].astype(str)
-            
+
         if not companies.empty:
             companies["id"] = companies["id"].astype(str)
 
@@ -190,7 +210,7 @@ class ScreenerEngine:
     def merge_data(self) -> pd.DataFrame:
         """
         Merge all tables into a unified dataframe.
-        
+
         Returns:
             pd.DataFrame: Merged financial dataset.
         """
@@ -201,7 +221,7 @@ class ScreenerEngine:
             balance_sheet,
             market_cap,
             sectors,
-            companies
+            companies,
         ) = self.load_data()
 
         if financial_ratios.empty:
@@ -231,34 +251,36 @@ class ScreenerEngine:
             "profit_loss": profit_loss,
             "cash_flow": cash_flow,
             "balance_sheet": balance_sheet,
-            "market_cap": market_cap
+            "market_cap": market_cap,
         }
-        
+
         for name, table in tables_to_check.items():
             if not table.empty and "year" in table.columns:
                 dup_count = len(table) - len(table.groupby(["company_id", "year"]))
                 if dup_count > 0:
                     logger.info(f"Fixed {dup_count} duplicate keys in {name}.")
-                    tables_to_check[name] = table.groupby(["company_id", "year"], as_index=False).last()
+                    tables_to_check[name] = table.groupby(
+                        ["company_id", "year"], as_index=False
+                    ).last()
 
         financial_ratios = tables_to_check["financial_ratios"]
         profit_loss = tables_to_check["profit_loss"]
         cash_flow = tables_to_check["cash_flow"]
         balance_sheet = tables_to_check["balance_sheet"]
         market_cap = tables_to_check["market_cap"]
-        
+
         if not sectors.empty:
             sectors_dup = len(sectors) - len(sectors.groupby("company_id"))
             if sectors_dup > 0:
                 logger.info(f"Fixed {sectors_dup} duplicate keys in sectors.")
                 sectors = sectors.groupby("company_id", as_index=False).last()
-                
+
         if not companies.empty:
             companies_dup = len(companies) - len(companies.groupby("id"))
             if companies_dup > 0:
                 logger.info(f"Fixed {companies_dup} duplicate keys in companies.")
                 companies = companies.groupby("id", as_index=False).last()
-            
+
         try:
             # Merge Financial Ratios + Market Cap
             df = financial_ratios.merge(
@@ -266,7 +288,7 @@ class ScreenerEngine:
                 on=["company_id", "year"],
                 how="left",
                 suffixes=("", "_market"),
-                validate="1:1"
+                validate="1:1",
             )
 
             df = df.merge(
@@ -274,7 +296,7 @@ class ScreenerEngine:
                 on=["company_id", "year"],
                 how="left",
                 suffixes=("", "_pl"),
-                validate="1:1"
+                validate="1:1",
             )
 
             df = df.merge(
@@ -282,7 +304,7 @@ class ScreenerEngine:
                 on=["company_id", "year"],
                 how="left",
                 suffixes=("", "_cf"),
-                validate="1:1"
+                validate="1:1",
             )
 
             df = df.merge(
@@ -290,16 +312,11 @@ class ScreenerEngine:
                 on=["company_id", "year"],
                 how="left",
                 suffixes=("", "_bs"),
-                validate="1:1"
+                validate="1:1",
             )
 
             # Merge Sector
-            df = df.merge(
-                sectors,
-                on="company_id",
-                how="left",
-                validate="m:1"
-            )
+            df = df.merge(sectors, on="company_id", how="left", validate="m:1")
 
             # Merge Company Details
             df = df.merge(
@@ -308,12 +325,12 @@ class ScreenerEngine:
                 right_on="id",
                 how="left",
                 suffixes=("", "_company"),
-                validate="m:1"
+                validate="m:1",
             )
-            
+
             logger.info(f"Data merged successfully. Shape: {df.shape}")
             return df
-            
+
         except pd.errors.MergeError as e:
             logger.error(f"Merge error occurred: {e}")
             return pd.DataFrame()
@@ -322,19 +339,19 @@ class ScreenerEngine:
     # Apply Filters
     # -------------------------------------------------
     def apply_filters(
-        self, 
-        df: pd.DataFrame, 
-        filters: Optional[Dict[str, float]] = None, 
-        preset_name: str = "custom"
+        self,
+        df: pd.DataFrame,
+        filters: dict[str, float] | None = None,
+        preset_name: str = "custom",
     ) -> pd.DataFrame:
         """
         Apply screening filters and rank stocks based on composite score.
-        
+
         Args:
             df (pd.DataFrame): The merged dataframe.
             filters (Dict[str, float], optional): Dictionary of metric thresholds.
             preset_name (str): Name of the preset being applied.
-            
+
         Returns:
             pd.DataFrame: Filtered and ranked dataframe.
         """
@@ -360,10 +377,20 @@ class ScreenerEngine:
             df["debt_to_equity"] = df["debt_to_equity"].replace({"Debt Free": 0})
             df["debt_to_equity"] = pd.to_numeric(df["debt_to_equity"], errors="coerce")
 
-            sector_column = next((c for c in ["broad_sector", "sector_name", "sector", "industry"] if c in df.columns), None)
-            
+            sector_column = next(
+                (
+                    c
+                    for c in ["broad_sector", "sector_name", "sector", "industry"]
+                    if c in df.columns
+                ),
+                None,
+            )
+
             if sector_column is not None:
-                financial = df[sector_column].astype(str).str.strip().str.lower() == "financials"
+                financial = (
+                    df[sector_column].astype(str).str.strip().str.lower()
+                    == "financials"
+                )
             else:
                 financial = pd.Series(False, index=df.index)
 
@@ -375,7 +402,10 @@ class ScreenerEngine:
 
         # Operating Profit Margin
         if filters.get("operating_profit_margin_min") is not None:
-            df = df[df["operating_profit_margin_pct"] >= filters["operating_profit_margin_min"]]
+            df = df[
+                df["operating_profit_margin_pct"]
+                >= filters["operating_profit_margin_min"]
+            ]
 
         # PE
         if filters.get("pe_max") is not None:
@@ -391,8 +421,12 @@ class ScreenerEngine:
 
         # Interest Coverage
         if filters.get("interest_coverage_min") is not None:
-            df["interest_coverage"] = df["interest_coverage"].replace({"Debt Free": 999999})
-            df["interest_coverage"] = pd.to_numeric(df["interest_coverage"], errors="coerce")
+            df["interest_coverage"] = df["interest_coverage"].replace(
+                {"Debt Free": 999999}
+            )
+            df["interest_coverage"] = pd.to_numeric(
+                df["interest_coverage"], errors="coerce"
+            )
             df = df[df["interest_coverage"] >= filters["interest_coverage_min"]]
 
         # Market Cap
@@ -405,14 +439,16 @@ class ScreenerEngine:
 
         df = (
             df.sort_values(["company_id", "year"])
-              .drop_duplicates(subset="company_id", keep="last")
-              .reset_index(drop=True)
+            .drop_duplicates(subset="company_id", keep="last")
+            .reset_index(drop=True)
         )
 
         # -------------------------------------------------
         # Sort by Composite Score
         # -------------------------------------------------
-        df = df.sort_values(by="composite_score", ascending=False).reset_index(drop=True)
+        df = df.sort_values(by="composite_score", ascending=False).reset_index(
+            drop=True
+        )
 
         # -------------------------------------------------
         # Ranking
@@ -423,11 +459,11 @@ class ScreenerEngine:
         # Display Top Stocks
         # -------------------------------------------------
         logger.info(f"Preset: {preset_name.title()} - Companies Found: {len(df)}")
-        
+
         output_dir = BASE_DIR / "output"
         output_dir.mkdir(exist_ok=True)
         file_name = f"{preset_name}_screener.csv"
-        
+
         try:
             df.to_csv(output_dir / file_name, index=False)
             logger.info(f"CSV Saved Successfully at {output_dir / file_name}")
@@ -439,13 +475,13 @@ class ScreenerEngine:
     # -------------------------------------------------
     # Run Preset Screener
     # -------------------------------------------------
-    def run_preset(self, preset_name: str) -> Optional[pd.DataFrame]:
+    def run_preset(self, preset_name: str) -> pd.DataFrame | None:
         """
         Execute the screener for a given preset.
-        
+
         Args:
             preset_name (str): The preset configuration to apply.
-            
+
         Returns:
             Optional[pd.DataFrame]: The resulting dataframe if successful, None otherwise.
         """
@@ -459,15 +495,15 @@ class ScreenerEngine:
         logger.info(f"Running {preset_name.upper()} screener...")
 
         df = self.merge_data()
-        
+
         if df.empty:
-            logger.error("Merge returned an empty dataframe. Aborting filter application.")
+            logger.error(
+                "Merge returned an empty dataframe. Aborting filter application."
+            )
             return None
 
         result = self.apply_filters(
-            df=df,
-            filters=PRESETS[preset_name],
-            preset_name=preset_name
+            df=df, filters=PRESETS[preset_name], preset_name=preset_name
         )
 
         return result
@@ -477,12 +513,12 @@ class ScreenerEngine:
 # Main
 # -------------------------------------------------
 if __name__ == "__main__":
-    
+
     print("=" * 60)
     print("AVAILABLE PRESETS")
     print("=" * 60)
 
-    for preset in PRESETS.keys():
+    for preset in PRESETS:
         print("-", preset)
 
     try:

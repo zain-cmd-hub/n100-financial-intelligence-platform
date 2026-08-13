@@ -3,13 +3,14 @@ import sqlite3
 import warnings
 from pathlib import Path
 
-import pandas as pd
 import numpy as np
+import pandas as pd
 
 # Suppress specific pandas warnings if necessary
-warnings.simplefilter(action='ignore', category=FutureWarning)
+warnings.simplefilter(action="ignore", category=FutureWarning)
 
 import sys
+
 BASE_DIR = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(BASE_DIR))
 
@@ -36,11 +37,12 @@ METRICS_TO_RANK = {
     "revenue_cagr": "Revenue CAGR 5yr",
     "eps_cagr": "EPS CAGR 5yr",
     "interest_coverage": "Interest Coverage",
-    "asset_turnover": "Asset Turnover"
+    "asset_turnover": "Asset Turnover",
 }
 
 
 def compute_peer_percentiles():
+    """Handles operations for compute_peer_percentiles."""
     logger.info("Starting Peer Percentile Ranking Engine...")
 
     if not PEER_GROUPS_FILE.exists():
@@ -53,7 +55,7 @@ def compute_peer_percentiles():
         if df.empty:
             logger.error("Failed to load financial data.")
             return
-            
+
         # Drop companies with invalid/empty company_id
         df = df.dropna(subset=["company_id"]).copy()
 
@@ -62,7 +64,7 @@ def compute_peer_percentiles():
         df = scorer.calculate_score()
 
     # Clean numeric columns before ranking
-    for col in METRICS_TO_RANK.keys():
+    for col in METRICS_TO_RANK:
         if col in df.columns:
             # Handle string artifacts like "Debt Free" for interest_coverage and debt_to_equity
             if df[col].dtype == object:
@@ -71,7 +73,7 @@ def compute_peer_percentiles():
                     df[col] = df[col].replace({"Debt Free": 0})
                 elif col == "interest_coverage":
                     df[col] = df[col].replace({"Debt Free": 999999})
-            
+
             df[col] = pd.to_numeric(df[col], errors="coerce")
         else:
             logger.warning(f"Metric column missing in dataframe: {col}")
@@ -83,9 +85,14 @@ def compute_peer_percentiles():
     except Exception as e:
         logger.error(f"Failed to read peer groups file: {e}")
         return
-        
-    if "company_id" not in peers_df.columns or "peer_group_name" not in peers_df.columns:
-        logger.error("peer_groups.xlsx must contain 'company_id' and 'peer_group_name' columns.")
+
+    if (
+        "company_id" not in peers_df.columns
+        or "peer_group_name" not in peers_df.columns
+    ):
+        logger.error(
+            "peer_groups.xlsx must contain 'company_id' and 'peer_group_name' columns."
+        )
         return
 
     peers_df = peers_df[["company_id", "peer_group_name"]].drop_duplicates()
@@ -104,20 +111,24 @@ def compute_peer_percentiles():
 
     # 4. Compute PERCENT_RANK
     # We rank within each peer group AND year to compare companies fairly in the same timeframe
-    rank_df["year"] = pd.to_numeric(rank_df["year"], errors="coerce").fillna(0).astype(int)
-    
+    rank_df["year"] = (
+        pd.to_numeric(rank_df["year"], errors="coerce").fillna(0).astype(int)
+    )
+
     group_cols = ["peer_group_name", "year"]
-    
+
     melted_rows = []
 
     for internal_col, display_name in METRICS_TO_RANK.items():
         if internal_col not in rank_df.columns:
             continue
-            
+
         # Calculate rank: default handles NaNs automatically usually, but we drop na for precise ranking
         # rank(pct=True) computes PERCENT_RANK
-        rank_series = rank_df.groupby(group_cols)[internal_col].rank(pct=True, ascending=True, na_option='bottom')
-        
+        rank_series = rank_df.groupby(group_cols)[internal_col].rank(
+            pct=True, ascending=True, na_option="bottom"
+        )
+
         # Invert rank for D/E (lower is better)
         if internal_col == "debt_to_equity":
             # For debt to equity, we want lower values to have higher ranks
@@ -125,14 +136,16 @@ def compute_peer_percentiles():
             # E.g. Lowest D/E -> 10th percentile. We want it to be 90th percentile.
             rank_series = 1.0 - rank_series
 
-        temp_df = rank_df[["company_id", "peer_group_name", "year", internal_col]].copy()
+        temp_df = rank_df[
+            ["company_id", "peer_group_name", "year", internal_col]
+        ].copy()
         temp_df.rename(columns={internal_col: "value"}, inplace=True)
         temp_df["metric"] = display_name
         temp_df["percentile_rank"] = rank_series
-        
+
         # Drop rows where the value was NaN as they shouldn't realistically be ranked
         temp_df = temp_df.dropna(subset=["value"])
-        
+
         melted_rows.append(temp_df)
 
     if not melted_rows:
@@ -140,18 +153,23 @@ def compute_peer_percentiles():
         return
 
     final_df = pd.concat(melted_rows, ignore_index=True)
-    
+
     # Reorder columns as requested
-    final_df = final_df[["company_id", "peer_group_name", "metric", "value", "percentile_rank", "year"]]
+    final_df = final_df[
+        ["company_id", "peer_group_name", "metric", "value", "percentile_rank", "year"]
+    ]
 
     # 5. Write to SQLite
     try:
         conn = sqlite3.connect(DATABASE_FILE)
         final_df.to_sql("peer_percentiles", conn, if_exists="replace", index=False)
         conn.close()
-        logger.info(f"Successfully populated peer_percentiles table with {len(final_df)} records.")
+        logger.info(
+            f"Successfully populated peer_percentiles table with {len(final_df)} records."
+        )
     except sqlite3.Error as e:
         logger.error(f"Failed to write to database: {e}")
+
 
 if __name__ == "__main__":
     compute_peer_percentiles()

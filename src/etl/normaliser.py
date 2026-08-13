@@ -1,6 +1,6 @@
 import re
-import pandas as pd
 
+import pandas as pd
 
 TICKER_ALIASES = {
     "AGTL": "ADANIGREEN",

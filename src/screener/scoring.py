@@ -1,5 +1,5 @@
 import logging
-from typing import Dict
+
 import numpy as np
 import pandas as pd
 
@@ -11,7 +11,7 @@ class CompositeScorer:
     Calculates a composite score for companies based on various financial metrics.
     """
 
-    WEIGHTS: Dict[str, float] = {
+    WEIGHTS: dict[str, float] = {
         "roe": 0.15,
         "roce": 0.10,
         "npm": 0.10,
@@ -21,7 +21,7 @@ class CompositeScorer:
         "revenue_cagr": 0.10,
         "pat_cagr": 0.10,
         "de_score": 0.10,
-        "icr_score": 0.05
+        "icr_score": 0.05,
     }
 
     def __init__(self, dataframe: pd.DataFrame):
@@ -110,7 +110,9 @@ class CompositeScorer:
         valid_mask = (years > 0) & (starts > 0) & (ends > 0)
 
         cagrs = pd.Series(index=starts.index, dtype="float64")
-        cagrs[valid_mask] = ((ends[valid_mask] / starts[valid_mask]) ** (1 / years[valid_mask]) - 1) * 100
+        cagrs[valid_mask] = (
+            (ends[valid_mask] / starts[valid_mask]) ** (1 / years[valid_mask]) - 1
+        ) * 100
 
         # Map back to original dataframe index via company_id
         result = self.df["company_id"].map(cagrs)
@@ -143,7 +145,9 @@ class CompositeScorer:
             logger.warning("Missing columns for CFO to PAT ratio calculation.")
             return pd.Series(index=self.df.index, dtype="float64")
 
-        operating_activity = pd.to_numeric(self.df["operating_activity"], errors="coerce")
+        operating_activity = pd.to_numeric(
+            self.df["operating_activity"], errors="coerce"
+        )
         net_profit = pd.to_numeric(self.df["net_profit"], errors="coerce")
 
         # Avoid division by zero warnings and deprecation warnings for replacing with pd.NA
@@ -171,18 +175,27 @@ class CompositeScorer:
             df["eps_cagr"] = self.calculate_eps_cagr()
 
             # Profitability (35%)
-            roe = self.normalize(df.get("return_on_equity_pct", pd.Series(0, index=df.index)))
-            roce = self.normalize(df.get("roce_percentage", pd.Series(50.0, index=df.index)))
-            npm = self.normalize(df.get("net_profit_margin_pct", pd.Series(0, index=df.index)))
+            roe = self.normalize(
+                df.get("return_on_equity_pct", pd.Series(0, index=df.index))
+            )
+            roce = self.normalize(
+                df.get("roce_percentage", pd.Series(50.0, index=df.index))
+            )
+            npm = self.normalize(
+                df.get("net_profit_margin_pct", pd.Series(0, index=df.index))
+            )
 
             # Cash Quality (30%)
             fcf_cagr = self.normalize(df["free_cash_flow_cagr"])
             cfo_pat = self.normalize(df["cfo_pat_ratio"])
 
             fcf_positive = (
-                (pd.to_numeric(df.get("free_cash_flow_cr", pd.Series(0, index=df.index)), errors="coerce") > 0)
-                .astype(int) * 100
-            )
+                pd.to_numeric(
+                    df.get("free_cash_flow_cr", pd.Series(0, index=df.index)),
+                    errors="coerce",
+                )
+                > 0
+            ).astype(int) * 100
 
             # Growth (20%)
             revenue_cagr = self.normalize(df["revenue_cagr"])
@@ -190,30 +203,35 @@ class CompositeScorer:
 
             # Leverage (15%)
             debt = (
-                pd.to_numeric(df.get("debt_to_equity", pd.Series(0, index=df.index)), errors="coerce")
+                pd.to_numeric(
+                    df.get("debt_to_equity", pd.Series(0, index=df.index)),
+                    errors="coerce",
+                )
                 .fillna(0)
                 .clip(lower=0)
             )
             de_score = 100 - self.normalize(debt)
 
-            interest_val = df.get("interest_coverage", pd.Series("0", index=df.index)).replace({"Debt Free": 999999})
+            interest_val = df.get(
+                "interest_coverage", pd.Series("0", index=df.index)
+            ).replace({"Debt Free": 999999})
             interest = pd.to_numeric(interest_val, errors="coerce")
             icr_score = self.normalize(interest)
 
             df["composite_score"] = (
-                roe * self.WEIGHTS["roe"] +
-                roce * self.WEIGHTS["roce"] +
-                npm * self.WEIGHTS["npm"] +
-                fcf_cagr * self.WEIGHTS["fcf_cagr"] +
-                cfo_pat * self.WEIGHTS["cfo_pat"] +
-                fcf_positive * self.WEIGHTS["fcf_positive"] +
-                revenue_cagr * self.WEIGHTS["revenue_cagr"] +
-                pat_cagr * self.WEIGHTS["pat_cagr"] +
-                de_score * self.WEIGHTS["de_score"] +
-                icr_score * self.WEIGHTS["icr_score"]
+                roe * self.WEIGHTS["roe"]
+                + roce * self.WEIGHTS["roce"]
+                + npm * self.WEIGHTS["npm"]
+                + fcf_cagr * self.WEIGHTS["fcf_cagr"]
+                + cfo_pat * self.WEIGHTS["cfo_pat"]
+                + fcf_positive * self.WEIGHTS["fcf_positive"]
+                + revenue_cagr * self.WEIGHTS["revenue_cagr"]
+                + pat_cagr * self.WEIGHTS["pat_cagr"]
+                + de_score * self.WEIGHTS["de_score"]
+                + icr_score * self.WEIGHTS["icr_score"]
             )
             logger.info("Composite score calculated successfully.")
-            
+
         except Exception as e:
             logger.error(f"Error calculating composite score: {e}")
             df["composite_score"] = np.nan

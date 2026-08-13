@@ -1,17 +1,15 @@
-from pathlib import Path
 import sqlite3
-import pandas as pd
+from pathlib import Path
+
 import numpy as np
+import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 DATABASE_FILE = BASE_DIR / "db" / "nifty100.db"
 
 conn = sqlite3.connect(DATABASE_FILE)
 
-df = pd.read_sql(
-    "SELECT * FROM financial_ratios",
-    conn
-)
+df = pd.read_sql("SELECT * FROM financial_ratios", conn)
 
 print("Financial Ratios Loaded :", len(df))
 
@@ -47,9 +45,7 @@ print("\n==============================")
 print("DUPLICATE CHECK")
 print("==============================")
 
-duplicates = df.duplicated(
-    subset=["company_id", "year"]
-).sum()
+duplicates = df.duplicated(subset=["company_id", "year"]).sum()
 
 print("Duplicate Records :", duplicates)
 
@@ -80,45 +76,39 @@ print("Negative ICR :", len(negative_icr))
 if len(negative_icr) > 0:
     print("\nCompanies with Negative Interest Coverage:")
     print(
-    negative_icr[
-        [
-            "company_id",
-            "year",
-            "interest_coverage",
-            "total_debt_cr",
-            "cash_from_operations_cr"
-        ]
-    ].head(10)
-)
+        negative_icr[
+            [
+                "company_id",
+                "year",
+                "interest_coverage",
+                "total_debt_cr",
+                "cash_from_operations_cr",
+            ]
+        ].head(10)
+    )
 
 # ==========================================================
 # EXPORT VALIDATION REPORT
 # ==========================================================
 
-summary = pd.DataFrame({
-    "Check": [
-        "Rows",
-        "Duplicate Records",
-        "Negative Debt/Equity",
-        "Negative Interest Coverage"
-    ],
-    "Value": [
-        len(df),
-        duplicates,
-        len(negative_de),
-        len(negative_icr)
-    ]
-})
+summary = pd.DataFrame(
+    {
+        "Check": [
+            "Rows",
+            "Duplicate Records",
+            "Negative Debt/Equity",
+            "Negative Interest Coverage",
+        ],
+        "Value": [len(df), duplicates, len(negative_de), len(negative_icr)],
+    }
+)
 
 reports_dir = BASE_DIR / "reports"
 reports_dir.mkdir(exist_ok=True)
 
 report_path = reports_dir / "financial_ratios_validation_report.csv"
 
-summary.to_csv(
-    report_path,
-    index=False
-)
+summary.to_csv(report_path, index=False)
 
 print("\n====================================")
 print("VALIDATION SUMMARY")

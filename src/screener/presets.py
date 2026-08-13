@@ -4,7 +4,6 @@ Preset Screeners
 Reusable filter configurations for different investing strategies.
 """
 
-
 # -------------------------------------------------
 # Growth Screener
 # -------------------------------------------------

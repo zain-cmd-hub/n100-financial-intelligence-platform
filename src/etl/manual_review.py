@@ -1,9 +1,8 @@
-from pathlib import Path
-import sqlite3
 import random
+import sqlite3
+from pathlib import Path
 
 import pandas as pd
-
 
 # ============================================================
 # PROJECT PATHS
@@ -30,6 +29,7 @@ SAMPLE_SIZE = 5
 # DATABASE CONNECTION
 # ============================================================
 
+
 def connect_database():
     """
     Connect to the SQLite database and enable
@@ -37,15 +37,11 @@ def connect_database():
     """
 
     if not DATABASE_FILE.exists():
-        raise FileNotFoundError(
-            f"Database not found: {DATABASE_FILE}"
-        )
+        raise FileNotFoundError(f"Database not found: {DATABASE_FILE}")
 
     connection = sqlite3.connect(DATABASE_FILE)
 
-    connection.execute(
-        "PRAGMA foreign_keys = ON;"
-    )
+    connection.execute("PRAGMA foreign_keys = ON;")
 
     return connection
 
@@ -54,14 +50,13 @@ def connect_database():
 # FOREIGN KEY CHECK
 # ============================================================
 
+
 def check_foreign_keys(connection):
     """
     Run SQLite foreign key integrity check.
     """
 
-    violations = connection.execute(
-        "PRAGMA foreign_key_check;"
-    ).fetchall()
+    violations = connection.execute("PRAGMA foreign_key_check;").fetchall()
 
     print("\n" + "=" * 70)
     print("1. FOREIGN KEY INTEGRITY CHECK")
@@ -70,10 +65,7 @@ def check_foreign_keys(connection):
     if not violations:
         print("✅ PASS — 0 foreign key violations")
     else:
-        print(
-            f"❌ FAIL — {len(violations)} "
-            f"foreign key violations found"
-        )
+        print(f"❌ FAIL — {len(violations)} " f"foreign key violations found")
 
         for violation in violations[:10]:
             print(violation)
@@ -84,6 +76,7 @@ def check_foreign_keys(connection):
 # ============================================================
 # GET MASTER COMPANIES
 # ============================================================
+
 
 def get_companies(connection):
     """
@@ -98,13 +91,14 @@ def get_companies(connection):
         FROM companies
         ORDER BY id;
         """,
-        connection
+        connection,
     )
 
 
 # ============================================================
 # RANDOM COMPANY REVIEW
 # ============================================================
+
 
 def review_random_companies(connection):
     """
@@ -116,19 +110,11 @@ def review_random_companies(connection):
 
     random.seed(RANDOM_SEED)
 
-    sample_size = min(
-        SAMPLE_SIZE,
-        len(companies)
-    )
+    sample_size = min(SAMPLE_SIZE, len(companies))
 
-    selected_ids = random.sample(
-        companies["company_id"].tolist(),
-        sample_size
-    )
+    selected_ids = random.sample(companies["company_id"].tolist(), sample_size)
 
-    selected_companies = companies[
-        companies["company_id"].isin(selected_ids)
-    ].copy()
+    selected_companies = companies[companies["company_id"].isin(selected_ids)].copy()
 
     print("\n" + "=" * 70)
     print("2. MANUAL REVIEW — 5 RANDOM COMPANIES")
@@ -141,10 +127,7 @@ def review_random_companies(connection):
         company_id = company["company_id"]
         company_name = company["company_name"]
 
-        print(
-            f"\n🔎 Reviewing: "
-            f"{company_id} — {company_name}"
-        )
+        print(f"\n🔎 Reviewing: " f"{company_id} — {company_name}")
 
         # --------------------------------------------
         # Profit & Loss
@@ -163,7 +146,7 @@ def review_random_companies(connection):
             ORDER BY year;
             """,
             connection,
-            params=(company_id,)
+            params=(company_id,),
         )
 
         # --------------------------------------------
@@ -181,7 +164,7 @@ def review_random_companies(connection):
             ORDER BY year;
             """,
             connection,
-            params=(company_id,)
+            params=(company_id,),
         )
 
         # --------------------------------------------
@@ -201,7 +184,7 @@ def review_random_companies(connection):
             ORDER BY year;
             """,
             connection,
-            params=(company_id,)
+            params=(company_id,),
         )
 
         # --------------------------------------------
@@ -218,7 +201,7 @@ def review_random_companies(connection):
             ORDER BY date;
             """,
             connection,
-            params=(company_id,)
+            params=(company_id,),
         )
 
         pnl_rows = len(pnl)
@@ -233,19 +216,11 @@ def review_random_companies(connection):
 
         status = (
             "PASS"
-            if (
-                pnl_rows > 0
-                and bs_rows > 0
-                and cf_rows > 0
-                and price_rows > 0
-            )
+            if (pnl_rows > 0 and bs_rows > 0 and cf_rows > 0 and price_rows > 0)
             else "REVIEW"
         )
 
-        print(
-            f"   Status: "
-            f"{'✅ PASS' if status == 'PASS' else '⚠ REVIEW'}"
-        )
+        print(f"   Status: " f"{'✅ PASS' if status == 'PASS' else '⚠ REVIEW'}")
 
         review_records.append(
             {
@@ -259,19 +234,11 @@ def review_random_companies(connection):
             }
         )
 
-    review_df = pd.DataFrame(
-        review_records
-    )
+    review_df = pd.DataFrame(review_records)
 
-    review_df.to_csv(
-        REVIEW_FILE,
-        index=False
-    )
+    review_df.to_csv(REVIEW_FILE, index=False)
 
-    print(
-        f"\n✅ Manual review report saved: "
-        f"{REVIEW_FILE}"
-    )
+    print(f"\n✅ Manual review report saved: " f"{REVIEW_FILE}")
 
     return review_df
 
@@ -279,6 +246,7 @@ def review_random_companies(connection):
 # ============================================================
 # YEAR COVERAGE CHECK
 # ============================================================
+
 
 def check_year_coverage(connection):
     """
@@ -309,26 +277,16 @@ def check_year_coverage(connection):
             year_count ASC,
             c.id ASC;
         """,
-        connection
+        connection,
     )
 
-    coverage["coverage_status"] = coverage[
-        "year_count"
-    ].apply(
-        lambda value:
-        "PASS"
-        if value >= 5
-        else "REVIEW"
+    coverage["coverage_status"] = coverage["year_count"].apply(
+        lambda value: "PASS" if value >= 5 else "REVIEW"
     )
 
-    coverage.to_csv(
-        COVERAGE_FILE,
-        index=False
-    )
+    coverage.to_csv(COVERAGE_FILE, index=False)
 
-    failed = coverage[
-        coverage["year_count"] < 5
-    ]
+    failed = coverage[coverage["year_count"] < 5]
 
     print("\n" + "=" * 70)
     print("3. MINIMUM 5-YEAR DATA COVERAGE")
@@ -336,34 +294,17 @@ def check_year_coverage(connection):
 
     if failed.empty:
 
-        print(
-            "✅ PASS — All companies have "
-            "at least 5 years of P&L data"
-        )
+        print("✅ PASS — All companies have " "at least 5 years of P&L data")
 
     else:
 
-        print(
-            f"⚠ REVIEW — {len(failed)} companies "
-            f"have less than 5 years of data"
-        )
+        print(f"⚠ REVIEW — {len(failed)} companies " f"have less than 5 years of data")
 
         print(
-            failed[
-                [
-                    "company_id",
-                    "company_name",
-                    "year_count"
-                ]
-            ].to_string(
-                index=False
-            )
+            failed[["company_id", "company_name", "year_count"]].to_string(index=False)
         )
 
-    print(
-        f"\n✅ Year coverage report saved: "
-        f"{COVERAGE_FILE}"
-    )
+    print(f"\n✅ Year coverage report saved: " f"{COVERAGE_FILE}")
 
     return coverage
 
@@ -372,20 +313,19 @@ def check_year_coverage(connection):
 # DATABASE ROW COUNTS
 # ============================================================
 
+
 def check_table_row_counts(connection):
     """
     Print row counts for all database tables.
     """
 
-    tables = connection.execute(
-        """
+    tables = connection.execute("""
         SELECT name
         FROM sqlite_master
         WHERE type = 'table'
           AND name NOT LIKE 'sqlite_%'
         ORDER BY name;
-        """
-    ).fetchall()
+        """).fetchall()
 
     print("\n" + "=" * 70)
     print("4. FINAL DATABASE ROW COUNTS")
@@ -397,19 +337,14 @@ def check_table_row_counts(connection):
 
         table_name = table[0]
 
-        count = connection.execute(
-            f"""
+        count = connection.execute(f"""
             SELECT COUNT(*)
             FROM {table_name};
-            """
-        ).fetchone()[0]
+            """).fetchone()[0]
 
         counts[table_name] = count
 
-        print(
-            f"{table_name:<20} "
-            f"{count}"
-        )
+        print(f"{table_name:<20} " f"{count}")
 
     return counts
 
@@ -418,87 +353,42 @@ def check_table_row_counts(connection):
 # DAY 6 FINAL SUMMARY
 # ============================================================
 
-def print_summary(
-    fk_violations,
-    review_df,
-    coverage
-):
+
+def print_summary(fk_violations, review_df, coverage):
     """
     Print Day 6 final review summary.
     """
 
-    manual_pass = int(
-        (
-            review_df[
-                "review_status"
-            ] == "PASS"
-        ).sum()
-    )
+    manual_pass = int((review_df["review_status"] == "PASS").sum())
 
-    manual_review = int(
-        (
-            review_df[
-                "review_status"
-            ] == "REVIEW"
-        ).sum()
-    )
+    manual_review = int((review_df["review_status"] == "REVIEW").sum())
 
-    under_5_years = int(
-        (
-            coverage[
-                "year_count"
-            ] < 5
-        ).sum()
-    )
+    under_5_years = int((coverage["year_count"] < 5).sum())
 
     print("\n" + "=" * 70)
     print("DAY 6 — DATA QUALITY MANUAL REVIEW SUMMARY")
     print("=" * 70)
 
-    print(
-        f"Foreign key violations: "
-        f"{fk_violations}"
-    )
+    print(f"Foreign key violations: " f"{fk_violations}")
 
-    print(
-        f"Random companies reviewed: "
-        f"{len(review_df)}"
-    )
+    print(f"Random companies reviewed: " f"{len(review_df)}")
 
-    print(
-        f"Manual review PASS: "
-        f"{manual_pass}"
-    )
+    print(f"Manual review PASS: " f"{manual_pass}")
 
-    print(
-        f"Manual review REVIEW: "
-        f"{manual_review}"
-    )
+    print(f"Manual review REVIEW: " f"{manual_review}")
 
-    print(
-        f"Companies with <5 years: "
-        f"{under_5_years}"
-    )
+    print(f"Companies with <5 years: " f"{under_5_years}")
 
-    print(
-        "\n✅ Day 6 manual review execution completed."
-    )
+    print("\n✅ Day 6 manual review execution completed.")
 
-    if (
-        fk_violations == 0
-        and manual_review == 0
-    ):
+    if fk_violations == 0 and manual_review == 0:
 
-        print(
-            "✅ Database integrity and sampled "
-            "company data look consistent."
-        )
+        print("✅ Database integrity and sampled " "company data look consistent.")
 
     if under_5_years > 0:
 
         print(
-            "⚠ Companies with limited historical data "
-            "remain documented for review."
+            "⚠ Companies with limited historical data " "remain documented for review."
         )
 
     print("=" * 70)
@@ -508,44 +398,25 @@ def print_summary(
 # MAIN
 # ============================================================
 
-def main():
 
-    OUTPUT_DIR.mkdir(
-        parents=True,
-        exist_ok=True
-    )
+def main():
+    """Handles operations for main."""
+
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     connection = connect_database()
 
     try:
 
-        fk_violations = (
-            check_foreign_keys(
-                connection
-            )
-        )
+        fk_violations = check_foreign_keys(connection)
 
-        review_df = (
-            review_random_companies(
-                connection
-            )
-        )
+        review_df = review_random_companies(connection)
 
-        coverage = (
-            check_year_coverage(
-                connection
-            )
-        )
+        coverage = check_year_coverage(connection)
 
-        check_table_row_counts(
-            connection
-        )
+        check_table_row_counts(connection)
 
-        print_summary(
-            fk_violations,
-            review_df,
-            coverage
-        )
+        print_summary(fk_violations, review_df, coverage)
 
     finally:
 

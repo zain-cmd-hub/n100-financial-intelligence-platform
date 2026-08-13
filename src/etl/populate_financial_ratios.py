@@ -1,8 +1,10 @@
-from src.analytics.ratios import *
-from src.analytics.cashflow_kpis import *
-from pathlib import Path
 import sqlite3
+from pathlib import Path
+
 import pandas as pd
+
+from src.analytics.cashflow_kpis import *
+from src.analytics.ratios import *
 
 # ==========================================================
 # DATABASE PATH
@@ -37,20 +39,11 @@ print(f"Companies Rows     : {len(company_df)}")
 # REMOVE DUPLICATE COMPANY-YEAR RECORDS
 # ==========================================================
 
-profit_df = profit_df.drop_duplicates(
-    subset=["company_id", "year"],
-    keep="first"
-)
+profit_df = profit_df.drop_duplicates(subset=["company_id", "year"], keep="first")
 
-balance_df = balance_df.drop_duplicates(
-    subset=["company_id", "year"],
-    keep="first"
-)
+balance_df = balance_df.drop_duplicates(subset=["company_id", "year"], keep="first")
 
-cashflow_df = cashflow_df.drop_duplicates(
-    subset=["company_id", "year"],
-    keep="first"
-)
+cashflow_df = cashflow_df.drop_duplicates(subset=["company_id", "year"], keep="first")
 
 print("\n✅ Duplicate company-year records removed.")
 
@@ -63,15 +56,10 @@ merged_df = pd.merge(
     balance_df,
     on=["company_id", "year"],
     how="inner",
-    suffixes=("_pl", "_bs")
+    suffixes=("_pl", "_bs"),
 )
 
-merged_df = pd.merge(
-    merged_df,
-    cashflow_df,
-    on=["company_id", "year"],
-    how="left"
-)
+merged_df = pd.merge(merged_df, cashflow_df, on=["company_id", "year"], how="left")
 
 merged_df = pd.merge(
     merged_df,
@@ -79,7 +67,7 @@ merged_df = pd.merge(
     left_on="company_id",
     right_on="id",
     how="left",
-    suffixes=("", "_company")
+    suffixes=("", "_company"),
 )
 
 print("\n✅ Tables merged successfully")
@@ -102,65 +90,36 @@ for _, row in merged_df.iterrows():
     try:
 
         record = {
-
             "company_id": row["company_id"],
             "year": row["year"],
-
             # Profitability
-            "net_profit_margin_pct": net_profit_margin(
-                row["net_profit"],
-                row["sales"]
-            ),
-
+            "net_profit_margin_pct": net_profit_margin(row["net_profit"], row["sales"]),
             "operating_profit_margin_pct": operating_profit_margin(
-                row["operating_profit"],
-                row["sales"]
+                row["operating_profit"], row["sales"]
             ),
-
             "return_on_equity_pct": return_on_equity(
-                row["net_profit"],
-                row["equity_capital"],
-                row["reserves"]
+                row["net_profit"], row["equity_capital"], row["reserves"]
             ),
-
             # Leverage
             "debt_to_equity": debt_to_equity(
-                row["borrowings"],
-                row["equity_capital"],
-                row["reserves"]
+                row["borrowings"], row["equity_capital"], row["reserves"]
             ),
-
             "interest_coverage": interest_coverage_ratio(
-                row["operating_profit"],
-                row["other_income"],
-                row["interest"]
+                row["operating_profit"], row["other_income"], row["interest"]
             ),
-
             # Efficiency
-            "asset_turnover": asset_turnover(
-                row["sales"],
-                row["total_assets"]
-            ),
-
+            "asset_turnover": asset_turnover(row["sales"], row["total_assets"]),
             # Cash Flow
             "free_cash_flow_cr": free_cash_flow(
-                row["operating_activity"],
-                abs(row["investing_activity"])
+                row["operating_activity"], abs(row["investing_activity"])
             ),
-
             # Direct values
             "capex_cr": abs(row["investing_activity"]),
-
             "earnings_per_share": row["eps"],
-
             "book_value_per_share": row["book_value"],
-
             "dividend_payout_ratio_pct": row["dividend_payout"],
-
             "total_debt_cr": row["borrowings"],
-
-            "cash_from_operations_cr": row["operating_activity"]
-
+            "cash_from_operations_cr": row["operating_activity"],
         }
 
         ratio_records.append(record)
@@ -190,18 +149,9 @@ conn.commit()
 
 print("Existing records deleted.")
 
-ratio_df.insert(
-    0,
-    "id",
-    range(1, len(ratio_df) + 1)
-)
+ratio_df.insert(0, "id", range(1, len(ratio_df) + 1))
 
-ratio_df.to_sql(
-    "financial_ratios",
-    conn,
-    if_exists="append",
-    index=False
-)
+ratio_df.to_sql("financial_ratios", conn, if_exists="append", index=False)
 
 conn.commit()
 
@@ -211,9 +161,7 @@ print("Financial ratios inserted successfully.")
 # VERIFY INSERT
 # ==========================================================
 
-count = conn.execute(
-    "SELECT COUNT(*) FROM financial_ratios"
-).fetchone()[0]
+count = conn.execute("SELECT COUNT(*) FROM financial_ratios").fetchone()[0]
 
 print("\n===================================")
 print("DATABASE VERIFICATION")
@@ -229,7 +177,7 @@ sample = pd.read_sql(
     FROM financial_ratios
     LIMIT 10
     """,
-    conn
+    conn,
 )
 
 print(sample)

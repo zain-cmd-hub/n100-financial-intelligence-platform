@@ -1,6 +1,6 @@
 from pathlib import Path
-import pandas as pd
 
+import pandas as pd
 
 # ============================================================
 # PATH CONFIGURATION
@@ -19,6 +19,7 @@ validation_failures = []
 # DATA LOADER
 # ============================================================
 
+
 def load_data(filename, header=0):
     """
     Load an Excel file from the raw data directory.
@@ -31,6 +32,7 @@ def load_data(filename, header=0):
 # FAILURE LOGGER
 # ============================================================
 
+
 def record_failure(dq_rule, severity, description, failed_df):
     """
     Store failed validation records for the final CSV report.
@@ -41,33 +43,28 @@ def record_failure(dq_rule, severity, description, failed_df):
 
     for _, row in failed_df.iterrows():
 
-        validation_failures.append({
-            "dq_rule": dq_rule,
-            "severity": severity,
-            "description": description,
-            "company_id": row.get(
-                "company_id",
-                row.get("id", "")
-            ),
-            "year": row.get(
-                "year",
-                row.get("Year", "")
-            )
-        })
+        validation_failures.append(
+            {
+                "dq_rule": dq_rule,
+                "severity": severity,
+                "description": description,
+                "company_id": row.get("company_id", row.get("id", "")),
+                "year": row.get("year", row.get("Year", "")),
+            }
+        )
 
 
 # ============================================================
 # DQ-01: PRIMARY KEY VALIDATION
 # ============================================================
 
+
 def check_primary_key(df, column_name):
     """
     DQ-01: Check duplicate primary keys.
     """
 
-    duplicates = df[
-        df[column_name].duplicated(keep=False)
-    ]
+    duplicates = df[df[column_name].duplicated(keep=False)]
 
     if duplicates.empty:
 
@@ -78,17 +75,10 @@ def check_primary_key(df, column_name):
         print(f"❌ DQ-01 Failed ({column_name})")
         print(f"Duplicate Records Found: {len(duplicates)}")
 
-        print(
-            duplicates[
-                [column_name]
-            ].drop_duplicates()
-        )
+        print(duplicates[[column_name]].drop_duplicates())
 
         record_failure(
-            "DQ-01",
-            "CRITICAL",
-            "Duplicate primary key detected",
-            duplicates
+            "DQ-01", "CRITICAL", "Duplicate primary key detected", duplicates
         )
 
 
@@ -96,17 +86,13 @@ def check_primary_key(df, column_name):
 # DQ-02: COMPOSITE KEY VALIDATION
 # ============================================================
 
+
 def check_composite_key(df, columns):
     """
     DQ-02: Check duplicate composite keys.
     """
 
-    duplicates = df[
-        df.duplicated(
-            subset=columns,
-            keep=False
-        )
-    ]
+    duplicates = df[df.duplicated(subset=columns, keep=False)]
 
     if duplicates.empty:
 
@@ -114,29 +100,17 @@ def check_composite_key(df, columns):
 
     else:
 
-        unique_duplicates = (
-            duplicates[columns]
-            .drop_duplicates()
-        )
+        unique_duplicates = duplicates[columns].drop_duplicates()
 
         print(f"❌ DQ-02 Failed {columns}")
-        print(
-            f"Duplicate Records Found: "
-            f"{len(duplicates)}"
-        )
+        print(f"Duplicate Records Found: " f"{len(duplicates)}")
 
         print(unique_duplicates)
 
-        print(
-            f"Duplicate Keys Found: "
-            f"{len(unique_duplicates)}"
-        )
+        print(f"Duplicate Keys Found: " f"{len(unique_duplicates)}")
 
         record_failure(
-            "DQ-02",
-            "CRITICAL",
-            "Duplicate company-year composite key",
-            duplicates
+            "DQ-02", "CRITICAL", "Duplicate company-year composite key", duplicates
         )
 
 
@@ -144,43 +118,25 @@ def check_composite_key(df, columns):
 # DQ-03: FOREIGN KEY VALIDATION
 # ============================================================
 
-def check_foreign_key(
-    parent_df,
-    child_df,
-    parent_key,
-    child_key
-):
+
+def check_foreign_key(parent_df, child_df, parent_key, child_key):
     """
     DQ-03: Check Foreign Key Integrity.
     """
 
-    invalid_records = child_df[
-        ~child_df[child_key].isin(
-            parent_df[parent_key]
-        )
-    ]
+    invalid_records = child_df[~child_df[child_key].isin(parent_df[parent_key])]
 
     if invalid_records.empty:
 
-        print(
-            f"✅ DQ-03 Passed ({child_key})"
-        )
+        print(f"✅ DQ-03 Passed ({child_key})")
 
     else:
 
-        unique_invalid = (
-            invalid_records[[child_key]]
-            .drop_duplicates()
-        )
+        unique_invalid = invalid_records[[child_key]].drop_duplicates()
 
-        print(
-            f"❌ DQ-03 Failed ({child_key})"
-        )
+        print(f"❌ DQ-03 Failed ({child_key})")
 
-        print(
-            f"Invalid Company IDs Found: "
-            f"{len(unique_invalid)}"
-        )
+        print(f"Invalid Company IDs Found: " f"{len(unique_invalid)}")
 
         print(unique_invalid)
 
@@ -188,7 +144,7 @@ def check_foreign_key(
             "DQ-03",
             "CRITICAL",
             "Foreign key company_id not found in companies table",
-            invalid_records
+            invalid_records,
         )
 
 
@@ -196,21 +152,16 @@ def check_foreign_key(
 # DQ-04: BALANCE SHEET VALIDATION
 # ============================================================
 
+
 def check_balance_sheet(df):
     """
     DQ-04: Assets and liabilities difference
     should not exceed 1%.
     """
 
-    valid_assets = (
-        df["total_assets"].notna()
-        & (df["total_assets"] != 0)
-    )
+    valid_assets = df["total_assets"].notna() & (df["total_assets"] != 0)
 
-    difference = pd.Series(
-        float("nan"),
-        index=df.index
-    )
+    difference = pd.Series(float("nan"), index=df.index)
 
     difference.loc[valid_assets] = (
         (
@@ -220,51 +171,34 @@ def check_balance_sheet(df):
         / df.loc[valid_assets, "total_assets"].abs()
     ) * 100
 
-    failed = df[
-        valid_assets
-        & (difference > 1)
-    ]
+    failed = df[valid_assets & (difference > 1)]
 
     if failed.empty:
 
-        print(
-            "✅ DQ-04 Passed "
-            "(Balance Sheet Validation)"
-        )
+        print("✅ DQ-04 Passed " "(Balance Sheet Validation)")
 
     else:
 
-        print(
-            "❌ DQ-04 Failed "
-            "(Balance Sheet Validation)"
-        )
+        print("❌ DQ-04 Failed " "(Balance Sheet Validation)")
+
+        print(f"Failed Records: {len(failed)}")
 
         print(
-            f"Failed Records: {len(failed)}"
-        )
-
-        print(
-            failed[
-                [
-                    "company_id",
-                    "year",
-                    "total_assets",
-                    "total_liabilities"
-                ]
-            ].head()
+            failed[["company_id", "year", "total_assets", "total_liabilities"]].head()
         )
 
         record_failure(
             "DQ-04",
             "WARNING",
             "Assets and liabilities difference exceeds 1 percent",
-            failed
+            failed,
         )
 
 
 # ============================================================
 # DQ-05: OPM CROSS CHECK
 # ============================================================
+
 
 def check_opm(df):
     """
@@ -277,64 +211,31 @@ def check_opm(df):
     # Source data contains some inconsistent OPM values.
     # The validator reports those inconsistencies.
 
-    valid_sales = (
-        df["sales"].notna()
-        & (df["sales"] != 0)
-    )
+    valid_sales = df["sales"].notna() & (df["sales"] != 0)
 
-    calculated_opm = pd.Series(
-        float("nan"),
-        index=df.index
-    )
+    calculated_opm = pd.Series(float("nan"), index=df.index)
 
     calculated_opm.loc[valid_sales] = (
-        df.loc[
-            valid_sales,
-            "operating_profit"
-        ]
-        / df.loc[
-            valid_sales,
-            "sales"
-        ]
+        df.loc[valid_sales, "operating_profit"] / df.loc[valid_sales, "sales"]
     ) * 100
 
-    difference = (
-        calculated_opm
-        - df["opm_percentage"]
-    ).abs()
+    difference = (calculated_opm - df["opm_percentage"]).abs()
 
-    failed = df[
-        valid_sales
-        & (difference > 1)
-    ]
+    failed = df[valid_sales & (difference > 1)]
 
     if failed.empty:
 
-        print(
-            "✅ DQ-05 Passed "
-            "(OPM Cross Check)"
-        )
+        print("✅ DQ-05 Passed " "(OPM Cross Check)")
 
     else:
 
-        print(
-            "❌ DQ-05 Failed "
-            "(OPM Cross Check)"
-        )
+        print("❌ DQ-05 Failed " "(OPM Cross Check)")
 
-        print(
-            f"Failed Records: {len(failed)}"
-        )
+        print(f"Failed Records: {len(failed)}")
 
         print(
             failed[
-                [
-                    "company_id",
-                    "year",
-                    "sales",
-                    "operating_profit",
-                    "opm_percentage"
-                ]
+                ["company_id", "year", "sales", "operating_profit", "opm_percentage"]
             ].head()
         )
 
@@ -342,7 +243,7 @@ def check_opm(df):
             "DQ-05",
             "WARNING",
             "Operating profit margin does not match calculated OPM",
-            failed
+            failed,
         )
 
 
@@ -350,55 +251,33 @@ def check_opm(df):
 # DQ-06: POSITIVE SALES VALIDATION
 # ============================================================
 
+
 def check_positive_sales(df):
     """
     DQ-06: Sales should be greater than zero.
     """
 
-    failed = df[
-        df["sales"].notna()
-        & (df["sales"] <= 0)
-    ]
+    failed = df[df["sales"].notna() & (df["sales"] <= 0)]
 
     if failed.empty:
 
-        print(
-            "✅ DQ-06 Passed "
-            "(Positive Sales)"
-        )
+        print("✅ DQ-06 Passed " "(Positive Sales)")
 
     else:
 
-        print(
-            "❌ DQ-06 Failed "
-            "(Positive Sales)"
-        )
+        print("❌ DQ-06 Failed " "(Positive Sales)")
 
-        print(
-            f"Failed Records: {len(failed)}"
-        )
+        print(f"Failed Records: {len(failed)}")
 
-        print(
-            failed[
-                [
-                    "company_id",
-                    "year",
-                    "sales"
-                ]
-            ]
-        )
+        print(failed[["company_id", "year", "sales"]])
 
-        record_failure(
-            "DQ-06",
-            "WARNING",
-            "Sales must be greater than zero",
-            failed
-        )
+        record_failure("DQ-06", "WARNING", "Sales must be greater than zero", failed)
 
 
 # ============================================================
 # DQ-07: NET CASH FLOW VALIDATION
 # ============================================================
+
 
 def check_net_cash_flow(df):
     """
@@ -416,33 +295,19 @@ def check_net_cash_flow(df):
         + df["financing_activity"].fillna(0)
     )
 
-    difference = (
-        calculated_net_cash
-        - df["net_cash_flow"]
-    ).abs()
+    difference = (calculated_net_cash - df["net_cash_flow"]).abs()
 
-    failed = df[
-        df["net_cash_flow"].notna()
-        & (difference > 1)
-    ]
+    failed = df[df["net_cash_flow"].notna() & (difference > 1)]
 
     if failed.empty:
 
-        print(
-            "✅ DQ-07 Passed "
-            "(Net Cash Flow Cross Check)"
-        )
+        print("✅ DQ-07 Passed " "(Net Cash Flow Cross Check)")
 
     else:
 
-        print(
-            "❌ DQ-07 Failed "
-            "(Net Cash Flow Cross Check)"
-        )
+        print("❌ DQ-07 Failed " "(Net Cash Flow Cross Check)")
 
-        print(
-            f"Failed Records: {len(failed)}"
-        )
+        print(f"Failed Records: {len(failed)}")
 
         print(
             failed[
@@ -452,7 +317,7 @@ def check_net_cash_flow(df):
                     "operating_activity",
                     "investing_activity",
                     "financing_activity",
-                    "net_cash_flow"
+                    "net_cash_flow",
                 ]
             ].head()
         )
@@ -461,13 +326,14 @@ def check_net_cash_flow(df):
             "DQ-07",
             "WARNING",
             "Net cash flow does not match operating, investing and financing activities",
-            failed
+            failed,
         )
 
 
 # ============================================================
 # DQ-08: TAX RATE VALIDATION
 # ============================================================
+
 
 def check_tax_rate(df):
     """
@@ -477,51 +343,33 @@ def check_tax_rate(df):
 
     failed = df[
         df["tax_percentage"].notna()
-        & (
-            (df["tax_percentage"] < 0)
-            | (df["tax_percentage"] > 100)
-        )
+        & ((df["tax_percentage"] < 0) | (df["tax_percentage"] > 100))
     ]
 
     if failed.empty:
 
-        print(
-            "✅ DQ-08 Passed "
-            "(Tax Rate Validation)"
-        )
+        print("✅ DQ-08 Passed " "(Tax Rate Validation)")
 
     else:
 
-        print(
-            "❌ DQ-08 Failed "
-            "(Tax Rate Validation)"
-        )
+        print("❌ DQ-08 Failed " "(Tax Rate Validation)")
 
-        print(
-            f"Failed Records: {len(failed)}"
-        )
+        print(f"Failed Records: {len(failed)}")
 
-        print(
-            failed[
-                [
-                    "company_id",
-                    "year",
-                    "tax_percentage"
-                ]
-            ].head()
-        )
+        print(failed[["company_id", "year", "tax_percentage"]].head())
 
         record_failure(
             "DQ-08",
             "WARNING",
             "Tax percentage is outside the expected 0 to 100 range",
-            failed
+            failed,
         )
 
 
 # ============================================================
 # DQ-09: DIVIDEND PAYOUT VALIDATION
 # ============================================================
+
 
 def check_dividend_payout(df):
     """
@@ -531,51 +379,33 @@ def check_dividend_payout(df):
 
     failed = df[
         df["dividend_payout"].notna()
-        & (
-            (df["dividend_payout"] < 0)
-            | (df["dividend_payout"] > 100)
-        )
+        & ((df["dividend_payout"] < 0) | (df["dividend_payout"] > 100))
     ]
 
     if failed.empty:
 
-        print(
-            "✅ DQ-09 Passed "
-            "(Dividend Payout Validation)"
-        )
+        print("✅ DQ-09 Passed " "(Dividend Payout Validation)")
 
     else:
 
-        print(
-            "❌ DQ-09 Failed "
-            "(Dividend Payout Validation)"
-        )
+        print("❌ DQ-09 Failed " "(Dividend Payout Validation)")
 
-        print(
-            f"Failed Records: {len(failed)}"
-        )
+        print(f"Failed Records: {len(failed)}")
 
-        print(
-            failed[
-                [
-                    "company_id",
-                    "year",
-                    "dividend_payout"
-                ]
-            ].head()
-        )
+        print(failed[["company_id", "year", "dividend_payout"]].head())
 
         record_failure(
             "DQ-09",
             "WARNING",
             "Dividend payout is outside the expected 0 to 100 range",
-            failed
+            failed,
         )
 
 
 # ============================================================
 # DQ-10: EPS SIGN CONSISTENCY
 # ============================================================
+
 
 def check_eps_sign(df):
     """
@@ -587,58 +417,32 @@ def check_eps_sign(df):
         df["net_profit"].notna()
         & df["eps"].notna()
         & (
-            (
-                (df["net_profit"] > 0)
-                & (df["eps"] < 0)
-            )
-            |
-            (
-                (df["net_profit"] < 0)
-                & (df["eps"] > 0)
-            )
+            ((df["net_profit"] > 0) & (df["eps"] < 0))
+            | ((df["net_profit"] < 0) & (df["eps"] > 0))
         )
     ]
 
     if failed.empty:
 
-        print(
-            "✅ DQ-10 Passed "
-            "(EPS Sign Consistency)"
-        )
+        print("✅ DQ-10 Passed " "(EPS Sign Consistency)")
 
     else:
 
-        print(
-            "❌ DQ-10 Failed "
-            "(EPS Sign Consistency)"
-        )
+        print("❌ DQ-10 Failed " "(EPS Sign Consistency)")
 
-        print(
-            f"Failed Records: {len(failed)}"
-        )
+        print(f"Failed Records: {len(failed)}")
 
-        print(
-            failed[
-                [
-                    "company_id",
-                    "year",
-                    "net_profit",
-                    "eps"
-                ]
-            ].head()
-        )
+        print(failed[["company_id", "year", "net_profit", "eps"]].head())
 
         record_failure(
-            "DQ-10",
-            "WARNING",
-            "EPS and net profit signs are inconsistent",
-            failed
+            "DQ-10", "WARNING", "EPS and net profit signs are inconsistent", failed
         )
 
 
 # ============================================================
 # DQ-11: ANNUAL REPORT URL VALIDATION
 # ============================================================
+
 
 def check_annual_report_url(df):
     """
@@ -650,54 +454,30 @@ def check_annual_report_url(df):
 
     failed = df[
         df["Annual_Report"].isna()
-        | ~df["Annual_Report"]
-            .astype(str)
-            .str.strip()
-            .str.match(
-                url_pattern,
-                na=False
-            )
+        | ~df["Annual_Report"].astype(str).str.strip().str.match(url_pattern, na=False)
     ]
 
     if failed.empty:
 
-        print(
-            "✅ DQ-11 Passed "
-            "(Annual Report URL Validation)"
-        )
+        print("✅ DQ-11 Passed " "(Annual Report URL Validation)")
 
     else:
 
-        print(
-            "❌ DQ-11 Failed "
-            "(Annual Report URL Validation)"
-        )
+        print("❌ DQ-11 Failed " "(Annual Report URL Validation)")
 
-        print(
-            f"Failed Records: {len(failed)}"
-        )
+        print(f"Failed Records: {len(failed)}")
 
-        print(
-            failed[
-                [
-                    "company_id",
-                    "Year",
-                    "Annual_Report"
-                ]
-            ].head()
-        )
+        print(failed[["company_id", "Year", "Annual_Report"]].head())
 
         record_failure(
-            "DQ-11",
-            "WARNING",
-            "Annual report URL is missing or invalid",
-            failed
+            "DQ-11", "WARNING", "Annual report URL is missing or invalid", failed
         )
 
 
 # ============================================================
 # DQ-12: BSE PROFILE URL VALIDATION
 # ============================================================
+
 
 def check_bse_profile(df):
     """
@@ -707,48 +487,23 @@ def check_bse_profile(df):
 
     failed = df[
         df["bse_profile"].isna()
-        | ~df["bse_profile"]
-            .astype(str)
-            .str.strip()
-            .str.match(
-                r"^https?://",
-                na=False
-            )
+        | ~df["bse_profile"].astype(str).str.strip().str.match(r"^https?://", na=False)
     ]
 
     if failed.empty:
 
-        print(
-            "✅ DQ-12 Passed "
-            "(BSE Profile URL Validation)"
-        )
+        print("✅ DQ-12 Passed " "(BSE Profile URL Validation)")
 
     else:
 
-        print(
-            "❌ DQ-12 Failed "
-            "(BSE Profile URL Validation)"
-        )
+        print("❌ DQ-12 Failed " "(BSE Profile URL Validation)")
 
-        print(
-            f"Failed Records: {len(failed)}"
-        )
+        print(f"Failed Records: {len(failed)}")
 
-        print(
-            failed[
-                [
-                    "id",
-                    "company_name",
-                    "bse_profile"
-                ]
-            ].head()
-        )
+        print(failed[["id", "company_name", "bse_profile"]].head())
 
         record_failure(
-            "DQ-12",
-            "WARNING",
-            "BSE profile URL is missing or invalid",
-            failed
+            "DQ-12", "WARNING", "BSE profile URL is missing or invalid", failed
         )
 
 
@@ -756,64 +511,41 @@ def check_bse_profile(df):
 # DQ-13: HISTORICAL DATA COVERAGE
 # ============================================================
 
-def check_data_coverage(
-    df,
-    minimum_years=5
-):
+
+def check_data_coverage(df, minimum_years=5):
     """
     DQ-13: Each company should have
     at least 5 unique financial years.
     """
 
-    coverage = (
-        df.groupby("company_id")["year"]
-        .nunique()
-        .reset_index(
-            name="year_count"
-        )
-    )
+    coverage = df.groupby("company_id")["year"].nunique().reset_index(name="year_count")
 
-    failed = coverage[
-        coverage["year_count"]
-        < minimum_years
-    ]
+    failed = coverage[coverage["year_count"] < minimum_years]
 
     if failed.empty:
 
-        print(
-            f"✅ DQ-13 Passed "
-            f"(Minimum {minimum_years}-Year "
-            f"Data Coverage)"
-        )
+        print(f"✅ DQ-13 Passed " f"(Minimum {minimum_years}-Year " f"Data Coverage)")
 
     else:
 
-        print(
-            f"❌ DQ-13 Failed "
-            f"(Minimum {minimum_years}-Year "
-            f"Data Coverage)"
-        )
+        print(f"❌ DQ-13 Failed " f"(Minimum {minimum_years}-Year " f"Data Coverage)")
 
-        print(
-            f"Failed Companies: "
-            f"{len(failed)}"
-        )
+        print(f"Failed Companies: " f"{len(failed)}")
 
-        print(
-            failed.head()
-        )
+        print(failed.head())
 
         record_failure(
             "DQ-13",
             "WARNING",
             f"Company has less than {minimum_years} years of financial data",
-            failed
+            failed,
         )
 
 
 # ============================================================
 # DQ-14: ROE RANGE VALIDATION
 # ============================================================
+
 
 def check_roe_range(df):
     """
@@ -823,51 +555,33 @@ def check_roe_range(df):
 
     failed = df[
         df["roe_percentage"].notna()
-        & (
-            (df["roe_percentage"] < -100)
-            | (df["roe_percentage"] > 100)
-        )
+        & ((df["roe_percentage"] < -100) | (df["roe_percentage"] > 100))
     ]
 
     if failed.empty:
 
-        print(
-            "✅ DQ-14 Passed "
-            "(ROE Range Validation)"
-        )
+        print("✅ DQ-14 Passed " "(ROE Range Validation)")
 
     else:
 
-        print(
-            "❌ DQ-14 Failed "
-            "(ROE Range Validation)"
-        )
+        print("❌ DQ-14 Failed " "(ROE Range Validation)")
 
-        print(
-            f"Failed Records: {len(failed)}"
-        )
+        print(f"Failed Records: {len(failed)}")
 
-        print(
-            failed[
-                [
-                    "id",
-                    "company_name",
-                    "roe_percentage"
-                ]
-            ].head()
-        )
+        print(failed[["id", "company_name", "roe_percentage"]].head())
 
         record_failure(
             "DQ-14",
             "WARNING",
             "ROE percentage is outside the expected -100 to 100 range",
-            failed
+            failed,
         )
 
 
 # ============================================================
 # DQ-15: NSE PROFILE URL VALIDATION
 # ============================================================
+
 
 def check_nse_profile(df):
     """
@@ -877,54 +591,30 @@ def check_nse_profile(df):
 
     failed = df[
         df["nse_profile"].isna()
-        | ~df["nse_profile"]
-            .astype(str)
-            .str.strip()
-            .str.match(
-                r"^https?://",
-                na=False
-            )
+        | ~df["nse_profile"].astype(str).str.strip().str.match(r"^https?://", na=False)
     ]
 
     if failed.empty:
 
-        print(
-            "✅ DQ-15 Passed "
-            "(NSE Profile URL Validation)"
-        )
+        print("✅ DQ-15 Passed " "(NSE Profile URL Validation)")
 
     else:
 
-        print(
-            "❌ DQ-15 Failed "
-            "(NSE Profile URL Validation)"
-        )
+        print("❌ DQ-15 Failed " "(NSE Profile URL Validation)")
 
-        print(
-            f"Failed Records: {len(failed)}"
-        )
+        print(f"Failed Records: {len(failed)}")
 
-        print(
-            failed[
-                [
-                    "id",
-                    "company_name",
-                    "nse_profile"
-                ]
-            ].head()
-        )
+        print(failed[["id", "company_name", "nse_profile"]].head())
 
         record_failure(
-            "DQ-15",
-            "WARNING",
-            "NSE profile URL is missing or invalid",
-            failed
+            "DQ-15", "WARNING", "NSE profile URL is missing or invalid", failed
         )
 
 
 # ============================================================
 # DQ-16: COMPANY WEBSITE URL VALIDATION
 # ============================================================
+
 
 def check_company_website(df):
     """
@@ -934,48 +624,23 @@ def check_company_website(df):
 
     failed = df[
         df["website"].isna()
-        | ~df["website"]
-            .astype(str)
-            .str.strip()
-            .str.match(
-                r"^https?://",
-                na=False
-            )
+        | ~df["website"].astype(str).str.strip().str.match(r"^https?://", na=False)
     ]
 
     if failed.empty:
 
-        print(
-            "✅ DQ-16 Passed "
-            "(Company Website URL Validation)"
-        )
+        print("✅ DQ-16 Passed " "(Company Website URL Validation)")
 
     else:
 
-        print(
-            "❌ DQ-16 Failed "
-            "(Company Website URL Validation)"
-        )
+        print("❌ DQ-16 Failed " "(Company Website URL Validation)")
 
-        print(
-            f"Failed Records: {len(failed)}"
-        )
+        print(f"Failed Records: {len(failed)}")
 
-        print(
-            failed[
-                [
-                    "id",
-                    "company_name",
-                    "website"
-                ]
-            ].head()
-        )
+        print(failed[["id", "company_name", "website"]].head())
 
         record_failure(
-            "DQ-16",
-            "WARNING",
-            "Company website URL is missing or invalid",
-            failed
+            "DQ-16", "WARNING", "Company website URL is missing or invalid", failed
         )
 
 
@@ -993,129 +658,63 @@ if __name__ == "__main__":
     # Load datasets
     # --------------------------------------------------------
 
-    companies = load_data(
-        "companies.xlsx",
-        header=1
-    )
+    companies = load_data("companies.xlsx", header=1)
 
-    profit_loss = load_data(
-        "profitandloss.xlsx",
-        header=1
-    )
+    profit_loss = load_data("profitandloss.xlsx", header=1)
 
-    balance_sheet = load_data(
-        "balancesheet.xlsx",
-        header=1
-    )
+    balance_sheet = load_data("balancesheet.xlsx", header=1)
 
-    cashflow = load_data(
-        "cashflow.xlsx",
-        header=1
-    )
+    cashflow = load_data("cashflow.xlsx", header=1)
 
-    documents = load_data(
-        "documents.xlsx",
-        header=1
-    )
+    documents = load_data("documents.xlsx", header=1)
 
     # --------------------------------------------------------
     # Run DQ validations
     # --------------------------------------------------------
 
-    check_primary_key(
-        companies,
-        "id"
-    )
+    check_primary_key(companies, "id")
 
-    check_composite_key(
-        profit_loss,
-        [
-            "company_id",
-            "year"
-        ]
-    )
+    check_composite_key(profit_loss, ["company_id", "year"])
 
-    check_foreign_key(
-        companies,
-        profit_loss,
-        "id",
-        "company_id"
-    )
+    check_foreign_key(companies, profit_loss, "id", "company_id")
 
-    check_balance_sheet(
-        balance_sheet
-    )
+    check_balance_sheet(balance_sheet)
 
-    check_opm(
-        profit_loss
-    )
+    check_opm(profit_loss)
 
-    check_positive_sales(
-        profit_loss
-    )
+    check_positive_sales(profit_loss)
 
-    check_net_cash_flow(
-        cashflow
-    )
+    check_net_cash_flow(cashflow)
 
-    check_tax_rate(
-        profit_loss
-    )
+    check_tax_rate(profit_loss)
 
-    check_dividend_payout(
-        profit_loss
-    )
+    check_dividend_payout(profit_loss)
 
-    check_eps_sign(
-        profit_loss
-    )
+    check_eps_sign(profit_loss)
 
-    check_annual_report_url(
-        documents
-    )
+    check_annual_report_url(documents)
 
-    check_bse_profile(
-        companies
-    )
+    check_bse_profile(companies)
 
-    check_data_coverage(
-        profit_loss
-    )
+    check_data_coverage(profit_loss)
 
-    check_roe_range(
-        companies
-    )
+    check_roe_range(companies)
 
-    check_nse_profile(
-        companies
-    )
+    check_nse_profile(companies)
 
-    check_company_website(
-        companies
-    )
+    check_company_website(companies)
 
     # --------------------------------------------------------
     # Save final validation report
     # --------------------------------------------------------
 
-    OUTPUT_DIR.mkdir(
-        parents=True,
-        exist_ok=True
-    )
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    failures_df = pd.DataFrame(
-        validation_failures
-    )
+    failures_df = pd.DataFrame(validation_failures)
 
-    output_file = (
-        OUTPUT_DIR
-        / "validation_failures.csv"
-    )
+    output_file = OUTPUT_DIR / "validation_failures.csv"
 
-    failures_df.to_csv(
-        output_file,
-        index=False
-    )
+    failures_df.to_csv(output_file, index=False)
 
     # --------------------------------------------------------
     # Final summary
@@ -1125,17 +724,10 @@ if __name__ == "__main__":
     print("VALIDATION SUMMARY")
     print("=" * 60)
 
-    print(
-        f"Validation report saved successfully"
-    )
+    print("Validation report saved successfully")
 
-    print(
-        f"File: {output_file}"
-    )
+    print(f"File: {output_file}")
 
-    print(
-        f"Total failures logged: "
-        f"{len(failures_df)}"
-    )
+    print(f"Total failures logged: " f"{len(failures_df)}")
 
     print("=" * 60)

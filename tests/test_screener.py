@@ -1,8 +1,8 @@
-import os
 import sys
-from pathlib import Path
-import pandas as pd
 import traceback
+from pathlib import Path
+
+import pandas as pd
 
 # Ensure src is in the path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -10,11 +10,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from src.screener.engine import ScreenerEngine
 from src.screener.scoring import CompositeScorer
 
+
 def test_engine_initialization():
     print("Running test_engine_initialization...")
     with ScreenerEngine() as engine:
         assert engine.conn is not None
     print("PASS: test_engine_initialization")
+
 
 def test_load_config():
     print("Running test_load_config...")
@@ -23,6 +25,7 @@ def test_load_config():
         assert isinstance(config, dict)
         assert "filters" in config or not config
     print("PASS: test_load_config")
+
 
 def test_load_and_merge_data():
     print("Running test_load_and_merge_data...")
@@ -34,6 +37,7 @@ def test_load_and_merge_data():
         assert "sales" in df.columns
         assert "net_profit" in df.columns
     print("PASS: test_load_and_merge_data")
+
 
 def test_composite_scorer_cagr_vectorization():
     print("Running test_composite_scorer_cagr_vectorization...")
@@ -48,22 +52,23 @@ def test_composite_scorer_cagr_vectorization():
         "roce_percentage": [10, 11, 12, 15, 18, 20],
         "net_profit_margin_pct": [10, 10, 10, 10, 10, 10],
         "debt_to_equity": [0.5, 0.4, 0.3, 1.0, 0.8, 0.5],
-        "interest_coverage": [5, 6, 7, 2, 3, 4]
+        "interest_coverage": [5, 6, 7, 2, 3, 4],
     }
     df = pd.DataFrame(data)
     scorer = CompositeScorer(df)
-    
+
     scored_df = scorer.calculate_score()
-    
+
     assert "revenue_cagr" in scored_df.columns
     assert "composite_score" in scored_df.columns
-    
+
     cagr_a = scored_df.loc[scored_df["company_id"] == "A", "revenue_cagr"].iloc[0]
     cagr_b = scored_df.loc[scored_df["company_id"] == "B", "revenue_cagr"].iloc[0]
-    
+
     assert 9.9 < cagr_a < 10.1, f"Expected ~10, got {cagr_a}"
     assert 99.9 < cagr_b < 100.1, f"Expected ~100, got {cagr_b}"
     print("PASS: test_composite_scorer_cagr_vectorization")
+
 
 def test_preset_execution():
     print("Running test_preset_execution...")
@@ -76,6 +81,7 @@ def test_preset_execution():
         assert len(result) == result["company_id"].nunique()
     print("PASS: test_preset_execution")
 
+
 def test_all_presets():
     print("Running test_all_presets...")
     presets = ["growth", "value", "quality", "dividend"]
@@ -86,6 +92,7 @@ def test_all_presets():
             assert result is not None
             assert not result.empty
     print("PASS: test_all_presets")
+
 
 if __name__ == "__main__":
     try:

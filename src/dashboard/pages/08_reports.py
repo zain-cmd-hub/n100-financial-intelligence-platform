@@ -1,8 +1,8 @@
-import streamlit as st
-import pandas as pd
-import requests
 import sys
 from pathlib import Path
+
+import requests
+import streamlit as st
 
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
@@ -17,10 +17,12 @@ if companies.empty:
     st.stop()
 
 # Prepare search box data
-companies['search_key'] = companies['id'] + " - " + companies['company_name']
-search_keys = companies['search_key'].tolist()
+companies["search_key"] = companies["id"] + " - " + companies["company_name"]
+search_keys = companies["search_key"].tolist()
 
-selected_key = st.selectbox("Search by Ticker or Company Name", options=[""] + search_keys, index=0)
+selected_key = st.selectbox(
+    "Search by Ticker or Company Name", options=[""] + search_keys, index=0
+)
 
 if not selected_key:
     st.info("Please select a company to view its annual reports.")
@@ -37,33 +39,39 @@ if docs.empty:
     st.stop()
 
 # Sort by year descending
-docs = docs.sort_values(by='year', ascending=False)
+docs = docs.sort_values(by="year", ascending=False)
+
 
 def check_url(url):
+    """Handles operations for check_url."""
     try:
-        # Use a short timeout to prevent UI blocking. 
+        # Use a short timeout to prevent UI blocking.
         # Some servers block HEAD requests, so we use a GET request with stream=True
         r = requests.get(url, stream=True, timeout=3)
         return r.status_code != 404
     except Exception:
         return False
 
+
 # Display reports nicely
 for _, row in docs.iterrows():
-    year = row['year']
-    url = row['annual_report']
-    
+    year = row["year"]
+    url = row["annual_report"]
+
     col1, col2 = st.columns([1, 4])
     with col1:
         st.markdown(f"### **FY {year}**")
-        
+
     with col2:
         # Verify URL live
         is_valid = check_url(url)
-        
+
         if is_valid:
             st.markdown(f"✅ [Download BSE PDF Report]({url})")
         else:
-            st.markdown(f"🔴 <span style='color:red; font-weight:bold;'>[Report Unavailable (404)]</span> - Link broken: {url}", unsafe_allow_html=True)
-            
+            st.markdown(
+                f"🔴 <span style='color:red; font-weight:bold;'>[Report Unavailable (404)]</span> - Link broken: {url}",
+                unsafe_allow_html=True,
+            )
+
     st.markdown("---")
